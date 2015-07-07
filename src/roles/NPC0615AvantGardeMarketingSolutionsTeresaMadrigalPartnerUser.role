@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>NPC-0615-Avant Garde Marketing Solutions (Teresa Madrigal) Partner User</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>NPC-0615-Avant Garde Marketing Solutions (Teresa Madrigal) Partner User</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>NPC0615AvantGardeMarketingSolutionsTeresaMadrigalPartnerManager</parentRole>
+</Role>

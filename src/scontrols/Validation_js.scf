@@ -1,0 +1,1239 @@
+<script type="text/javascript">
+//create array for fields if it does not already exist (in case script is loaded multiple times)
+if(!window.fields)
+{
+	window.fields = [];
+}
+window.submitting = false;
+window.suggest = true;
+//default to production state, allow tag from XML to change this value
+window.debug = false;
+	
+/**
+   \brief validateApp: validate the application according to the defined field validation
+*/
+function validateApp()
+{
+	// Disable Submit Button
+	//$('btnVal').disable();
+	// Must be present - called by submit button to validate the application
+	window.submitting = true;
+	// BEGIN Standard Validation
+	var validated = true;
+	var validateFields = [];
+	for(var i=0;window.fields.length > i;i++)
+	{
+		var elm = document.getElementById(window.fields[i]);
+		// Only validate if object is displayed on the page
+		if(!elm || (elm.offsetHeight < 1 ) ){continue;}
+		var obj = $(elm);
+		// If the field has a validatefunction, call it and check its result
+		if(obj.readAttribute('validatefunction') && window[obj.readAttribute('validatefunction')])
+		{
+			var testVal = window[obj.readAttribute('validatefunction')](obj);
+			if(!testVal) 
+			{
+				validated = false;
+			}
+		}
+		// Check whether high and low value attributes exist and contain numbers
+          // Check whether high and low value attributes exist and contain numbers
+           if(obj.readAttribute("highvalue")!=null && obj.readAttribute("lowValue")!=null && !isNaN(obj.readAttribute("highvalue")) && !isNaN(obj.readAttribute("lowvalue")))
+          {
+            // Determine whether the field's value is empty or not a number
+            if(obj.value.replace(/^\s+|\s+$/g, "") == '' || isNaN(obj.value.replace(/\,/g,'')) )
+            {
+                validated = false;
+                warnField(obj);
+                continue;
+            }
+            // Determine whether is field's value is within the bounds of the high and low values
+            if(parseFloat(obj.value.replace(/\,/g,'')) < parseFloat(obj.readAttribute("lowvalue")) )
+            {
+                validated = false;
+                warnField(obj);
+            }
+            if(parseFloat(obj.value.replace(/\,/g,'')) > parseFloat(obj.readAttribute("highvalue")) )
+            {
+                validated = false;
+                warnField(obj);
+            }
+          }
+          
+		// Check whether min length attribute exists and contains a number
+		if(obj.readAttribute("minlength")!=null && !isNaN(obj.readAttribute("minlength")))
+		{
+			if(parseInt(obj.readAttribute("minlength")) > obj.value.length)
+			{
+				validated = false;
+				warnField(obj);
+			}
+		}
+	  
+		if(obj.readAttribute("validationType") != null)
+		{
+			validateFields.push(obj);
+		}
+	}
+	for(var i=0;validateFields.length > i;i++)
+	{
+		if(validateFields[i].readAttribute("validationType") != null)
+		{
+			validated = updateValidation(validateFields[i], validateFields[i].readAttribute("validationType")) && validated;
+		}
+	}
+	// END Standard Validation 
+	if (window.customValidate)
+	{
+		validated = window.customValidate() && validated;
+	}
+	window.submitting = false;
+	//$('btnVal').enable();
+	if(validated)
+	{
+		if (window.suggest)
+		{
+			var suggested = false;
+			for(var i=0;i<window.fields.length;i++)
+			{
+				var elm = document.getElementById(window.fields[i]);
+				// Only suggest the field if its element exists and is visible
+				if (elm && elm.offsetHeight > 0 && elm.getAttribute('presence') == 'suggested')
+				{
+					suggestField(elm);
+					suggested = true;
+				}
+			}
+			window.suggest = false;
+			if (suggested)
+			{
+				alert('This application contains suggested fields. Please review the highlighted field(s).');
+				return false;
+			}
+		}
+	}
+	else
+	{
+		alert('This application contains errors.  Please correct the highlighted field(s).');
+	}
+	
+	return validated;
+}
+		
+	function hideField(id)
+	{
+	    var obj = $(id);
+	    if(obj == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var i = 10;
+	    if (obj.hasClassName('application_section_div') || obj.hasClassName('application_subsection_div') ||
+	        obj.hasClassName('field_group_note'))
+	    {
+	            obj.hide();
+	    }	            
+	    else if(obj.hasClassName('field_group_field_list'))
+	    {
+	            var flds = obj.value.split('|');
+	            for(var j=0;j<flds.length;j++)
+	            {
+	                if($(flds[j])){hideField(flds[j]);}
+	            }
+	    }
+	    else if(obj.hasClassName('application_subsection_content_div'))
+	    {
+	        var inputs = obj.getElementsBySelector('input');
+	        for(var i = 0; i<inputs.length;i++)
+	        {
+	            inputs[i].writeAttribute('value', '');
+	        }   
+	        obj.hide();
+	    }
+	    else
+	    {
+	            if(obj.tagName.toLowerCase() == 'input')
+	            {
+	                if(obj.type && obj.type.toLowerCase() == 'checkbox'){}
+	                else{ obj.value = '';}
+	            }
+	            else if(obj.tagName.toLowerCase() == 'select')
+	            {
+	                obj.value = 'BHC_NONE_SEL';
+	            }
+	            var tr = obj.up('tr.field_row');
+	            
+	            if(tr)
+	            {
+	                tr.hide();
+	                var titleTr = tr.previous('tr.field_title_row');
+	                if (titleTr)
+	                {
+	                    titleTr.hide();
+	                }
+	            }
+	            if(obj.up('tr.field_row_table'))
+	            {
+	                obj.up('table').hide();
+	            }
+	    }
+	}
+	
+	/**
+	    function showField(id): shows the object specified by id
+	    id is the unique id for a DOM element
+	*/
+	function showField(id)
+	{
+	    var obj = $(id);
+	    if(obj == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var i = 10;
+	    if (obj.hasClassName('application_section_div') || obj.hasClassName('application_subsection_div') ||
+	        obj.hasClassName('field_group_note'))
+	    {
+	            obj.show();
+	    }	            
+	    else if(obj.hasClassName('field_group_field_list'))
+	    {
+	            var flds = obj.value.split('|');
+	            for(var j=0;j<flds.length;j++)
+	            {
+	                if($(flds[j])){showField(flds[j]);}
+	            }
+	    }
+	    else if(obj.hasClassName('application_subsection_content_div'))
+	    {
+	        var inputs = obj.getElementsBySelector('input');
+	        for(var i = 0; i<inputs.length;i++)
+	        {
+	            inputs[i].writeAttribute('value', '');
+	        }   
+	        obj.show();
+	    }
+	    else
+	    {
+	            var tr = obj.up('tr.field_row');
+	            if(tr)
+	            {
+	                tr.show();
+	                var titleTr = tr.previous('tr.field_title_row');
+	                if (titleTr)
+	                {
+	                    titleTr.show();
+	                }
+	            }
+	            if(obj.up('tr.field_row_table'))
+	            {
+	                obj.up('table').show();
+	            }
+	    }
+	}
+	
+	/**
+	    The warnField function changes the appearance of the field to inform the user of failed validation.
+	    Prototype enabled
+	*/
+	function warnField(id)
+	{
+	    var elm = $(id);
+	    
+	    elm.addClassName('field_control_invalid');
+	    
+	    if (elm.readAttribute('errortext') != null && elm.readAttribute('errortext') != '')
+	    {
+	        if (elm.title == null)
+	        {
+	            elm.title = elm.readAttribute('errortext');
+	        }
+	        else
+	        {
+	            elm.title += ' ' + elm.readAttribute('errortext');
+	        }
+		//hard stop of 7 levels of DOM parents checked -- typical structure is 2 or 3 levels
+		var i = 7;
+		var div = elm;
+		while(div.parentNode && i > 0 && div.className != 'field_control' )
+		{
+			i--;
+			div = div.parentNode;
+		}
+		if(div.className != 'field_control')
+		{
+			//div not found -- nothing to warn
+			return;
+		}
+	        //~ var div = elm.up('.field_control');
+		
+		var warnDiv = div.nextSibling;
+		
+		if(!warnDiv || !warnDiv.className || !warnDiv.className.match(/field_control_error/gi))
+		{
+			warnDiv = document.createElement('div');
+			warnDiv.className = 'field_control_error';
+			
+			if(div.nextSibling)
+			{
+				div.parentNode.insertBefore(warnDiv, div.nextSibling);
+			}
+			else
+			{
+				div.parentNode.appendChild(warnDiv);
+			}
+		}
+	        //~ var warnDiv = div.next('.field_control_error');
+	        
+	        //~ if (warnDiv == null)
+	        //~ {
+	            //~ div.insert({after: new Element('div', {'class': 'field_control_error'})});
+	            //~ warnDiv = div.next('.field_control_error');
+	            //~ //elm.up('.field_control').next('.field_control_error').hide();
+	        //~ }
+	        //~ warnDiv.update(elm.readAttribute('errortext'));
+		
+		warnDiv.innerHTML = elm.getAttribute('errortext');
+	        //Effect.Appear(elm.up('.field_control').next('.field_control_error'));	        
+	    }
+	}
+	
+	function suggestField(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    elm.addClassName('field_control_suggested');
+	    
+	    if(elm.readAttribute("errortext") != null && elm.readAttribute != '')
+	    {
+	        if(elm.title == null)
+	        {
+			    elm.title = elm.getAttribute("errortext");
+			}
+		    else
+		    {
+			    elm.title += elm.getAttribute("errortext");
+		    }
+		//hard stop of 7 levels of DOM parents checked -- typical structure is 2 or 3 levels
+		var i = 7;
+		var div = elm;
+		while(div.parentNode && i > 0 && div.className != 'field_control' )
+		{
+			i--;
+			div = div.parentNode;
+		}
+		if(div.className != 'field_control')
+		{
+			//div not found -- nothing to warn
+			return;
+		}
+	        //~ var div = elm.up('.field_control');
+		
+		var suggestDiv = div.nextSibling;
+		
+		if(!suggestDiv || !suggestDiv.className.match(/field_control_error/gi))
+		{
+			suggestDiv = document.createElement('div');
+			suggestDiv.className = 'field_control_error';
+			
+			if(div.nextSibling)
+			{
+				div.parentNode.insertBefore(suggestDiv, div.nextSibling);
+			}
+			else
+			{
+				div.parentNode.appendChild(suggestDiv);
+			}
+		}	
+			//~ var div = elm.up('.field_control');
+	        //~ var suggestDiv = div.next('.field_control_suggest');
+			
+			//~ if (suggestDiv == null)
+	        //~ {
+	            //~ suggestDiv = div.insert({after: new Element('div', {'class': 'field_control_suggest'})});
+	            //~ suggestDiv = div.next('.field_control_suggest');
+	            //~ //elm.up('.field_control').next('.field_control_suggest').hide();
+	        //~ }
+	        //~ suggestDiv.update(elm.readAttribute('errortext'));
+		suggestDiv.innerHTML = elm.getAttribute('errortext');
+	        //Effect.Appear(elm.up('.field_control').next('.field_control_suggest'));
+	    }
+	}
+	
+	/**
+	    The unwarnField function is called at the start of field validation to reset its appearance.
+	    Prototype enabled
+	*/
+	function unwarnField(id)
+	{
+	    var elm = $(id);
+	    
+	    elm.removeClassName('field_control_invalid');
+	    if (elm.readAttribute('errortext') != '')
+	    {
+	        elm.title = elm.title.sub(elm.readAttribute('errortext'), '').strip();
+	    }
+		//hard stop of 7 levels of DOM parents checked -- typical structure is 2 or 3 levels
+	    var i = 7;
+	    var div = elm;
+		while(div.parentNode && i > 0 && div.className != 'field_control' )
+		{
+			i--;
+			div = div.parentNode;
+		}
+		if(div.className != 'field_control')
+		{
+			//div not found -- nothing to warn
+			return;
+		}
+		var warnDiv = div.nextSibling;
+		if(warnDiv && warnDiv.className == 'field_control_error')
+		{
+			warnDiv.parentNode.removeChild(warnDiv);
+		}
+	    //~ var warnDiv = elm.up('.field_control').next('.field_control_error');
+	    //~ if (warnDiv != null)
+	    //~ {
+	        //~ warnDiv.remove();
+	    //~ }
+	}
+	
+	function unsuggestField(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    elm.removeClassName('field_control_suggested');
+	    if (elm.readAttribute('errortext') != '')
+	    {
+	        elm.title = elm.title.sub(elm.readAttribute('errortext'), '').strip();
+	    }
+		//hard stop of 7 levels of DOM parents checked -- typical structure is 2 or 3 levels
+	        var i = 7;
+	        var div = elm;
+		while(div.parentNode && i > 0 && div.className != 'field_control' )
+		{
+			i--;
+			div = div.parentNode;
+		}
+		if(div.className != 'field_control')
+		{
+			//div not found -- nothing to warn
+			return;
+		}
+		
+		var suggestDiv = div.nextSibling;
+		if(suggestDiv && suggestDiv.className == 'field_control_suggest')
+		{
+			suggestDiv.parentNode.removeChild(suggestDiv);
+		}
+	    
+	    //~ var suggestDiv = elm.up('.field_control').next('.field_control_suggest');
+	    
+	    //~ if (suggestDiv != null)
+	    //~ {
+	        //~ suggestDiv.remove();
+	    //~ }
+	}	
+		
+	function updateValidation(id, type)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+		        return false;
+		    }
+	        return true;
+	    }
+	    var warn = false;
+	    if(type.match(/dualEntry/gi))
+	    {
+	        var elm2 = $(elm.readAttribute("dualEntryField"));
+		    if(elm2)
+		    {
+			    if(elm.value != elm2.value)
+			    {
+				    warn = true;
+				    warnField(elm);
+				    warnField(elm2);
+			    }
+		    }
+	    }
+	    
+	    return !warn;
+	}
+	
+	/**
+	    The updateText function validates for required text fields.
+	*/
+	function updateText(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    elm.value = trim(elm.value);
+	    
+	    var warn = false;
+	    unwarnField(elm);
+	    if(elm.value.replace(/^\s+|\s+$/g, "") == '' && elm.readAttribute('presence').match(/required/i))
+	    {
+	        warn = true;
+	    }
+	    if(warn)
+	    {
+	        warnField(elm);
+	    }
+	    return !warn;
+	}
+	
+	/**
+	    The updateNumber function validates for required and numeric entry.
+	*/
+	function updateNumber(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var warn = false;
+	    unwarnField(elm);
+	    if(elm.value.replace(/^\s+|\s+$/g, "") == '' && elm.readAttribute('presence').match(/required/i))
+	    {
+	        warn = true;
+	    }
+	    if(isNaN(elm.value))
+	    {
+	        warn = true;
+	    }
+	    if(warn)
+	    {
+	        warnField(elm);
+	    }
+	    return !warn;
+	}
+	
+	/**
+	    The updatePhone function validates for ten-digit entry if required and formats the field to display as a US phone number.
+	*/
+	function updatePhone(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var warn = false;
+	    var val = elm.value.replace(/\D+/g, "");
+	    unwarnField(elm);
+	    if(val.length < 10 && elm.readAttribute('presence').match(/required/i))
+	    {
+	        warn = true;
+	    }
+	    if(warn)
+	    {
+	        warnField(elm);
+	    }
+	    if(val.length >= 10)
+	    {
+	        elm.value = "(" + val.substring(0,3) + ")" + val.substring(3,6) + "-" + val.substring(6,10);
+	    }
+	    return !warn;
+	}
+	
+	/**
+	    The updateZip function validate for five-or-more-digit entry if required and formats the entry for display as a US zip-code.
+	*/
+	function updateZip(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var warn = false;
+	    var val = elm.value.replace(/\D+/g, "");
+	    unwarnField(elm);
+	    if(val.length < 5 && elm.readAttribute('presence').match(/required/i))
+	    {
+	        warn = true;
+	    }
+	    if(warn)
+	    {
+	        warnField(elm);
+	    }
+	    if(val.length == 5)
+	    {
+	        elm.value = val;
+	    }
+	    if(val.length > 5)
+	    {
+	        elm.value = val.substring(0,5) + "-" + val.substring(5);
+	    }
+	    return !warn;
+	}
+	
+	/**
+	    The updateEmail function validate for email format.
+	*/
+	function updateEmail(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var warn = false;
+		var objRegExp =
+		    /^[a-z0-9\!#\$%&'\*\+\/\=\?\^_`\{\|\}~-]+(?:\.[a-z0-9\!#$%&'\*\+\/\=\?\^_`\{\|\}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/gi;
+        
+        elm.value = trim(elm.value);
+        var val = elm.value;
+	    
+	    var isValid = elm.value.match(objRegExp);
+	    unwarnField(elm);
+	    if(!isValid && elm.readAttribute('presence') == 'required')
+	    {
+	        warn = true;
+	    }
+	    if(!isValid && val.length > 0)
+	    {
+	        warn = true;
+	    }
+	    if(warn)
+	    {
+	        warnField(elm);
+	    }
+	    return !warn;
+	}
+	
+	/**
+	    The updateSSN function validates for nine-digit entry if required and formats the entry as a US SSN.
+	*/
+	function updateSSN(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var warn = false;
+	    var val = elm.value.replace(/\D+/g, "");
+	    unwarnField(elm);
+	    if(val.length != 9 && elm.readAttribute('presence').match(/required/i))
+	    {
+	        warn = true;
+	    }
+	    if(warn)
+	    {
+	        warnField(elm);
+	    }
+	    if(val.length == 9)
+	    {
+	        elm.value = val.substring(0,3) + "-" + val.substring(3,5) + "-" + val.substring(5);
+	    }
+	    return !warn;
+	}
+	
+	/**
+	    The updateSSN324 function validates for proper entry in an SSN field displayed as three input elements.
+	*/
+	function updateSSN324(id, evnt)
+	{
+	    var elm = $(id);
+	    
+        window.ssn324Field = elm;
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    if (evnt == null)
+	    {
+	        evnt = 'change';
+	    }
+	    var warn = false;
+	    var strBase = elm.id.substring(0, elm.id.length-1);
+	    $(strBase + '1').value = trim($(strBase + '1').value);
+	    $(strBase + '2').value = trim($(strBase + '2').value);
+	    $(strBase + '3').value = trim($(strBase + '3').value);
+	    var strSSN = $(strBase + '1').value + '-' + $(strBase + '2').value + '-' + $(strBase + '3').value;
+	    
+	    
+	    var val = elm.value.replace(/\D+/g, "");
+	    
+	    unwarnField(strBase + '1');
+	    unwarnField(strBase + '2');
+	    unwarnField(strBase + '3');
+	    var len = 3;
+	    switch(elm.id.substring(elm.id.length-1))
+	    {
+	        case "3":
+	            len = 4;
+	            break;
+	        case "2":
+	            len = 2;
+	            break;
+	        default:
+	            len = 3;
+	            break;
+	    }
+	    
+	    if(strSSN.length < 11 && !window.submitting)
+	    {
+		    return true;
+	    }
+	    
+	    if(evnt == 'keypress' && val.length < len-1 && elm.readAttribute("presence") == 'required')
+	    {
+	        warn = true;
+	    }
+	    if(evnt == 'change' && val.length != len && elm.readAttribute("presence") == 'required')
+	    {
+	        warn = true;
+	    }
+	    if(strSSN.replace(/\D+/g, "").length != 9 && elm.readAttribute("presence") == 'required' )
+	    {
+	        warn = true;
+	    }
+	    
+	    if(warn)
+	    {
+	        warnField(strBase + '1');
+		    warnField(strBase + '2');
+		    warnField(strBase + '3');
+	    }
+
+	    return !warn;
+	}
+	
+	//todo: check for tab
+	function focusSSN324(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var val = elm.value.replace(/\D+/g, "");
+	    var len = 3;
+	    switch(elm.id.substring(elm.id.length-1))
+	    {
+	        case "3":
+	            len = 4;
+	            break;
+	        case "2":
+	            len = 2;
+	            break;
+	        default:
+	            len = 3;
+	            break;
+	    }
+        if(window.event)
+        {
+            if(window.event.keyCode == 16 || window.event.keyCode == 9)
+            {
+                return;
+            }
+        }
+	    
+	    if(val.length == len && elm.nextSibling && elm == window.ssn324Field)
+	    {
+	        elm.nextSibling.focus();
+	        elm.nextSibling.select(0, elm.value.length);
+	    }
+	}
+	
+	/**
+	    The updateDate function validates for eight-digit entry if required and formats the entry as mm/dd/yyyy.
+	*/
+	function updateDate(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var warn = false;
+	    var val = elm.value.replace(/\D+/g, "");
+	    unwarnField(elm);
+	    
+	    if(val.length < 8 && elm.readAttribute('presence').match(/required/i))
+	    {
+	        warn = true;
+	    }
+	    
+	    if(val.length >= 8)
+	    {
+	        elm.value = val.substring(0,2) + "/" + val.substring(2,4) + "/" + val.substring(4,8);
+	    }
+	    
+	    try
+	    {
+	        var tempDate = new Date(elm.value);
+	        if( (val.substring(0,2) == tempDate.getMonth() + 1) && 
+	            (val.substring(2,4) == tempDate.getDate()) && 
+	            (val.substring(4,8) == tempDate.getFullYear()) )
+	        {}
+	        else
+	        {
+	            warn = true;
+	            elm.writeAttribute('errortext', 'Date must be a valid date in the format mm/dd/yyyy.');
+	        }
+	        if (tempDate - new Date('01/01/1900') < 0 || tempDate - new Date('12/31/2099') > 0)
+	        {
+	            warn = true;
+	            elm.writeAttribute('errortext', 'Date must be a valid date between 01/01/1900 and 12/31/2099.');
+	        }
+	    }
+	    catch (ex)
+	    {
+	        warn = true;
+	    }
+   	    if(val.length == 0 && elm.getAttribute("presence") != 'required')
+	    {
+	        warn = false;
+	    }
+	    if(warn)
+	    {
+	        warnField(elm);
+	    }
+	    else
+	    {
+	        elm.writeAttribute('errortext', '');
+	    }
+	    
+	    return !warn;
+	}
+	
+	/**
+     The updateDateMDY function validates for proper entry in a Date field displayed as three input elements.
+	*/
+	function updateDateMDY(id, evnt)
+	{
+	    var elm = $(id);
+	    
+		window.datemdyField = elm;
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    if (evnt == null)
+	    {
+	        evnt = 'change';
+	    }
+	    var warn = false;
+	    var val = elm.value.replace(/\D+/g, "");
+	    var strBase = elm.id.substring(0, elm.id.length-1);
+	    var month = $(strBase + '1');
+	    var day = $(strBase + '2');
+	    var year = $(strBase + '3')
+	    
+	    var strDate = $F(month) + "/" + $F(day) + "/" + $F(year);
+	    
+	    unwarnField(month);
+	    unwarnField(day);
+	    unwarnField(year);
+	    
+	    if(strDate.length < 10 && !window.submitting)
+	    {
+		    return true;
+	    }
+        
+        if (strDate.length == 2 && elm.readAttribute("presence") != 'required')
+        {
+            return true;
+        }
+        
+	    var len = 2;
+	    switch(elm.id.substring(elm.id.length-1))
+	    {
+	        case "3":
+	            len = 4;
+	            break;
+	        default:
+	            len = 2;
+	            break;
+	    }
+	  
+	    
+	    if(evnt == 'keypress' && val.length < len-1 && elm.readAttribute("presence") == 'required')
+	    {
+	        warn = true;
+	    }
+	    if(evnt == 'change' && val.length != len && elm.readAttribute("presence") == 'required')
+	    {
+	        warn = true;
+	    }
+	    
+	    try
+	    {
+	        var tempDate = new Date(strDate);
+	        if( ($F(month) == tempDate.getMonth() + 1) && 
+	            ($F(day) == tempDate.getDate() ) && 
+	            ($F(year) == tempDate.getFullYear() ) )
+	        {}
+	        else
+	        { 
+	            warn = true; 
+	            month.writeAttribute('errortext', 'Date must be a valid date in the format mm/dd/yyyy.');
+	            day.writeAttribute('errortext', 'Date must be a valid date in the format mm/dd/yyyy.');
+	            year.writeAttribute('errortext', 'Date must be a valid date in the format mm/dd/yyyy.');
+	        }
+	        if (tempDate - new Date('01/01/1900') < 0 || tempDate - new Date('12/31/2099') > 0)
+	        {
+	            warn = true;
+	            month.writeAttribute('errortext', 'Date must be a valid date between 01/01/1900 and 12/31/2099.');
+	            day.writeAttribute('errortext', 'Date must be a valid date between 01/01/1900 and 12/31/2099.');
+	            year.writeAttribute('errortext', 'Date must be a valid date between 01/01/1900 and 12/31/2099.');
+	        }
+	    }
+	    catch(ex)
+	    {
+	        warn = true;
+	    }
+	    
+	    if (($F(month) == '' && $F(day) == '' && $F(year) == '') && elm.readAttribute('presence').toLowerCase() != 'required')
+	    {
+	        warn = false;
+	    }
+	    if(warn)
+	    {
+	        warnField(month);
+	        warnField(day);
+	        warnField(year);
+	    }
+
+	    return !warn;
+	}
+	
+	//todo: check for tab
+	function focusDateMDY(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var val = elm.value.replace(/\D+/g, "");
+	    var len = 2;
+	    switch(elm.id.substring(elm.id.length-1))
+	    {
+	        case "3":
+	            len = 4;
+	            break;
+	        default:
+	            len = 2;
+	            break;
+	    }
+        if(window.event)
+        {
+            if(window.event.keyCode == 16 || window.event.keyCode == 9)
+            {
+                return;
+            }
+        }
+	    
+	    if(val.length == len && elm.nextSibling && elm.nextSibling.nextSibling && elm == window.datemdyField)
+	    {
+	        elm.nextSibling.nextSibling.focus();
+	        elm.nextSibling.nextSibling.select(0, elm.value.length);
+	    }
+	}
+	
+	/**
+	    The updateEIN function validates for nine-digit entry if required and formats the entry as a US EIN.
+	*/
+	function updateEIN(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var warn = false;
+	    var val = elm.value.replace(/\D+/g, "");
+	    unwarnField(elm);
+	    if(val.length < 9 && elm.readAttribute('presence').match(/required/i))
+	    {
+	        warn = true;
+	    }
+	    if(warn)
+	    {
+	        warnField(elm);
+	    }
+	    if(val.length >= 9)
+	    {
+	        elm.value = val.substring(0,2) + "-" + val.substring(2,9);
+	    }
+	    return !warn;
+	}
+	
+	/**
+	    The updateCurrency function validates for numeric entry and formats the entry as whole US dollars.
+	*/
+	function updateCurrency(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+        var val = elm.value.replace(/[^\.\d]/g, '');
+	    var warn = false;
+	    unwarnField(elm);
+	    if(val == '' && elm.readAttribute('presence').match(/required/i))
+	    {
+	        warn = true;
+	    }
+	    if(isNaN(val))
+	    {
+	        warn = true;
+	    }
+	    if(warn)
+	    {
+	        warnField(elm);
+	    }
+	    else if(window.addCommas)
+	    {
+	        elm.value = addCommas(val);
+	    }
+	    return !warn;
+	}
+	
+	/**
+	    The updatePercent function validates for numeric entry if required and specifies a range of 0 to 100.
+	*/
+	function updatePercent(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var warn = false;
+	    unwarnField(elm);
+	    if(elm.value.replace(/^\s+|\s+$/g, "") == '' && elm.readAttribute('presence').match(/required/i))
+	    {
+	        warn = true;
+	    }
+	    if(isNaN(elm.value))
+	    {
+	        warn = true;
+	    }
+	    else
+	    {
+	        try
+	        {
+	            var val = parseFloat(elm.value);
+	            if(val < 0.0) 
+	            {
+	                warn = true;
+	            }
+	            else if(val > 100.0)
+	            {
+	                warn = true;
+	            }
+	        }
+	        catch(e)
+	        {
+	            warn = true;
+	        }
+	    }
+	    if(warn)
+	    {
+	        warnField(elm);
+	    }
+	    return !warn;
+	}
+	
+	/**
+	    The updateCheckbox function validates for entry (check) if the field is required.
+	*/
+	function updateCheckbox(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var warn = false;
+	    unwarnField(elm);
+	    
+	    if(elm.checked == false && elm.readAttribute('presence').match(/required/i))
+	    {
+	        warn = true;
+	    } 
+	    
+	    if(warn)
+	    {
+	        warnField(elm);
+	    }
+	    return !warn;
+	}
+	
+	/**
+	    The updateDropdown function validates for non-blank (not BHC_NONE_SEL) selection if the field is required.
+	*/
+	function updateDropdown(id)
+	{
+	    var elm = $(id);
+	    if(elm == null)
+	    {
+	        if(window.debug)
+	        {
+	            alert('The ' + id  + ' element was not found; please ensure that a field with that name has been specified in the configuration file.');
+	        }
+	        return;
+	    }
+	    var warn = false;
+	    unwarnField(elm);
+	    
+	    if(elm.value == 'BHC_NONE_SEL' && elm.readAttribute('presence').match(/required/i))
+	    {
+	        warn = true;
+	    }
+	    
+	    if(warn)
+	    {
+	        warnField(id );
+	    }
+	    return !warn;
+	}
+	
+	function toggleSubsection(lnk, divId)
+	{
+	    var div = $(divId);
+	    lnk = $(lnk);
+	    
+	    //var subsection = div.parentNode;
+	    var subsection = div.up();
+	    
+	    if (!div.visible())
+	    {
+	        showField(divId);
+	        lnk.update(lnk.readAttribute('collapseText'));
+	        subsection.removeClassName('screenOnly');
+	    }
+	    else
+	    {
+	        hideField(divId);
+	        lnk.update(lnk.readAttribute('expandText'));
+	        subsection.addClassName('screenOnly');
+	    }
+	}
+	
+	function SetAttributes(id, options)
+	{
+	    var obj = $(id);
+	    if(obj == null || options == null)
+	    {
+		    return;
+	    }
+	
+	    for(i in options)
+	    {
+		    try
+		    {
+			    if(i == "hint")
+			    {
+				    $(id + "_hint").update(options[i]);
+			    } else if (i == "value")
+			    {
+			        obj.value = options[i];
+			    } else if (i == "display")
+			    {
+			        obj.style.display = options[i];
+			    }
+			    obj.writeAttribute(i.toLowerCase(), options[i]);
+    			
+		    }
+		    catch(ex){}
+	    }
+	}
+</script>

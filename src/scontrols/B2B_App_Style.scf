@@ -1,0 +1,304 @@
+<style>
+body {
+	background-color: #eeeeee;
+	text-align: center;
+	font-family: Arial;
+	position: relative;
+}
+
+form {
+	width: 663px;
+	margin: 5px auto 5px auto;
+	background-color: White;
+	text-align: left;
+}
+
+@media print {
+	.screenOnly {
+		display: none;
+	}
+	.printOnly {
+		visibility: visible;
+	}
+	form {
+		border-style: none;
+	}
+	.field_title,.field_control_cell
+	{
+		padding: 0px;
+	}
+}
+
+@media screen
+{
+	.screenOnly
+	{
+		visibility: visible;
+	}
+	.printOnly
+	{
+		display: none;
+	}
+	form
+	{
+		border: 2px solid Black;
+	}
+	.field_title,.field_control_cell
+	{
+		padding: 5px;
+	}
+}
+
+.application_title_div
+{
+	color: White;
+	background-color: #24b;
+	font-size: 18px;
+	padding: 5px;
+	margin: 5px 5px 5px 5px;
+}
+
+.application_note_div
+{
+	margin: 5px 15px 5px 15px;
+	font-size: 11px;
+}
+
+.application_section_title_div
+{
+	background-color: #87b93c;
+	color: White;
+	font-size: 14px;
+	padding: 5px 5px 5px 5px;
+	margin: auto 5px auto 5px;
+	font-weight: bold;
+}
+
+.application_subsection_title_div
+{
+	background-color: #c82310;
+	color: White;
+	font-size: 12px;
+	padding: 5px;
+	margin: auto auto auto auto;
+	font-weight: bold;
+	width: 92%;
+}
+
+.application_subsection_toggle_link
+{
+	cursor: pointer;
+}
+
+.application_section_note_div,.application_subsection_note_div
+{
+	margin: 10px 10px 10px 10px;
+	font-size: 14px;
+}
+
+.application_section_div,.application_subsection_div
+{
+	font-size: small;
+	margin: 5px auto 5px auto;
+}
+
+.application_section_layout_table,.application_subsection_layout_table {
+	width: 95%;
+	margin: auto auto auto auto;
+}
+
+.application_section_layout_column1,.application_subsection_layout_column1
+{
+	width: 50%;
+	height: 100%;
+	text-align: left;
+	vertical-align: top;
+}
+
+.application_section_layout_column2,.application_subsection_layout_column2
+{
+	width: 50%;
+	height: 100%;
+	vertical-align: top;
+}
+
+.application_section_layout_center_table,.application_section_layout_left_table,.application_section_layout_right_table
+	{
+	width: 100%;
+	margin: 0;
+}
+
+.field_group_note {
+	text-align: left;
+	width: 100%;
+	background-color: #c82310;
+}
+
+.field_title,.fieldGroup_title {
+	text-align: right;
+	font-size: 12px;
+	background-color: #eeeeee;
+	width: 50%;
+}
+
+.fieldGroup_horizontal_field_title {
+	background-color: White;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.fieldGroup_table_field_title {
+	background-color: White;
+	font-size: 11px;
+	text-align: left;
+	vertical-align: bottom;
+}
+
+.field_title_vert {
+	display: block;
+	text-align: left;
+	font-size: 12px;
+	background-color: #eeeeee;
+	width: 100%;
+	padding: 3px 4px 4px 4px;
+	margin-bottom: 2px;
+}
+
+.field_title_required {
+	color: #c82310;
+	font-weight: bold;
+}
+
+.field_control_cell {
+	width: 50%;
+	vertical-align: top;
+}
+
+.field_control_cell_vert {
+	display: block;
+	width: 100%;
+	padding: 3px 4px 4px 4px;
+}
+
+.field_hint {
+	font-size: 10px;
+	text-align: center;
+}
+
+.field_text,.field_date,.field_percent,.field_currency,.field_number,.field_ssn,.field_phone,.field_ein,.field_zip,.field_email
+	{
+	width: 155px;
+	background-color: White;
+	border: 1px solid #7F9DB9;
+}
+
+.field_text_vert,.field_date_vert,.field_percent_vert,.field_currency_vert,.field_number_vert,.field_ssn_vert,.field_phone_vert,.field_ein_vert,.field_zip_vert,.field_email_vert
+	{
+	width: 98%;
+	background-color: White;
+	border: 1px solid #7F9DB9;
+	margin: auto auto auto 5px;
+}
+
+.field_currency {
+	width: 148px;
+	text-align: right;
+	/*background-image: url(images/dollar.jpg);
+	background-position: left;
+	background-repeat: no-repeat;*/
+}
+
+.field_currency_div {
+	width: 100%;
+        white-space: nowrap;
+}
+
+.field_percent {
+	width: 144px;
+	text-align: right;
+	/*padding-right: 15px;
+	background-image: url(images/percent.jpg);
+	background-position: right;
+	background-repeat: no-repeat;*/
+}
+
+.field_number {
+	text-align: right;
+}
+
+.field_dropdown {
+	width: 159px;
+	background-color: White;
+	border: 1px solid #7F9DB9;
+}
+
+.field_dropdown_vert {
+	width: 98%;
+	background-color: White;
+	border: 1px solid #7F9DB9;
+	margin: auto auto auto 5px;
+}
+
+.field_ssn324 {
+	width: 49px;
+	background-color: White;
+	border: 1px solid #7f9db9;
+	text-align: center;
+}
+
+.field_link {
+	width: 100%;
+	text-decoration: underline;
+	color: Blue;
+	cursor: pointer;
+}
+
+.field_control_valid {
+	background-color: White;
+	border: 1px solid #7F9DB9;
+}
+
+.field_control_invalid {
+	background-color: Yellow;
+	border: 1px solid red;
+}
+
+.submit_button_div {
+	text-align: right;
+}
+
+.footer_hr {
+	margin: 10px;
+}
+
+.footer_note_div {
+	margin: 10px;
+	text-align: center;
+	font-size: small;
+}
+
+.field_row_table {
+	text-align: left;
+	font-size: 11px;
+}
+
+.application_section_layout_center_table {
+	border-collapse: collapse;
+}
+
+.field_vert_cell {
+	padding-left: 0px;
+}
+
+.field_control_error {
+	background-color: Red;
+	color: White;
+	border: solid 1px Black;
+	font-weight: bold;
+	font-size: 11px;
+	padding: 2px;
+	margin: 2px auto 2px auto;
+	text-align: center;
+}
+</style>

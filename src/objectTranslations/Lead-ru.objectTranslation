@@ -1,0 +1,3804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Accepts Credit Cards? --></label>
+        <name>Accepts_Credit_Cards__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Accounts Receivable Amount --></label>
+        <name>Accounts_Receivable_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Advance Amount Requested --></label>
+        <name>Advance_Amount_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount Requested --></label>
+        <name>Amount_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Awaiting CC Flag --></label>
+        <name>Awaiting_CC_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- BD Round Robin --></label>
+        <name>BD_Round_Robin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Best Time to Call? --></label>
+        <name>Best_Time_to_Call__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Email Address --></label>
+        <name>Business_Email_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Open Tax Lien Amount --></label>
+        <name>Business_Open_Tax_Lien_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Open Tax Lien Payment Plan --></label>
+        <name>Business_Open_Tax_Lien_Payment_Plan__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Business Structure --></label>
+        <name>Business_Structure__c</name>
+        <picklistValues>
+            <masterLabel>C-Corporation</masterLabel>
+            <translation><!-- C-Corporation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Partnership</masterLabel>
+            <translation><!-- General Partnership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited Liability Company</masterLabel>
+            <translation><!-- Limited Liability Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited Liability Partnership</masterLabel>
+            <translation><!-- Limited Liability Partnership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited Partnership</masterLabel>
+            <translation><!-- Limited Partnership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proprietorship</masterLabel>
+            <translation><!-- Proprietorship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S-Corporation</masterLabel>
+            <translation><!-- S-Corporation --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CALC Link --></label>
+        <name>CALC_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- CI Score --></label>
+        <name>CI_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Name Upload --></label>
+        <name>Campaign_Name_Upload__c</name>
+    </fields>
+    <fields>
+        <help><!-- Swift partner campaign names. --></help>
+        <label><!-- Campaign Names --></label>
+        <name>Campaign_Names__c</name>
+        <picklistValues>
+            <masterLabel>Artisans&apos; Bank</masterLabel>
+            <translation><!-- Artisans&apos; Bank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dover Commercial Lending</masterLabel>
+            <translation><!-- Dover Commercial Lending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swift Test Campaign</masterLabel>
+            <translation><!-- Swift Test Campaign --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Residential Delivery Indicator --></label>
+        <name>CloudingoAgent__ARDI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Type --></label>
+        <name>CloudingoAgent__AR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Status --></label>
+        <name>CloudingoAgent__AS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Timezone --></label>
+        <name>CloudingoAgent__ATZ__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Vacancy --></label>
+        <name>CloudingoAgent__AV__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Email Status --></label>
+        <name>CloudingoAgent__LES__c</name>
+    </fields>
+    <fields>
+        <label><!-- ColdCall Lead Ass --></label>
+        <name>ColdCall_Lead_Ass__c</name>
+    </fields>
+    <fields>
+        <label><!-- Collateral Available --></label>
+        <name>Collateral_Available__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company corp ID --></label>
+        <name>Company_corp_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competitor Advance Company --></label>
+        <name>Competitor_Advance_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy Email --></label>
+        <name>Copy_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy Name --></label>
+        <name>Copy_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Cards --></label>
+        <name>Credit_Cards__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Processor --></label>
+        <name>Current_Processor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Fax Email --></label>
+        <name>Custom_Fax_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- DNB Marketing Prescreen Score --></label>
+        <name>DNB_Marketing_Prescreen_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- DO NOT FAX --></label>
+        <name>DO_NOT_FAX__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Open Date --></label>
+        <name>DateBusinessStarted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 Date Of Birth --></label>
+        <name>Date_Of_Birth__c</name>
+    </fields>
+    <fields>
+        <help><!-- Did you talk to someone about RapidAdvance prior to submitting your application on the web? --></help>
+        <label><!-- Did you talk to a Sales Rep.? --></label>
+        <name>Did_you_talk_to_a_Sales_Rep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Does Merchant Own Their Building? --></label>
+        <name>Does_Merchant_Own_Their_Building__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Dynamic Assignment --></label>
+        <name>Dynamic_Assignment__c</name>
+    </fields>
+    <fields>
+        <label><!-- EFax Address --></label>
+        <name>EFax_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Custom Field --></label>
+        <name>Email_Custom_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Opened - Please Call --></label>
+        <name>Email_Opened_Please_Call__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Present - Lead --></label>
+        <name>Email_Present_Lead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entry URL --></label>
+        <name>Entry_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expired Lead --></label>
+        <name>Expired_Lead__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- External Status --></label>
+        <name>External_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fax # --></label>
+        <name>Fax2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Do not use spaces, dashes, or brackets in the fax number. Please enter as follows: 2405142010 --></help>
+        <label><!-- Fax Number --></label>
+        <name>Fax_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Federal Tax ID Number --></label>
+        <name>Federal_Tax_ID_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Federal or State Tax Liens? --></label>
+        <name>Federal_or_State_Tax_Liens__c</name>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNSURE</masterLabel>
+            <translation><!-- UNSURE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Has Principal declared bankruptcy within the last ten (10) years? --></help>
+        <label><!-- Filed for bankruptcy? --></label>
+        <name>Filed_for_bankruptcy_del__c</name>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Five9 Call Counter --></label>
+        <name>Five9_Call_Counter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flag Brad Leads --></label>
+        <name>Flag_Brad_Leads__c</name>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Flag Previous Lead Owner --></label>
+        <name>Flag_Previous_Lead_Owner__c</name>
+        <picklistValues>
+            <masterLabel>Brent Gardner</masterLabel>
+            <translation><!-- Brent Gardner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chris Payer</masterLabel>
+            <translation><!-- Chris Payer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cleaned</masterLabel>
+            <translation><!-- Cleaned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Erick Guerrero</masterLabel>
+            <translation><!-- Erick Guerrero --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>James Lang</masterLabel>
+            <translation><!-- James Lang --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jeff Hageman</masterLabel>
+            <translation><!-- Jeff Hageman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michael Dodge</masterLabel>
+            <translation><!-- Michael Dodge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michael Massey</masterLabel>
+            <translation><!-- Michael Massey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No One</masterLabel>
+            <translation><!-- No One --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peter Havenstein</masterLabel>
+            <translation><!-- Peter Havenstein --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Flag Tim J Leads --></label>
+        <name>Flag_Tim_J_Leads__c</name>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation><!-- NO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YES</masterLabel>
+            <translation><!-- YES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Follow Needed Count --></label>
+        <name>Follow_Needed_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google AdGroup --></label>
+        <name>Google_AdGroup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Ad Position --></label>
+        <name>Google_Ad_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Device --></label>
+        <name>Google_Device__c</name>
+    </fields>
+    <fields>
+        <label><!-- Government Insurace --></label>
+        <name>Government_Insurace__c</name>
+    </fields>
+    <fields>
+        <label><!-- Greg Deal Status --></label>
+        <name>Greg_Deal_Status__c</name>
+        <picklistValues>
+            <masterLabel>DUPLICATE LEAD</masterLabel>
+            <translation><!-- DUPLICATE LEAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing Customer</masterLabel>
+            <translation><!-- Existing Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow Up Call Needed</masterLabel>
+            <translation><!-- Follow Up Call Needed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incomplete contact/company information</masterLabel>
+            <translation><!-- Incomplete contact/company information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Language Barrier</masterLabel>
+            <translation><!-- Language Barrier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Interested</masterLabel>
+            <translation><!-- Not Interested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Legitimate</masterLabel>
+            <translation><!-- Not Legitimate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not qualified, Wrong SIC</masterLabel>
+            <translation><!-- Not qualified, Wrong SIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not the Owner</masterLabel>
+            <translation><!-- Not the Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote submitted</masterLabel>
+            <translation><!-- Quote submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requested Information Only</masterLabel>
+            <translation><!-- Requested Information Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Started application sent</masterLabel>
+            <translation><!-- Started application sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted to Partner</masterLabel>
+            <translation><!-- Submitted to Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>submitted to Partner-Starter Program</masterLabel>
+            <translation><!-- submitted to Partner-Starter Program --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Greg Partner Final Status --></label>
+        <name>Greg_Partner_Final_Status__c</name>
+        <picklistValues>
+            <masterLabel>No Success</masterLabel>
+            <translation><!-- No Success --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation><!-- Success --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Greg Success Number --></label>
+        <name>Greg_Success_Number__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Greg Total Lead Success --></label>
+        <name>Greg_Total_Lead_Success__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gross Monthly Income --></label>
+        <name>Gross_Monthly_Income__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gross Monthly Sales --></label>
+        <name>Gross_Monthly_Sales_Cur__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gross Monthly Sales --></label>
+        <name>Gross_Monthly_Sales__c</name>
+        <picklistValues>
+            <masterLabel>0 - 2,500</masterLabel>
+            <translation><!-- 0 - 2,500 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10,000 - 20,000</masterLabel>
+            <translation><!-- 10,000 - 20,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100,000 - 120,000</masterLabel>
+            <translation><!-- 100,000 - 120,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>120,000 - 140,000</masterLabel>
+            <translation><!-- 120,000 - 140,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>140,000 - 160,000</masterLabel>
+            <translation><!-- 140,000 - 160,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>160,000 - 180,000</masterLabel>
+            <translation><!-- 160,000 - 180,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>180,000 - 200,000</masterLabel>
+            <translation><!-- 180,000 - 200,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2,500 - 5,000</masterLabel>
+            <translation><!-- 2,500 - 5,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20,000 - 40,000</masterLabel>
+            <translation><!-- 20,000 - 40,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>200,000+</masterLabel>
+            <translation><!-- 200,000+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40,000 - 60,000</masterLabel>
+            <translation><!-- 40,000 - 60,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5,000 - 10,000</masterLabel>
+            <translation><!-- 5,000 - 10,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60,000 - 80,000</masterLabel>
+            <translation><!-- 60,000 - 80,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>80,000 - 100,000</masterLabel>
+            <translation><!-- 80,000 - 100,000 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How did you hear about us? --></label>
+        <name>How_did_you_hear_about_us__c</name>
+        <picklistValues>
+            <masterLabel>Current Customer</masterLabel>
+            <translation><!-- Current Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Search</masterLabel>
+            <translation><!-- Internet Search --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mag/Newspaper Ad</masterLabel>
+            <translation><!-- Mag/Newspaper Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mailer</masterLabel>
+            <translation><!-- Mailer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Card</masterLabel>
+            <translation><!-- Post Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Rep</masterLabel>
+            <translation><!-- Sales Rep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Statement/Bill Insert</masterLabel>
+            <translation><!-- Statement/Bill Insert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TV Commercial</masterLabel>
+            <translation><!-- TV Commercial --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How long has your business been open? --></label>
+        <name>How_long_has_your_business_been_open__c</name>
+    </fields>
+    <fields>
+        <label><!-- IP Address --></label>
+        <name>IP_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- If &quot;Other&quot; please explain: --></label>
+        <name>If_Other_please_explain__c</name>
+    </fields>
+    <fields>
+        <name>Industry</name>
+        <picklistValues>
+            <masterLabel>Agriculture</masterLabel>
+            <translation><!-- Agriculture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Apparel</masterLabel>
+            <translation><!-- Apparel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auto Parts</masterLabel>
+            <translation><!-- Auto Parts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive</masterLabel>
+            <translation><!-- Automotive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banking</masterLabel>
+            <translation><!-- Banking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biotechnology</masterLabel>
+            <translation><!-- Biotechnology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chemicals</masterLabel>
+            <translation><!-- Chemicals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communications</masterLabel>
+            <translation><!-- Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consulting</masterLabel>
+            <translation><!-- Consulting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics</masterLabel>
+            <translation><!-- Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Energy</masterLabel>
+            <translation><!-- Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environmental</masterLabel>
+            <translation><!-- Environmental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food &amp; Beverage</masterLabel>
+            <translation><!-- Food &amp; Beverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair Salon</masterLabel>
+            <translation><!-- Hair Salon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare</masterLabel>
+            <translation><!-- Healthcare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospitality</masterLabel>
+            <translation><!-- Hospitality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance</masterLabel>
+            <translation><!-- Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Machinery</masterLabel>
+            <translation><!-- Machinery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manufacturing</masterLabel>
+            <translation><!-- Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media</masterLabel>
+            <translation><!-- Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not For Profit</masterLabel>
+            <translation><!-- Not For Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recreation</masterLabel>
+            <translation><!-- Recreation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restuarant</masterLabel>
+            <translation><!-- Restuarant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salon &amp; Nails</masterLabel>
+            <translation><!-- Salon &amp; Nails --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shipping</masterLabel>
+            <translation><!-- Shipping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tanning Salon</masterLabel>
+            <translation><!-- Tanning Salon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technology</masterLabel>
+            <translation><!-- Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telecommunications</masterLabel>
+            <translation><!-- Telecommunications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation</masterLabel>
+            <translation><!-- Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities</masterLabel>
+            <translation><!-- Utilities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Inquiry Date --></label>
+        <name>Inquiry_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insurance Type 1 --></label>
+        <name>Insurance_Type_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insurance Type 2 --></label>
+        <name>Insurance_Type_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insurance Type 3 --></label>
+        <name>Insurance_Type_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insurance Type 4 --></label>
+        <name>Insurance_Type_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insurance Type 5 --></label>
+        <name>Insurance_Type_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insurance Type 6 --></label>
+        <name>Insurance_Type_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel Monthly Cost --></label>
+        <name>Internet_Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Business for Sale? --></label>
+        <name>Is_Business_for_Sale__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Keyword Match Type --></label>
+        <name>Keyword_Match_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Landlord/Agent Name --></label>
+        <name>Landlord_Agent_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Landlord/Agent Phone Number --></label>
+        <name>Landlord_Agent_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last 3 Months Avg Credit Card Processing --></label>
+        <name>Last_3_Months_Avg_Credit_Card_Processing__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeadCount --></label>
+        <name>LeadCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeadID --></label>
+        <name>LeadID__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeadId18Char --></label>
+        <name>LeadId18Char__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Owner Fax --></label>
+        <name>LeadOwnerFax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Owner ID (Full) --></label>
+        <name>LeadOwnerID_Full__c</name>
+    </fields>
+    <fields>
+        <label><!-- LeadOwnerID --></label>
+        <name>LeadOwnerID__c</name>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>---------------------------------------</masterLabel>
+            <translation><!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100% Paid Off</masterLabel>
+            <translation><!-- 100% Paid Off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agent</masterLabel>
+            <translation><!-- Agent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auto Dialer</masterLabel>
+            <translation><!-- Auto Dialer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calc Lander Web to Lead</masterLabel>
+            <translation><!-- Calc Lander Web to Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call-In</masterLabel>
+            <translation><!-- Call-In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cold Call</masterLabel>
+            <translation><!-- Cold Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Journey Web to Lead</masterLabel>
+            <translation><!-- Customer Journey Web to Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Mail</masterLabel>
+            <translation><!-- Direct Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Campaign</masterLabel>
+            <translation><!-- Email Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Experian List</masterLabel>
+            <translation><!-- Experian List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facebook</masterLabel>
+            <translation><!-- Facebook --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fraud Alert From NAMAA</masterLabel>
+            <translation><!-- Fraud Alert From NAMAA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google+</masterLabel>
+            <translation><!-- Google+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Generation</masterLabel>
+            <translation><!-- Lead Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LinkedIn</masterLabel>
+            <translation><!-- LinkedIn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>List Purchase</masterLabel>
+            <translation><!-- List Purchase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meridian Direct Mail</masterLabel>
+            <translation><!-- Meridian Direct Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newsletter</masterLabel>
+            <translation><!-- Newsletter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner-Web</masterLabel>
+            <translation><!-- Partner-Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print Ad</masterLabel>
+            <translation><!-- Print Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Relations</masterLabel>
+            <translation><!-- Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radio</masterLabel>
+            <translation><!-- Radio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radio Ad</masterLabel>
+            <translation><!-- Radio Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal Campaign - Existing Merchants</masterLabel>
+            <translation><!-- Renewal Campaign - Existing Merchants --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rock Connections</masterLabel>
+            <translation><!-- Rock Connections --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Internal</masterLabel>
+            <translation><!-- Seminar - Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Partner</masterLabel>
+            <translation><!-- Seminar - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spanish Web-To-Lead</masterLabel>
+            <translation><!-- Spanish Web-To-Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TV-Call-In</masterLabel>
+            <translation><!-- TV-Call-In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telemarketing - Partner</masterLabel>
+            <translation><!-- Telemarketing - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Twitter</masterLabel>
+            <translation><!-- Twitter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UCC1 - List</masterLabel>
+            <translation><!-- UCC1 - List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web-Call-In</masterLabel>
+            <translation><!-- Web-Call-In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web-To-Lead</masterLabel>
+            <translation><!-- Web-To-Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow Pages</masterLabel>
+            <translation><!-- Yellow Pages --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Age trigger --></label>
+        <name>Lead_Age_trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Country --></label>
+        <name>Lead_Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Created Date --></label>
+        <name>Lead_Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Level --></label>
+        <name>Lead_Level__c</name>
+        <picklistValues>
+            <masterLabel>1 - New Live Lead</masterLabel>
+            <translation><!-- 1 - New Live Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 - Called Lead; Not Contact Yet</masterLabel>
+            <translation><!-- 2 - Called Lead; Not Contact Yet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - Made Contact; Need to Follow Up</masterLabel>
+            <translation><!-- 3 - Made Contact; Need to Follow Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 - Lead Interested; Submitting CC Stmnts</masterLabel>
+            <translation><!-- 4 - Lead Interested; Submitting CC Stmnts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 - Rec&apos;d CC Stmnts; Preparing Quote</masterLabel>
+            <translation><!-- 5 - Rec&apos;d CC Stmnts; Preparing Quote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 - Quote Submitted; Waiting On Approval</masterLabel>
+            <translation><!-- 6 - Quote Submitted; Waiting On Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 - Quote Approved; Lead ok to Convert</masterLabel>
+            <translation><!-- 7 - Quote Approved; Lead ok to Convert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8 - Future Possibility for Business</masterLabel>
+            <translation><!-- 8 - Future Possibility for Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9 - No Future Possibility for Business</masterLabel>
+            <translation><!-- 9 - No Future Possibility for Business --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Number --></label>
+        <name>Lead_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Owner Fax --></label>
+        <name>Lead_Owner_Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Owner (Text) --></label>
+        <name>Lead_Owner_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legal Name --></label>
+        <name>Legal_Business_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line of Business --></label>
+        <name>Line_of_Business__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 5 Address: --></label>
+        <name>Location_1_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 5 DBA NAME: --></label>
+        <name>Location_1_DBA_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 5 Fax Number: --></label>
+        <name>Location_1_Fax_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 5 Landlord Contact Name: --></label>
+        <name>Location_1_Landlord_Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 5 Landlord Phone Number: --></label>
+        <name>Location_1_Landlord_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 5 Phone Number: --></label>
+        <name>Location_1_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 2 Address: --></label>
+        <name>Location_2_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 2 DBA NAME: --></label>
+        <name>Location_2_DBA_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 2 Fax Number: --></label>
+        <name>Location_2_Fax_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 2 Landlord Contact Name: --></label>
+        <name>Location_2_Landlord_Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 2 Landlord Phone Number: --></label>
+        <name>Location_2_Landlord_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 2 Phone Number: --></label>
+        <name>Location_2_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 2: Time Remaining On The Lease --></label>
+        <name>Location_2_Time_Remaining_On_The_Lease__c</name>
+        <picklistValues>
+            <masterLabel>1 - 6 months</masterLabel>
+            <translation><!-- 1 - 6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Year</masterLabel>
+            <translation><!-- 1 Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Years</masterLabel>
+            <translation><!-- 2 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Years</masterLabel>
+            <translation><!-- 3 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 Years</masterLabel>
+            <translation><!-- 4 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 years +</masterLabel>
+            <translation><!-- 5 years + --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 - 11 months</masterLabel>
+            <translation><!-- 7 - 11 months --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Location 3 Address: --></label>
+        <name>Location_3_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 3 DBA NAME: --></label>
+        <name>Location_3_DBA_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 3 Fax Number: --></label>
+        <name>Location_3_Fax_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 3 Landlord Contact Name: --></label>
+        <name>Location_3_Landlord_Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 3 Landlord Phone Number: --></label>
+        <name>Location_3_Landlord_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 3 Phone Number: --></label>
+        <name>Location_3_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 3: Time Remaining On The Lease --></label>
+        <name>Location_3_Time_Remaining_On_The_Lease__c</name>
+        <picklistValues>
+            <masterLabel>1 - 6 months</masterLabel>
+            <translation><!-- 1 - 6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Year</masterLabel>
+            <translation><!-- 1 Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Years</masterLabel>
+            <translation><!-- 2 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Years</masterLabel>
+            <translation><!-- 3 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 Years</masterLabel>
+            <translation><!-- 4 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 years +</masterLabel>
+            <translation><!-- 5 years + --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 - 11 months</masterLabel>
+            <translation><!-- 7 - 11 months --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Location 4 Address: --></label>
+        <name>Location_4_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 4 DBA NAME: --></label>
+        <name>Location_4_DBA_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 4 Fax Number: --></label>
+        <name>Location_4_Fax_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 4 Landlord Contact Name: --></label>
+        <name>Location_4_Landlord_Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 4 Landlord Phone Number: --></label>
+        <name>Location_4_Landlord_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 4 Phone Number: --></label>
+        <name>Location_4_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location 4: Time Remaining On The Lease --></label>
+        <name>Location_4_Time_Remaining_On_The_Lease__c</name>
+        <picklistValues>
+            <masterLabel>1 - 6 months</masterLabel>
+            <translation><!-- 1 - 6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Year</masterLabel>
+            <translation><!-- 1 Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Years</masterLabel>
+            <translation><!-- 2 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Years</masterLabel>
+            <translation><!-- 3 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 Years</masterLabel>
+            <translation><!-- 4 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 years +</masterLabel>
+            <translation><!-- 5 years + --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 - 11 months</masterLabel>
+            <translation><!-- 7 - 11 months --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Location 5: Time Remaining On The Lease --></label>
+        <name>Location_5_Time_Remaining_On_The_Lease__c</name>
+        <picklistValues>
+            <masterLabel>1 - 6 months</masterLabel>
+            <translation><!-- 1 - 6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Year</masterLabel>
+            <translation><!-- 1 Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Years</masterLabel>
+            <translation><!-- 2 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Years</masterLabel>
+            <translation><!-- 3 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 Years</masterLabel>
+            <translation><!-- 4 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 years +</masterLabel>
+            <translation><!-- 5 years + --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 - 11 months</masterLabel>
+            <translation><!-- 7 - 11 months --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MI Score --></label>
+        <name>MI_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Merchant ID Number --></label>
+        <name>Merchant_ID_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Middle Name --></label>
+        <name>Middle_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mini Application Submitted --></label>
+        <name>Mini_Application_Submitted__c</name>
+        <picklistValues>
+            <masterLabel>0</masterLabel>
+            <translation><!-- 0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Missing Items --></label>
+        <name>Missing_Items__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mkt Channels --></label>
+        <name>Mkt_Channels__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mkt Month --></label>
+        <name>Mkt_Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mktg Reminder --></label>
+        <name>Mktg_Reminder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Credit Card Sales --></label>
+        <name>Monthly_Credit_Card_Sales__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Gross Salary --></label>
+        <name>Monthly_Gross_Salary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Visa/Mastercard Sales --></label>
+        <name>Monthly_Visa_Mastercard_Volume__c</name>
+        <picklistValues>
+            <masterLabel>0 - 2,500</masterLabel>
+            <translation><!-- 0 - 2,500 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10,000 - 20,000</masterLabel>
+            <translation><!-- 10,000 - 20,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100,000 +</masterLabel>
+            <translation><!-- 100,000 + --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2,500 - 5,000</masterLabel>
+            <translation><!-- 2,500 - 5,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20,000 - 40,000</masterLabel>
+            <translation><!-- 20,000 - 40,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3,500 - 5,000</masterLabel>
+            <translation><!-- 3,500 - 5,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40,000 - 60,000</masterLabel>
+            <translation><!-- 40,000 - 60,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5,000 - 10,000</masterLabel>
+            <translation><!-- 5,000 - 10,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60,000 - 80,000</masterLabel>
+            <translation><!-- 60,000 - 80,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>80,000 - 100,000</masterLabel>
+            <translation><!-- 80,000 - 100,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Does Not Accept Visa/MC</masterLabel>
+            <translation><!-- Does Not Accept Visa/MC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Monthly Volume (Ins Type 1) --></label>
+        <name>Monthly_Volume_Ins_Type_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Volume (Ins Type 2) --></label>
+        <name>Monthly_Volume_Ins_Type_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Volume (Ins Type 3) --></label>
+        <name>Monthly_Volume_Ins_Type_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Volume (Ins Type 4) --></label>
+        <name>Monthly_Volume_Ins_Type_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Volume (Ins Type 5) --></label>
+        <name>Monthly_Volume_Ins_Type_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Volume (Ins Type 6) --></label>
+        <name>Monthly_Volume_Ins_Type_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Remaining On Site Lease/Mortgage --></label>
+        <name>Months_Remaining_On_Site_Lease_Mortgage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Months at Current Address --></label>
+        <name>Months_at_Current_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Months at Previous Address --></label>
+        <name>Months_at_Previous_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Months with Current Processor --></label>
+        <name>Months_with_Current_Processor__c</name>
+    </fields>
+    <fields>
+        <label><!-- NAICS --></label>
+        <name>NAICS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name of Bank (Personal) --></label>
+        <name>Name_of_Bank_Personal__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Lead Source --></label>
+        <name>New_Lead_Source__c</name>
+        <picklistValues>
+            <masterLabel>100% Paid Off</masterLabel>
+            <translation><!-- 100% Paid Off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AAHOA - Post Card May 2008</masterLabel>
+            <translation><!-- AAHOA - Post Card May 2008 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agent</masterLabel>
+            <translation><!-- Agent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ameridial</masterLabel>
+            <translation><!-- Ameridial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auto Dialer</masterLabel>
+            <translation><!-- Auto Dialer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barrata Web To Lead</masterLabel>
+            <translation><!-- Barrata Web To Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cold Call</masterLabel>
+            <translation><!-- Cold Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Mail</masterLabel>
+            <translation><!-- Direct Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Mail DMCK 506</masterLabel>
+            <translation><!-- Direct Mail DMCK 506 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Mail DMCK1106</masterLabel>
+            <translation><!-- Direct Mail DMCK1106 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Mail DMCK406</masterLabel>
+            <translation><!-- Direct Mail DMCK406 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Mail DMPTM 0506</masterLabel>
+            <translation><!-- Direct Mail DMPTM 0506 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Campaign</masterLabel>
+            <translation><!-- Email Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Experian List</masterLabel>
+            <translation><!-- Experian List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ExpertServ</masterLabel>
+            <translation><!-- ExpertServ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Search</masterLabel>
+            <translation><!-- Internet Search --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mercury Statement Insert</masterLabel>
+            <translation><!-- Mercury Statement Insert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mini Web-to-Lead</masterLabel>
+            <translation><!-- Mini Web-to-Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NXGEN - Quancor</masterLabel>
+            <translation><!-- NXGEN - Quancor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newsletter</masterLabel>
+            <translation><!-- Newsletter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POSTCARD - GENERAL</masterLabel>
+            <translation><!-- POSTCARD - GENERAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POSTCARD - RENEWAL</masterLabel>
+            <translation><!-- POSTCARD - RENEWAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Card #2 51206</masterLabel>
+            <translation><!-- Post Card #2 51206 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Card 51206</masterLabel>
+            <translation><!-- Post Card 51206 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Card DMP 2406</masterLabel>
+            <translation><!-- Post Card DMP 2406 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Card DMPC 506</masterLabel>
+            <translation><!-- Post Card DMPC 506 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print Ad</masterLabel>
+            <translation><!-- Print Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Relations</masterLabel>
+            <translation><!-- Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quancor</masterLabel>
+            <translation><!-- Quancor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quancor - HOT LEAD</masterLabel>
+            <translation><!-- Quancor - HOT LEAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RBS Lynk - Post Card MAY 2008</masterLabel>
+            <translation><!-- RBS Lynk - Post Card MAY 2008 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RBS Web-To-Lead</masterLabel>
+            <translation><!-- RBS Web-To-Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RBSLynk - Post Card JUNE 2008</masterLabel>
+            <translation><!-- RBSLynk - Post Card JUNE 2008 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radio</masterLabel>
+            <translation><!-- Radio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recycle Project - Quancor</masterLabel>
+            <translation><!-- Recycle Project - Quancor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recycle Project - Quancor JULY 2008</masterLabel>
+            <translation><!-- Recycle Project - Quancor JULY 2008 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recycle Project - Quancor MAY 2008</masterLabel>
+            <translation><!-- Recycle Project - Quancor MAY 2008 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal Postcard - March 2008</masterLabel>
+            <translation><!-- Renewal Postcard - March 2008 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Internal</masterLabel>
+            <translation><!-- Seminar - Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Partner</masterLabel>
+            <translation><!-- Seminar - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telemarketing - Partner</masterLabel>
+            <translation><!-- Telemarketing - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UCC1 - List</masterLabel>
+            <translation><!-- UCC1 - List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VentureDirect-Call</masterLabel>
+            <translation><!-- VentureDirect-Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web-To-Lead</masterLabel>
+            <translation><!-- Web-To-Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow Pages</masterLabel>
+            <translation><!-- Yellow Pages --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- New Partner Contact --></label>
+        <name>New_Partner_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Not Interested Count --></label>
+        <name>Not_Interested_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Not Interested Reason --></label>
+        <name>Not_Interested_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Able to get funds elsewhere</masterLabel>
+            <translation><!-- Able to get funds elsewhere --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Looking for personal loan</masterLabel>
+            <translation><!-- Looking for personal loan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Term too short</masterLabel>
+            <translation><!-- Term too short --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>This is not the right time</masterLabel>
+            <translation><!-- This is not the right time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Too Expensive</masterLabel>
+            <translation><!-- Too Expensive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wanted more money</masterLabel>
+            <translation><!-- Wanted more money --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Notes Link --></label>
+        <name>Notes_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Locations --></label>
+        <name>Number_of_Locations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of terminal at location? --></label>
+        <name>Number_of_terminal_at_location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length of time in business --></label>
+        <name>Operating_Since__c</name>
+        <picklistValues>
+            <masterLabel>1 year to 2 years</masterLabel>
+            <translation><!-- 1 year to 2 years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 months to 1 year</masterLabel>
+            <translation><!-- 6 months to 1 year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than 1 year</masterLabel>
+            <translation><!-- Less than 1 year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less then 6 months</masterLabel>
+            <translation><!-- Less then 6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>More than 2 years</masterLabel>
+            <translation><!-- More than 2 years --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Original Owner --></label>
+        <name>Original_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Income Explination --></label>
+        <name>Other_Income_Explination__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Income --></label>
+        <name>Other_Income__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owned Business Since --></label>
+        <name>Owned_Business_Since__c</name>
+    </fields>
+    <fields>
+        <label><!-- OwnerFax --></label>
+        <name>OwnerFax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Ext --></label>
+        <name>P1_Phone_Ext__c</name>
+    </fields>
+    <fields>
+        <label><!-- PPC Creative --></label>
+        <name>PPC_Creative__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Application Number --></label>
+        <name>Partner_Application_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Credit Score --></label>
+        <name>Partner_Credit_Score_txt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 Percent Ownership --></label>
+        <name>Percent_Ownership__c</name>
+    </fields>
+    <fields>
+        <label><!-- Personal Credit Score (text) --></label>
+        <name>Personal_Credit_Score_text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Ext --></label>
+        <name>Phone_Ext__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Number (email &amp; postcard) --></label>
+        <name>Postcard_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Language --></label>
+        <name>Preferred_Language__c</name>
+        <picklistValues>
+            <masterLabel>Chinese</masterLabel>
+            <translation><!-- Chinese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English</masterLabel>
+            <translation><!-- English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French</masterLabel>
+            <translation><!-- French --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spanish</masterLabel>
+            <translation><!-- Spanish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vietnamese</masterLabel>
+            <translation><!-- Vietnamese --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Preferred Method of Contact --></label>
+        <name>Preferred_Method_of_Contact__c</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Present Management Since --></label>
+        <name>Present_Management_Since__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Lead Owner --></label>
+        <name>Previous_Lead_Owner__c</name>
+        <relationshipLabel><!-- Leads (Previous Lead Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Previous Owner 1 --></label>
+        <name>Previous_Owner_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Owner 2 --></label>
+        <name>Previous_Owner_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Owner 3 --></label>
+        <name>Previous_Owner_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 City --></label>
+        <name>Principal_1_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 Country --></label>
+        <name>Principal_1_Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 Email --></label>
+        <name>Principal_1_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 State --></label>
+        <name>Principal_1_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 Street Address --></label>
+        <name>Principal_1_Street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 Zip --></label>
+        <name>Principal_1_Zip__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 City --></label>
+        <name>Principal_2_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Date Of Birth --></label>
+        <name>Principal_2_Date_Of_Birth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Email --></label>
+        <name>Principal_2_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 First Name --></label>
+        <name>Principal_2_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Last Name --></label>
+        <name>Principal_2_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Mobile --></label>
+        <name>Principal_2_Mobile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Percent Ownership --></label>
+        <name>Principal_2_Percent_Ownership__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Phone --></label>
+        <name>Principal_2_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Social Security --></label>
+        <name>Principal_2_Social_Security__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 State --></label>
+        <name>Principal_2_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Street Address --></label>
+        <name>Principal_2_Street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Zip --></label>
+        <name>Principal_2_Zip__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal Current Annual Income? --></label>
+        <name>Principal_Current_Annual_Income__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 Phone --></label>
+        <name>Principal_Home_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal Type --></label>
+        <name>Principal_Type__c</name>
+        <picklistValues>
+            <masterLabel>Co-Signer and Guarantor</masterLabel>
+            <translation><!-- Co-Signer and Guarantor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guarantor</masterLabel>
+            <translation><!-- Guarantor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Signer and Guarantor</masterLabel>
+            <translation><!-- Signer and Guarantor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Private Insurance --></label>
+        <name>Private_Insurance__c</name>
+    </fields>
+    <fields>
+        <label><!-- ProMED Lead --></label>
+        <name>ProMED_Lead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Interest --></label>
+        <name>ProductInterest__c</name>
+        <picklistValues>
+            <masterLabel>ATM &amp; Telephone Banking</masterLabel>
+            <translation><!-- ATM &amp; Telephone Banking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash Management</masterLabel>
+            <translation><!-- Cash Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Checking &amp; Money Market Savings</masterLabel>
+            <translation><!-- Checking &amp; Money Market Savings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Solutions</masterLabel>
+            <translation><!-- Credit Solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance and Employee Benefits</masterLabel>
+            <translation><!-- Insurance and Employee Benefits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International Services</masterLabel>
+            <translation><!-- International Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant Services</masterLabel>
+            <translation><!-- Merchant Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Servives</masterLabel>
+            <translation><!-- Online Servives --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payroll Services</masterLabel>
+            <translation><!-- Payroll Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retirement Plans &amp; Investment</masterLabel>
+            <translation><!-- Retirement Plans &amp; Investment --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <picklistValues>
+            <masterLabel>ACH Fixed</masterLabel>
+            <translation><!-- ACH Fixed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Decline Program</masterLabel>
+            <translation><!-- Decline Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loan</masterLabel>
+            <translation><!-- Loan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loan w/MCA pricing</masterLabel>
+            <translation><!-- Loan w/MCA pricing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MCA</masterLabel>
+            <translation><!-- MCA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Starter Program</masterLabel>
+            <translation><!-- Starter Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Syndication ACH Fixed</masterLabel>
+            <translation><!-- Syndication ACH Fixed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Syndication Loan</masterLabel>
+            <translation><!-- Syndication Loan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Syndication MCA</masterLabel>
+            <translation><!-- Syndication MCA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Syndication Starter Program</masterLabel>
+            <translation><!-- Syndication Starter Program --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product_txt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prohibited Business Type --></label>
+        <name>Prohibited_Business_Type__c</name>
+        <picklistValues>
+            <masterLabel>Adult Entertainment</masterLabel>
+            <translation><!-- Adult Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertising Services</masterLabel>
+            <translation><!-- Advertising Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Airlines</masterLabel>
+            <translation><!-- Airlines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Annual memberships</masterLabel>
+            <translation><!-- Annual memberships --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Antique/Collectibles</masterLabel>
+            <translation><!-- Antique/Collectibles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Appliance Stores</masterLabel>
+            <translation><!-- Appliance Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Appraisal Services</masterLabel>
+            <translation><!-- Appraisal Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auction Houses (1/1/09)</masterLabel>
+            <translation><!-- Auction Houses (1/1/09) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automobile Dealerships New/Used  (1/1/09)</masterLabel>
+            <translation><!-- Automobile Dealerships New/Used  (1/1/09) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bail Bonds</masterLabel>
+            <translation><!-- Bail Bonds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Big Ticket (i.e. Apartment)</masterLabel>
+            <translation><!-- Big Ticket (i.e. Apartment) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billiards</masterLabel>
+            <translation><!-- Billiards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bit Tick Retail (i.e. electronic, audio equipment)</masterLabel>
+            <translation><!-- Bit Tick Retail (i.e. electronic, audio equipment) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Boating/Marina</masterLabel>
+            <translation><!-- Boating/Marina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canadian Merchant</masterLabel>
+            <translation><!-- Canadian Merchant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Casinos</masterLabel>
+            <translation><!-- Casinos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Credit Counseling Services</masterLabel>
+            <translation><!-- Consumer Credit Counseling Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cruise Ships</masterLabel>
+            <translation><!-- Cruise Ships --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Day Care Services  (1/1/09)</masterLabel>
+            <translation><!-- Day Care Services  (1/1/09) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Day Tours</masterLabel>
+            <translation><!-- Day Tours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct/Multi Level Marketing</masterLabel>
+            <translation><!-- Direct/Multi Level Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>E-Bay Sales</masterLabel>
+            <translation><!-- E-Bay Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment (i.e. night clubs, comedy clubs, dinner theatre)</masterLabel>
+            <translation><!-- Entertainment (i.e. night clubs, comedy clubs, dinner theatre) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event Planning  (1/1/09)</masterLabel>
+            <translation><!-- Event Planning  (1/1/09) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Firearms</masterLabel>
+            <translation><!-- Firearms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flea Market</masterLabel>
+            <translation><!-- Flea Market --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flooring</masterLabel>
+            <translation><!-- Flooring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furniture Indoor/Outdoor</masterLabel>
+            <translation><!-- Furniture Indoor/Outdoor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furriers</masterLabel>
+            <translation><!-- Furriers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gas Stations/Convenience Stores</masterLabel>
+            <translation><!-- Gas Stations/Convenience Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guard Dog Service</masterLabel>
+            <translation><!-- Guard Dog Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair Replacement</masterLabel>
+            <translation><!-- Hair Replacement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Club Monthly Membership</masterLabel>
+            <translation><!-- Health Club Monthly Membership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Heating Oil</masterLabel>
+            <translation><!-- Heating Oil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Based Door/Door</masterLabel>
+            <translation><!-- Home Based Door/Door --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>House Remodeling/Improvements</masterLabel>
+            <translation><!-- House Remodeling/Improvements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Import/Export</masterLabel>
+            <translation><!-- Import/Export --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance</masterLabel>
+            <translation><!-- Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Prescription</masterLabel>
+            <translation><!-- Internet Prescription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Sales not on Prohibited List</masterLabel>
+            <translation><!-- Internet Sales not on Prohibited List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Software Downloads</masterLabel>
+            <translation><!-- Internet Software Downloads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jewelry Stores (1/21/09)</masterLabel>
+            <translation><!-- Jewelry Stores (1/21/09) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kiosks</masterLabel>
+            <translation><!-- Kiosks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limousine/Taxi Services (1/1/09)</masterLabel>
+            <translation><!-- Limousine/Taxi Services (1/1/09) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mail Order/Telephone order</masterLabel>
+            <translation><!-- Mail Order/Telephone order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mattresses</masterLabel>
+            <translation><!-- Mattresses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moving Companies</masterLabel>
+            <translation><!-- Moving Companies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New and Used Car Dealers</masterLabel>
+            <translation><!-- New and Used Car Dealers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Entered</masterLabel>
+            <translation><!-- Not Entered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nurseries (Garden)</masterLabel>
+            <translation><!-- Nurseries (Garden) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Dating/Memberships</masterLabel>
+            <translation><!-- Online Dating/Memberships --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plumbers</masterLabel>
+            <translation><!-- Plumbers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pools/Spas</masterLabel>
+            <translation><!-- Pools/Spas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Property Management/Realty</masterLabel>
+            <translation><!-- Property Management/Realty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RV and/or Campgrounds</masterLabel>
+            <translation><!-- RV and/or Campgrounds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roofing</masterLabel>
+            <translation><!-- Roofing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Schools</masterLabel>
+            <translation><!-- Schools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminars</masterLabel>
+            <translation><!-- Seminars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Temp Agencies  (1/1/09)</masterLabel>
+            <translation><!-- Temp Agencies  (1/1/09) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tile/Carpet</masterLabel>
+            <translation><!-- Tile/Carpet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time Share Advertising/Sales</masterLabel>
+            <translation><!-- Time Share Advertising/Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tractor Trailer</masterLabel>
+            <translation><!-- Tractor Trailer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel Agencies</masterLabel>
+            <translation><!-- Travel Agencies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upholstery</masterLabel>
+            <translation><!-- Upholstery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warranty Companies</masterLabel>
+            <translation><!-- Warranty Companies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weight Loss Centers</masterLabel>
+            <translation><!-- Weight Loss Centers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Windows</masterLabel>
+            <translation><!-- Windows --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wireless Phone/Accessories</masterLabel>
+            <translation><!-- Wireless Phone/Accessories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>construction</masterLabel>
+            <translation><!-- construction --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Intended Use of Cash --></label>
+        <name>Purpose_of_Funds__c</name>
+        <picklistValues>
+            <masterLabel>Buyout a partner</masterLabel>
+            <translation><!-- Buyout a partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction/Renovation</masterLabel>
+            <translation><!-- Construction/Renovation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Emergency working capital</masterLabel>
+            <translation><!-- Emergency working capital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expansion</masterLabel>
+            <translation><!-- Expansion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing expense, promotion</masterLabel>
+            <translation><!-- Marketing expense, promotion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open a new location</masterLabel>
+            <translation><!-- Open a new location --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pay off a tax lien</masterLabel>
+            <translation><!-- Pay off a tax lien --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pay off debt</masterLabel>
+            <translation><!-- Pay off debt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payroll</masterLabel>
+            <translation><!-- Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase new equipment, inventory</masterLabel>
+            <translation><!-- Purchase new equipment, inventory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seasonal - surplus cash for off-season</masterLabel>
+            <translation><!-- Seasonal - surplus cash for off-season --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Qual flag --></label>
+        <name>Qual_flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Qualified Interested Contact --></label>
+        <name>Qualified_Interested_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Qualified --></label>
+        <name>Qualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quancor HOT LEAD --></label>
+        <name>Quancor_HOT_LEAD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Amount --></label>
+        <name>Quote_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- RBS Round Robin --></label>
+        <name>RBS_Round_Robin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rock Connections - Had Contact --></label>
+        <name>RC_Had_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rock Connections - Had Conversation --></label>
+        <name>RC_Had_Conversation__c</name>
+    </fields>
+    <fields>
+        <label><!-- RC Lead Type --></label>
+        <name>RC_Lead_Type__c</name>
+        <picklistValues>
+            <masterLabel>RABC</masterLabel>
+            <translation><!-- RABC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RACK</masterLabel>
+            <translation><!-- RACK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RADM</masterLabel>
+            <translation><!-- RADM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RADM2</masterLabel>
+            <translation><!-- RADM2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RAFC</masterLabel>
+            <translation><!-- RAFC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RAFF</masterLabel>
+            <translation><!-- RAFF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RAFRESH</masterLabel>
+            <translation><!-- RAFRESH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RAFRESHAGED</masterLabel>
+            <translation><!-- RAFRESHAGED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RAFRESHQS</masterLabel>
+            <translation><!-- RAFRESHQS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RAFREXP</masterLabel>
+            <translation><!-- RAFREXP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RALEND</masterLabel>
+            <translation><!-- RALEND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RALT</masterLabel>
+            <translation><!-- RALT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RAPPC</masterLabel>
+            <translation><!-- RAPPC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RAPQ</masterLabel>
+            <translation><!-- RAPQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RAQS</masterLabel>
+            <translation><!-- RAQS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RATV</masterLabel>
+            <translation><!-- RATV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RCRAAA</masterLabel>
+            <translation><!-- RCRAAA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RC Status --></label>
+        <name>RC_Status__c</name>
+        <picklistValues>
+            <masterLabel>Attempted to Contact</masterLabel>
+            <translation><!-- Attempted to Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calling - No Contact Made</masterLabel>
+            <translation><!-- Calling - No Contact Made --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calling – No Contact Made</masterLabel>
+            <translation><!-- Calling – No Contact Made --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact - Pending Profile Call</masterLabel>
+            <translation><!-- Contact - Pending Profile Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contacted</masterLabel>
+            <translation><!-- Contacted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Converted to Opportunity</masterLabel>
+            <translation><!-- Converted to Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Folder Complete</masterLabel>
+            <translation><!-- Folder Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Folder Documents Received</masterLabel>
+            <translation><!-- Folder Documents Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Folder Received</masterLabel>
+            <translation><!-- Folder Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow-Up</masterLabel>
+            <translation><!-- Follow-Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Call Needed</masterLabel>
+            <translation><!-- Initial Call Needed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Installed</masterLabel>
+            <translation><!-- Installed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost</masterLabel>
+            <translation><!-- Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Eligible</masterLabel>
+            <translation><!-- Not Eligible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Bank Card Statements</masterLabel>
+            <translation><!-- Pending Bank Card Statements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Folder Document</masterLabel>
+            <translation><!-- Pending Folder Document --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Presentation</masterLabel>
+            <translation><!-- Pending Presentation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Profile</masterLabel>
+            <translation><!-- Pending Profile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Signature</masterLabel>
+            <translation><!-- Pending Signature --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pitched</masterLabel>
+            <translation><!-- Pitched --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presentation Complete</masterLabel>
+            <translation><!-- Presentation Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Profile Call Complete</masterLabel>
+            <translation><!-- Profile Call Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Profile Statements Received</masterLabel>
+            <translation><!-- Profile Statements Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shipped</masterLabel>
+            <translation><!-- Shipped --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Signature Received</masterLabel>
+            <translation><!-- Signature Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Signature Received - Scheduled Install</masterLabel>
+            <translation><!-- Signature Received - Scheduled Install --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sleeping</masterLabel>
+            <translation><!-- Sleeping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold</masterLabel>
+            <translation><!-- Sold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transferred to 3rd party</masterLabel>
+            <translation><!-- Transferred to 3rd party --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Withdrawn</masterLabel>
+            <translation><!-- Withdrawn --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RC Tracking ID --></label>
+        <name>RC_Tracking_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- RR_Quancor --></label>
+        <name>RR_Quancor__c</name>
+    </fields>
+    <fields>
+        <name>Rating</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cold</masterLabel>
+            <translation><!-- Cold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hot</masterLabel>
+            <translation><!-- Hot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Interested</masterLabel>
+            <translation><!-- Not Interested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warm</masterLabel>
+            <translation><!-- Warm --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reference Number --></label>
+        <name>Reference_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referral AE Owner ID --></label>
+        <name>Referral_AE_Owner_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referral AE Owner Name --></label>
+        <name>Referral_AE_Owner_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referral Merchant ID --></label>
+        <name>Referral_Merchant_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referral Merchant Name --></label>
+        <name>Referral_Merchant_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referring URL --></label>
+        <name>Referring_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Register This Deal --></label>
+        <name>Register_This_Deal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Return To Sender Reason --></label>
+        <name>Return_To_Sender_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rock Connections Transfer Recipient --></label>
+        <name>Rock_Connections_Transfer_Recipient__c</name>
+        <picklistValues>
+            <masterLabel>Alejandra Sims</masterLabel>
+            <translation><!-- Alejandra Sims --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brendan McBride</masterLabel>
+            <translation><!-- Brendan McBride --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brent Elliott</masterLabel>
+            <translation><!-- Brent Elliott --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carolina Chiedi</masterLabel>
+            <translation><!-- Carolina Chiedi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cayce Prunesti</masterLabel>
+            <translation><!-- Cayce Prunesti --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chanda Moorman</masterLabel>
+            <translation><!-- Chanda Moorman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charles Wagner</masterLabel>
+            <translation><!-- Charles Wagner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Christopher Conway</masterLabel>
+            <translation><!-- Christopher Conway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Courtney Dorsey</masterLabel>
+            <translation><!-- Courtney Dorsey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Devin Delany</masterLabel>
+            <translation><!-- Devin Delany --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Janak Pancholi</masterLabel>
+            <translation><!-- Janak Pancholi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jeff Hageman</masterLabel>
+            <translation><!-- Jeff Hageman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joseph LaFalcia</masterLabel>
+            <translation><!-- Joseph LaFalcia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Juan Yanez</masterLabel>
+            <translation><!-- Juan Yanez --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maria Rivera</masterLabel>
+            <translation><!-- Maria Rivera --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marilyn Nunez</masterLabel>
+            <translation><!-- Marilyn Nunez --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marlow Santos</masterLabel>
+            <translation><!-- Marlow Santos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Matthew Dillingham</masterLabel>
+            <translation><!-- Matthew Dillingham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mauricio Safi</masterLabel>
+            <translation><!-- Mauricio Safi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peter Havenstein</masterLabel>
+            <translation><!-- Peter Havenstein --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Robert Kim</masterLabel>
+            <translation><!-- Robert Kim --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ryan Dearborn</masterLabel>
+            <translation><!-- Ryan Dearborn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tim Iuculano</masterLabel>
+            <translation><!-- Tim Iuculano --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Round Robin Barrata --></label>
+        <name>Round_Robin_Barrata__c</name>
+    </fields>
+    <fields>
+        <label><!-- Round_Robin_ID_2 --></label>
+        <name>Round_Robin_ID_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Round Robin ID 3 --></label>
+        <name>Round_Robin_ID_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Round_Robin_ID --></label>
+        <name>Round_Robin_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- SIC Codes --></label>
+        <name>SIC_Codes__c</name>
+    </fields>
+    <fields>
+        <label><!-- SWIFT Follow up Campaign --></label>
+        <name>SWIFT_Follow_up_Campaign__c</name>
+        <picklistValues>
+            <masterLabel>Distributed 6-25-2010</masterLabel>
+            <translation><!-- Distributed 6-25-2010 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SWIFT Priority Code --></label>
+        <name>SWIFT_Priority_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- SWIFT Product Code --></label>
+        <name>SWIFT_Product_Code__c</name>
+        <picklistValues>
+            <masterLabel>GFSA</masterLabel>
+            <translation><!-- GFSA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GFSB</masterLabel>
+            <translation><!-- GFSB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GFSC</masterLabel>
+            <translation><!-- GFSC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GFSR</masterLabel>
+            <translation><!-- GFSR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GFSX</masterLabel>
+            <translation><!-- GFSX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFMA</masterLabel>
+            <translation><!-- SFMA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFMB</masterLabel>
+            <translation><!-- SFMB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WSFS</masterLabel>
+            <translation><!-- WSFS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZGA</masterLabel>
+            <translation><!-- ZGA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZMB</masterLabel>
+            <translation><!-- ZMB --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SWIFT Response Date --></label>
+        <name>SWIFT_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Agent ID --></label>
+        <name>Sales_Agent_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Agent Name --></label>
+        <name>Sales_Agent_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Search Engine --></label>
+        <name>Search_Engine__c</name>
+    </fields>
+    <fields>
+        <label><!-- Search Match Type --></label>
+        <name>Search_Match_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Category --></label>
+        <name>Service_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 Social Security --></label>
+        <name>Social_Security_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- State of incorporation? --></label>
+        <name>State_of_incorporation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Statement Received Flag --></label>
+        <name>Statement_Received_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Statements Received --></label>
+        <name>Statements_Received__c</name>
+    </fields>
+    <fields>
+        <name>Status</name>
+        <picklistValues>
+            <masterLabel>Bad Phone Number</masterLabel>
+            <translation><!-- Bad Phone Number --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calling - No Contact Made</masterLabel>
+            <translation><!-- Calling - No Contact Made --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Converted</masterLabel>
+            <translation><!-- Converted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate - Customer</masterLabel>
+            <translation><!-- Duplicate - Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate - Lead</masterLabel>
+            <translation><!-- Duplicate - Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fraud</masterLabel>
+            <translation><!-- Fraud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GTF - Initial Call Needed</masterLabel>
+            <translation><!-- GTF - Initial Call Needed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress - Awaiting Statements</masterLabel>
+            <translation><!-- In Progress - Awaiting Statements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress - Follow Up Call Needed</masterLabel>
+            <translation><!-- In Progress - Follow Up Call Needed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress - Pending Approval</masterLabel>
+            <translation><!-- In Progress - Pending Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress - Pending Quote</masterLabel>
+            <translation><!-- In Progress - Pending Quote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Call Needed</masterLabel>
+            <translation><!-- Initial Call Needed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost - Incomplete Information</masterLabel>
+            <translation><!-- Lost - Incomplete Information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost - Language Barrier</masterLabel>
+            <translation><!-- Lost - Language Barrier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Interested - Do Not Contact</masterLabel>
+            <translation><!-- Not Interested - Do Not Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Interested - Follow Up Later</masterLabel>
+            <translation><!-- Not Interested - Follow Up Later --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Legitimate</masterLabel>
+            <translation><!-- Not Legitimate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requested Information Only</masterLabel>
+            <translation><!-- Requested Information Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unqualified</masterLabel>
+            <translation><!-- Unqualified --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subscribed to Newsletter --></label>
+        <name>Subscribed_to_Newsletter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Suffix --></label>
+        <name>Suffix__c</name>
+        <picklistValues>
+            <masterLabel>D.D</masterLabel>
+            <translation><!-- D.D --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>II</masterLabel>
+            <translation><!-- II --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>III</masterLabel>
+            <translation><!-- III --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IV</masterLabel>
+            <translation><!-- IV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>J.D</masterLabel>
+            <translation><!-- J.D --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jr.</masterLabel>
+            <translation><!-- Jr. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SNR</masterLabel>
+            <translation><!-- SNR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sr.</masterLabel>
+            <translation><!-- Sr. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>V</masterLabel>
+            <translation><!-- V --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VI</masterLabel>
+            <translation><!-- VI --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Swift State Restrictions --></label>
+        <name>Swift_State_Restrictions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sync with RC --></label>
+        <name>Sync_with_RC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Syndication Amount: --></label>
+        <name>Syndication_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- TEST Lead Owner (Text) --></label>
+        <name>TEST_Lead_Owner_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- TM Cost --></label>
+        <name>TM_Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temp Marketing Field --></label>
+        <name>Temp_Marketing_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time with current processor? Year/Months --></label>
+        <name>Time_with_current_processor_Year_Months__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Profits --></label>
+        <name>Total_Profits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tracking Code --></label>
+        <name>Tracking_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transferred By: --></label>
+        <name>Transferred_By__c</name>
+        <picklistValues>
+            <masterLabel>Brian Hernandez</masterLabel>
+            <translation><!-- Brian Hernandez --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dwayne McCoy</masterLabel>
+            <translation><!-- Dwayne McCoy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Steven McGee</masterLabel>
+            <translation><!-- Steven McGee --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Transferred Date/Time --></label>
+        <name>Transferred_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type Of Business --></label>
+        <name>Type_Of_Business__c</name>
+        <picklistValues>
+            <masterLabel>Appliance Store</masterLabel>
+            <translation><!-- Appliance Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auto Service</masterLabel>
+            <translation><!-- Auto Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auto Supply Store</masterLabel>
+            <translation><!-- Auto Supply Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bakery</masterLabel>
+            <translation><!-- Bakery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bar/Tavern</masterLabel>
+            <translation><!-- Bar/Tavern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beauty/Nail/Spa Salon</masterLabel>
+            <translation><!-- Beauty/Nail/Spa Salon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bicycle Store</masterLabel>
+            <translation><!-- Bicycle Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Book Store</masterLabel>
+            <translation><!-- Book Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Camera Store</masterLabel>
+            <translation><!-- Camera Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Candy Store</masterLabel>
+            <translation><!-- Candy Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carwash</masterLabel>
+            <translation><!-- Carwash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caterer</masterLabel>
+            <translation><!-- Caterer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cell Phone Store</masterLabel>
+            <translation><!-- Cell Phone Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chiropractor</masterLabel>
+            <translation><!-- Chiropractor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cigar Cigarette &amp; Tobacco Dealer-Retail</masterLabel>
+            <translation><!-- Cigar Cigarette &amp; Tobacco Dealer-Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clothing Store</masterLabel>
+            <translation><!-- Clothing Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communications</masterLabel>
+            <translation><!-- Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer and Software Store</masterLabel>
+            <translation><!-- Computer and Software Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consignment/Second Hand Store</masterLabel>
+            <translation><!-- Consignment/Second Hand Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Convenience Store</masterLabel>
+            <translation><!-- Convenience Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dentist</masterLabel>
+            <translation><!-- Dentist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributor</masterLabel>
+            <translation><!-- Distributor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drug and Vitamin Store</masterLabel>
+            <translation><!-- Drug and Vitamin Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drycleaner</masterLabel>
+            <translation><!-- Drycleaner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics/TV and Radio Store</masterLabel>
+            <translation><!-- Electronics/TV and Radio Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Floor Covering Store</masterLabel>
+            <translation><!-- Floor Covering Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florist</masterLabel>
+            <translation><!-- Florist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Framing Store</masterLabel>
+            <translation><!-- Framing Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furniture Store</masterLabel>
+            <translation><!-- Furniture Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gas Station</masterLabel>
+            <translation><!-- Gas Station --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gift Store</masterLabel>
+            <translation><!-- Gift Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grocery Store</masterLabel>
+            <translation><!-- Grocery Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair Salon</masterLabel>
+            <translation><!-- Hair Salon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hardware Store</masterLabel>
+            <translation><!-- Hardware Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare</masterLabel>
+            <translation><!-- Healthcare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Based Business</masterLabel>
+            <translation><!-- Home Based Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hotels and Motels</masterLabel>
+            <translation><!-- Hotels and Motels --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Import-Export</masterLabel>
+            <translation><!-- Import-Export --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Only Store</masterLabel>
+            <translation><!-- Internet Only Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jewelry Store</masterLabel>
+            <translation><!-- Jewelry Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquor/Wine/Beer Store</masterLabel>
+            <translation><!-- Liquor/Wine/Beer Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Luggage/Leather Goods Store</masterLabel>
+            <translation><!-- Luggage/Leather Goods Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lumber and Building Material</masterLabel>
+            <translation><!-- Lumber and Building Material --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manufacturer</masterLabel>
+            <translation><!-- Manufacturer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meat and Fish Market</masterLabel>
+            <translation><!-- Meat and Fish Market --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Musical Instrument Store</masterLabel>
+            <translation><!-- Musical Instrument Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nurseries/ Lawn and Garden</masterLabel>
+            <translation><!-- Nurseries/ Lawn and Garden --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Optical Goods Stores, nec</masterLabel>
+            <translation><!-- Optical Goods Stores, nec --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paint Supply</masterLabel>
+            <translation><!-- Paint Supply --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pet Supply Store</masterLabel>
+            <translation><!-- Pet Supply Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Photo Studio</masterLabel>
+            <translation><!-- Photo Studio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physical Fitness Facilities</masterLabel>
+            <translation><!-- Physical Fitness Facilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plumbing/HVAC Contractor</masterLabel>
+            <translation><!-- Plumbing/HVAC Contractor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Printing/Quick Copy</masterLabel>
+            <translation><!-- Printing/Quick Copy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Real Estate</masterLabel>
+            <translation><!-- Real Estate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recreational Vehicle Dealer</masterLabel>
+            <translation><!-- Recreational Vehicle Dealer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restaurant</masterLabel>
+            <translation><!-- Restaurant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services</masterLabel>
+            <translation><!-- Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sewing, Needlework Store</masterLabel>
+            <translation><!-- Sewing, Needlework Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shoe Store</masterLabel>
+            <translation><!-- Shoe Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sign Store</masterLabel>
+            <translation><!-- Sign Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specialty Retail</masterLabel>
+            <translation><!-- Specialty Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sporting Goods Store</masterLabel>
+            <translation><!-- Sporting Goods Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stationery Store</masterLabel>
+            <translation><!-- Stationery Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technology</masterLabel>
+            <translation><!-- Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tire Store</masterLabel>
+            <translation><!-- Tire Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tobacco Product Store</masterLabel>
+            <translation><!-- Tobacco Product Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toys/Hobby Store</masterLabel>
+            <translation><!-- Toys/Hobby Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation/Limo</masterLabel>
+            <translation><!-- Transportation/Limo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Variety Store</masterLabel>
+            <translation><!-- Variety Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Video Retail</masterLabel>
+            <translation><!-- Video Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wholesaler</masterLabel>
+            <translation><!-- Wholesaler --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type of Funding Preferred --></label>
+        <name>Type_of_Funding_Preferred__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unqualified Count --></label>
+        <name>Unqualified_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unqualified Reason --></label>
+        <name>Unqualified_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Business Closed</masterLabel>
+            <translation><!-- Business Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business for Sale</masterLabel>
+            <translation><!-- Business for Sale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor Balance Too High</masterLabel>
+            <translation><!-- Competitor Balance Too High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Does not accept Visa/Mastercard</masterLabel>
+            <translation><!-- Does not accept Visa/Mastercard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Based Business</masterLabel>
+            <translation><!-- Home Based Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Only Business</masterLabel>
+            <translation><!-- Internet Only Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than 1 Year</masterLabel>
+            <translation><!-- Less than 1 Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than 9 months lease</masterLabel>
+            <translation><!-- Less than 9 months lease --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less then $2,500 V/MC</masterLabel>
+            <translation><!-- Less then $2,500 V/MC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Enough Monthly Transactions</masterLabel>
+            <translation><!-- Not Enough Monthly Transactions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not the Owner</masterLabel>
+            <translation><!-- Not the Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prohibited Business Type</masterLabel>
+            <translation><!-- Prohibited Business Type --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Residential Phone Number</masterLabel>
+            <translation><!-- Residential Phone Number --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Start Up Business</masterLabel>
+            <translation><!-- Start Up Business --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Leads (User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Verified Qualified --></label>
+        <name>Verified_Qualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- 15 days Old undefined --></label>
+        <name>X15_days_Old_undefined__c</name>
+    </fields>
+    <fields>
+        <label><!-- 19 days Old undefined --></label>
+        <name>X19_days_Old_undefined__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2008 Mktg Cost --></label>
+        <name>X2008_Mktg_Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- 7 days Old undefined --></label>
+        <name>X7_days_Old_undefined__c</name>
+    </fields>
+    <fields>
+        <label><!-- dnbic --></label>
+        <name>dnbic__c</name>
+    </fields>
+    <fields>
+        <label><!-- efaxcorporate.com address --></label>
+        <name>efaxcorporate_com_address__c</name>
+    </fields>
+    <fields>
+        <help><!-- Reference to the Geocode object holding all of mapping information for the record. --></help>
+        <label><!-- Geocode --></label>
+        <name>geopointe__Geocode__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Distribution action --></label>
+        <name>n2de__Action__c</name>
+        <picklistValues>
+            <masterLabel>Contacted</masterLabel>
+            <translation><!-- Contacted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reviewed</masterLabel>
+            <translation><!-- Reviewed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is distributed --></label>
+        <name>n2de__Is_distributed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is auto reassigned --></label>
+        <name>n2de__Is_reassigned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger enabled --></label>
+        <name>n2de__Is_trigger_enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is triggered --></label>
+        <name>n2de__Is_triggered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date last distributed to user --></label>
+        <name>n2de__Last_distributed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date last auto reassigned --></label>
+        <name>n2de__Last_reassigned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Campaign --></label>
+        <name>pi__campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Comments --></label>
+        <name>pi__comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Date --></label>
+        <name>pi__conversion_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Object Name --></label>
+        <name>pi__conversion_object_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Object Type --></label>
+        <name>pi__conversion_object_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Created Date --></label>
+        <name>pi__created_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Activity --></label>
+        <name>pi__first_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer Query --></label>
+        <name>pi__first_search_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer Type --></label>
+        <name>pi__first_search_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer --></label>
+        <name>pi__first_touch_url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Grade --></label>
+        <name>pi__grade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Last Activity --></label>
+        <name>pi__last_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Notes --></label>
+        <name>pi__notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Score --></label>
+        <name>pi__score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot URL --></label>
+        <name>pi__url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Campaign --></label>
+        <name>pi__utm_campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Content --></label>
+        <name>pi__utm_content__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Medium --></label>
+        <name>pi__utm_medium__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Source --></label>
+        <name>pi__utm_source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Term --></label>
+        <name>pi__utm_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- unqualified flag --></label>
+        <name>unqualified_flag__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Deal Registration --></label>
+        <name>DealRegistration</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Cash Pickle Web-Call-In: You must record the 10-digit caller ID in the Tracking Code before proceeding. Do not include a 1 prefix, and do not include any characters other than the numbers. --></errorMessage>
+        <name>Cash_Pickle_Web_Call_In_Tracking</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Principal 2 Last Name cannot be blank if Principal 2  - First Name, Street Address, City, State or Zip is entered! --></errorMessage>
+        <name>CheckPrincipal2Name</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ******REMINDER*********
+ASK FOR THE EMAIL ADDRESS! --></errorMessage>
+        <name>Collect_Email_Address</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Marketing Dept: You can&apos;t change the original lead source, update in the new lead source. --></errorMessage>
+        <name>Lock_Lead_Source</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- you can&apos;t change the value of this field. --></errorMessage>
+        <name>Lock_Transferred_By_Validation_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a &quot;Not Interested Reason&quot; before proceeding. --></errorMessage>
+        <name>Not_Interested_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter numbers only. --></errorMessage>
+        <name>PhoneExtOnlyText</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter numbers only. --></errorMessage>
+        <name>PhoneExtOnlyTextP1</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Prohibited Business Type cannot be null when Lead Status=&quot;Prohibited Business Type&quot; --></errorMessage>
+        <name>Prohibited_Business_Type_validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lead must include the reference number. --></errorMessage>
+        <name>Reference_Number_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Social Security must be in the proper format, XXX-XX-XXXX.  Please reformat your number. --></errorMessage>
+        <name>Social_Security_Format_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Specify Type of Business. Try to be more specific. --></errorMessage>
+        <name>Specify_Type_Of_Business_When_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must enter the standard 2 letter Postal Abbreviation for States within the U.S. --></errorMessage>
+        <name>State_Name_Abbreviation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Amount is required --></errorMessage>
+        <name>Syndication_Amount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please specify Transferred by --></errorMessage>
+        <name>Transferred_By_Validation_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a &quot;Unqualified Reason&quot; before proceeding. --></errorMessage>
+        <name>Unqualified_Reason</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Re_subscribe_in_ExactTarget --></label>
+        <name>Re_subscribe_in_ExactTarget</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendExactTargetEmail --></label>
+        <name>SendExactTargetEmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- financialprofile --></label>
+        <name>financialprofile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Map --></label>
+        <name>geopointe__Map</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Map_Records_Lead --></label>
+        <name>geopointe__Map_Records_Lead</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Map_newWindow --></label>
+        <name>geopointe__Map_newWindow</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- FindLeadinInsideView --></label>
+        <name>iv__FindLeadinInsideView</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- map --></label>
+        <name>map</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- news --></label>
+        <name>news</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Email --></label>
+        <name>pi__Send_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Prospect_Insight --></label>
+        <name>pi__Send_to_Prospect_Insight</name>
+    </webLinks>
+</CustomObjectTranslation>

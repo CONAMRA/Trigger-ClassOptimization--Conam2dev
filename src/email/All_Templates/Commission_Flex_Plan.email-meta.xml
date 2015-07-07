@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>For pricing partners-Commission Flex Plan</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Commission Flex Plan</name>
+    <style>freeForm</style>
+    <subject>Commission Flex Plan</subject>
+    <textOnly>Please read attached memo on our commission flex plan.</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,544 @@
+<apex:page controller="ProcessorInformation_Ctrl" showHeader="false" sidebar="false" >
+    <c:Opportunity_Related_CSS imgName="ProcessInfo.png"/>
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="MBForm" styleClass="MBForm"><br/>
+     <apex:outputPanel id="PanelId1">
+       <div class="bgImg"></div>
+       <div align="center">              
+           <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,PanelId,PanelId1" status="ajaxStatus"  oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+       </div><br/>
+       <apex:outputPanel id="PanelId">
+       <table id="MBTable">
+            <tr>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Processing_Representative__c.label}"/> 
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!oppRecord.Processing_Representative__c}" />
+               </td>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Processing_Rep_Assigned__c.label}"/> 
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!oppRecord.Processing_Rep_Assigned__c}" />
+               </td>
+            </tr>
+            <tr>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Processing_Initial_Review_Complete__c.label}"/> 
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!oppRecord.Processing_Initial_Review_Complete__c}" />
+               </td>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Submitted_For_Funding_Approval__c.label}"/> 
+               </td>
+               <td align="left" style="padding-left:0px;">
+                   <apex:inputField value="{!oppRecord.Submitted_For_Funding_Approval__c}" />
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4">
+                    <c:Extjs_Panel title="Processor Information"  RefreshButton="Refresh"/>
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Current_Processor__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Current_Processor__c}" />
+               </td>
+                <td Style="padding-left:5px;">
+                    <label>Date of Re-price</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Deal_Repriced_Need_New_FRSA__c}" /> 
+                </td>
+            </tr>
+            <tr>  
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Processor_Name__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Processor_Name__c}" /> 
+               </td>
+                <td Style="padding-left:5px;">
+                     <apex:outputLabel value="{!$ObjectType.Opportunity.fields.New_FRSA_Has_Been_Received__c.label}"/> 
+                </td>
+                <td>
+                     <apex:inputField value="{!oppRecord.New_FRSA_Has_Been_Received__c}" />
+                </td>               
+            </tr>
+            <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.New_Processor_Setup_Completed__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.New_Processor_Setup_Completed__c}" /> 
+               </td>
+                <td Style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.UWEligible_for_Rapid_Funding__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.UWEligible_for_Rapid_Funding__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Split_Fund_Set_Up__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Split_Fund_Set_Up__c}" />
+                </td>
+                <td Style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Partner_Merchant_Notified__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Partner_Merchant_Notified__c}" /> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Resulting_Process__c.label}"/>                 
+                </td>
+                <td>  
+                   <apex:inputField value="{!oppRecord.Resulting_Process__c}" /> 
+                </td>
+                <td Style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Required_Paperwork_Sent__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Required_Paperwork_Sent__c}" /> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Account.fields.Number_of_Locations__c.label}" />
+                </td>
+                <td >
+                    <apex:inputField value="{!accRecord.Number_of_Locations__c}" />
+                </td>
+                <td Style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Required_Paperwork_Received__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Required_Paperwork_Received__c}" /> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.DDA_Received__c.label}" />
+                </td>
+                <td >
+                    <apex:inputField value="{!oppRecord.DDA_Received__c}" />
+                </td>
+                <td Style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.DDA_Requested__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.DDA_Requested__c}" /> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Account.fields.Number_of_Terminals_at_Location__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!accRecord.Number_of_Terminals_at_Location__c}" />
+                </td>
+                <td Style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Confirmed_Split_in_Place__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Confirmed_Split_in_Place__c}" /> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Number_of_MIDs_used_for_Pricing__c.label}"/>                 
+                </td>
+                <td>  
+                   <apex:inputField value="{!oppRecord.Number_of_MIDs_used_for_Pricing__c}" /> 
+                </td>
+                <td Style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Exception_Requested__c.label}"/>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Exception_Requested__c}" /> 
+                </td>
+            </tr>
+            <tr>
+               <td colspan="2" rowspan="8">
+                    <c:Extjs_MID_Nos height="210" parentField="Opportunity__c" title="MID Nos" object="MID__c" fields="Name,Type__c" rows="3" minimized="false" parentRecordId="{!$CurrentPage.parameters.Id}"/>  
+               </td>
+               <td style="padding-left:5px;font-weight:bold;">
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.First_Batch__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.First_Batch__c}" />
+               </td>               
+            </tr>
+            <tr>
+                <td style="padding-left:5px;">
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Second_Batch__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Second_Batch__c}" /> 
+               </td>
+            </tr>
+            <tr>
+                <td style="padding-left:5px;">
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.ACH_Requested__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.ACH_Requested__c}" />
+               </td>
+            </tr>
+            <tr>
+                <td style="padding-left:5px;">
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.ACH_Confirmed__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.ACH_Confirmed__c}" />
+               </td>
+            </tr>
+            <tr>
+                <td style="padding-left:5px;">
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Previous_Deal_60_Paid_Off__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Previous_Deal_60_Paid_Off__c}" /> 
+               </td>
+            </tr>
+            <tr>
+                <td style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Possible_Funding_Today__c.label}"/>                 
+                </td>
+                <td>  
+                   <apex:inputField value="{!oppRecord.Possible_Funding_Today__c}" /> 
+                </td>
+            </tr>           
+            <tr>
+               <td style="padding-left:5px;">
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Have_all_UW_conditions_been_satisfied__c.label}"/> 
+               </td>
+               <td>
+                   <apex:inputField value="{!oppRecord.Have_all_UW_conditions_been_satisfied__c}" />
+               </td>               
+           </tr>
+           <tr>
+                <td style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Accepted_Rapid_Funding__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Accepted_Rapid_Funding__c}" />
+                </td>
+           </tr>
+           <tr>
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Sent_Rapid_Funding_Addendum__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Sent_Rapid_Funding_Addendum__c}" /> 
+               </td>
+              <td style="padding-left:5px;"> 
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Received_Rapid_Funding_Addendum__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Received_Rapid_Funding_Addendum__c}" /> 
+               
+               
+                </td>
+           </tr>   
+           <tr>               
+               <td>
+                   <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Any_New_UCC_Found__c.label}"/>                 
+               </td>
+               <td>  
+                  <apex:inputField value="{!oppRecord.Any_New_UCC_Found__c}" /> 
+               </td>
+                <td style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Any_New_Competitor_Tag__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Any_New_Competitor_Tag__c}" />
+                </td>              
+           </tr>
+           <tr>
+                <td>
+                   
+                </td>
+                <td>
+                   
+                </td>
+                <td style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Processing_On_Hold__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Processing_On_Hold__c}" />
+                </td> 
+                   
+           </tr>
+           <tr>
+                <td>
+                   
+                </td>
+                <td>
+                   
+                </td>
+               <td style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.On_Hold_Start_Date__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.On_Hold_Start_Date__c}" />
+                </td> 
+                           
+           </tr>
+           <tr>
+                <td>
+                   
+                </td>
+                <td>
+                   
+                </td>
+                <td style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.On_Hold_Stop_Date__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.On_Hold_Stop_Date__c}" />
+                </td>
+                         
+           </tr>
+
+           <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.BAM_Match_Selection__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.BAM_Match_Selection__c}" />
+                </td>
+                <td style="padding-left:5px;">
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.On_Hold_Reason__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.On_Hold_Reason__c}" />
+                </td>               
+           </tr>
+                      
+           <tr>
+                <td>
+                     <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Completed_NAMAA_Tag__c.label}"/> 
+                 </td>
+                 <td>
+                     <apex:inputField value="{!oppRecord.Completed_NAMAA_Tag__c}" />
+                 </td>
+                 <td>
+                     <apex:outputLabel value="{!$ObjectType.Opportunity.fields.All_Approved_With_Conditions_Met__c.label}"/>
+                 </td>
+                 <td>
+                     <apex:inputField value="{!oppRecord.All_Approved_With_Conditions_Met__c}" />
+                 </td>
+           </tr>
+           <tr>
+                <td>
+                     <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Sales_Note_to_UW_Processing__c.label}"/> 
+                 </td>
+                 <td>
+                     <apex:inputField value="{!oppRecord.Sales_Note_to_UW_Processing__c}" rendered="{!IF($Profile.Name =='System Administrator' ,true,false)}"/>
+                     <apex:outputLabel value="{!oppRecord.Sales_Note_to_UW_Processing__c}" rendered="{!IF($Profile.Name !='System Administrator' ,true,false)}"/>
+                 </td>
+                  <td>
+                     <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Approved_With_Conditions__c.label}"/>
+                 </td>
+                 <td>
+                     <apex:inputField value="{!oppRecord.Approved_With_Conditions__c}" />
+                 </td>
+           </tr>           
+            <tr>
+                <td colspan="4">                    
+                     <c:Extjs_Panel title="Site Inspection"/>
+                </td>
+            </tr>    
+            <tr>
+                <td class="labelCol">
+                    <label>Site Survey Ordered Date/Time</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Site_Survey_Ordered__c}"/>
+                </td>                
+                <td>
+                    <label>Site Survey Ordered Due Date</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Site_Survey_Ordered_Due_Date__c}"/>
+                </td>                                 
+            </tr>                                 
+            <tr>
+                <td>
+                    <label>Site Survey Available</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Site_Survey_Available__c}" />
+                </td>                
+                <td>
+                    <label>Site Survey Expected Completion Date</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Site_Survey_Available_Due_Date__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Canceled Site Survey</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Canceled_Site_Survey__c}" />
+                </td>               
+                <td>
+                    <label>All necessary site inspections ordered?</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.All_necessary_site_inspections_ordered__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <c:Extjs_Panel title="Competitor Payoff Information"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Existing_Competitor_Advance2__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Existing_Competitor_Advance2__c}" />
+                </td>                    
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Third_Party_Payoff__c.label}"/>                 
+                </td>
+                <td>  
+                   <apex:inputField value="{!oppRecord.Third_Party_Payoff__c}" /> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Competitor_Advance_Company__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Competitor_Advance_Company__c}" />
+                </td>                                    
+                  <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Third_Party_Company_Name__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Third_Party_Company_Name__c}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Payoff_Amount__c.label}"/>                 
+                </td>
+                <td>  
+                   <apex:inputField value="{!oppRecord.Payoff_Amount__c}" /> 
+                </td>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Third_Party_Payoff_Amount__c.label}"/>                 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Third_Party_Payoff_Amount__c}" /> 
+                </td>                   
+                
+            </tr>           
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Confirmed_competitor_Payoff_Information__c.label}"/> 
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Confirmed_competitor_Payoff_Information__c}" />
+                </td>
+            </tr>
+            <tr>
+                                    
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Payoff_Check_Sent__c.label}"/>                 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Payoff_Check_Sent__c}" /> 
+                </td>
+            </tr>            
+            <tr>
+                <td>
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Has_the_check_been_requested__c.label}"/>                 
+                </td>
+                <td>  
+                    <apex:inputField value="{!oppRecord.Has_the_check_been_requested__c}" /> 
+                </td>
+            </tr>
+           
+            
+            <!-- <tr>
+                <td>
+                    <label>Bank Name</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Bank_Name__c}"/>
+                </td>                
+                <td>
+                    <label>Are there special wiring instructions?</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Are_there_special_wiring_instructions__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Wire Bank Routing Number</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Routing_Number__c}" />
+                </td>                
+                <td>
+                    <label>Wire Bank Account Number</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Account_Number_For_Funding__c}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Any New UCC Found?</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Any_New_UCC_Found__c}" />
+                </td>                
+                <td>
+                    <label>BAM Match?</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.BAM_Match_Selection__c}" required="true"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Any New Competitor Tag?</label>
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Any_New_Competitor_Tag__c}" />
+                </td>                
+                <td>
+                    <label> Completed NAMAA Tag:</label>               
+                </td>
+                <td>
+                    <apex:inputField value="{!oppRecord.Completed_NAMAA_Tag__c}"/>
+                </td>
+            </tr>-->
+       </table><br/>
+       </apex:outputPanel>        
+       <div align="center">              
+            <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,PanelId,PanelId1" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+       </div>           
+        </apex:outputPanel>
+    </apex:form>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

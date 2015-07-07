@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>iPayment-ROMI Merchant Services dba Universal Merchant Solutio Partner Manager</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>iPayment-ROMI Merchant Services dba Universal Merchant Solutio Partner Manager</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>iPaymentROMIMerchantServicesdbaUniversalMerchantSolutioPartnerExe</parentRole>
+</Role>

@@ -1,0 +1,44 @@
+<apex:page StandardController="Opportunity" extensions="OppGreenTreeViewController1">
+  
+    <apex:form >
+            <apex:pageBlock rendered="{!if(((gtNew!=null)&&(NOT(isEdit))),true,false)}" >
+            <apex:pageBlockbuttons location="top">
+                <apex:commandbutton Value="Edit" action="{!edit}" immediate="true"/>
+            </apex:pageBlockbuttons>
+            
+            <apex:pageBlockSection columns="2" title="GreenTree Description" collapsible="false" >
+                <apex:outputfield value="{!gtNew.No_of_Payments__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Daily_Payment_Amount__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Estimated_Balance__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Estimated_Days_to_Repay__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Average_CC_Sales__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Average_Gross_Sales__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.Product__c}"></apex:outputfield>
+                <apex:outputfield value="{!gtNew.ProductTerm__c}"></apex:outputfield>
+            </apex:pageBlockSection>
+            
+        </apex:pageblock>
+        <!-- Edit Mode -->
+        <apex:pageBlock id="editPBB" rendered="{!isEdit}">
+            <apex:pageBlockButtons >
+                 <apex:commandButton value="Save" action="{!DoSave}"/>
+                 <apex:commandButton value="Cancel" action="{!Cancel}"/>
+            </apex:pageBlockButtons>
+                        
+           <apex:pageBlockSection columns="2" title="GreenTree Description" collapsible="TRUE" >
+                <apex:inputfield value="{!gtNew.No_of_Payments__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Daily_Payment_Amount__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Estimated_Balance__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Estimated_Days_to_Repay__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Average_CC_Sales__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Average_Gross_Sales__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.Product__c}"></apex:inputfield>
+                <apex:inputfield value="{!gtNew.ProductTerm__c}"></apex:inputfield>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+       <apex:actionFunction name="saveActionFunc" action="{!Save}" oncomplete="redirectBack()" rerender="theBlock" />
+
+        <!--Edit Mode --> 
+    </apex:form>
+</apex:page>

@@ -1,0 +1,9 @@
+Processing trial is in effect. Processor is requesting Management to review account for funding approval as an exception. 
+
+Exception:
+
+{!Opportunity.Reason_s_For_Funding_Exceptions__c}
+
+Comments:
+
+{!Opportunity.Funding_Notes__c}

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>All Assignment Rules</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>rockconnections@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Connection User</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.New_Partner_Contact__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.ProMED_Lead__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <template>ProMED/Partner_Lead_Assignment_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>(1 AND 2) OR 3</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Web-To-Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>startsWith</operation>
+                <value>ProMED</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.ProMED_Lead__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <template>ProMED/Lead_Assignment_Notification</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>BD_Web_Leads</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Partner Web Leads</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Web_to_Lead</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>contains</operation>
+                <value>Credit Karma,Lendio,Business.com,LendingTree</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Web Services</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Lead_Generation_Partner</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>LendingTree</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Web_to_Lead</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Web-To-Lead</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CreatedById</field>
+                <operation>equals</operation>
+                <value>Web Services</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Web_to_Lead</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>contains</operation>
+                <value>Calc</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>AAICF</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Campaign_Name_Upload__c</field>
+                <operation>equals</operation>
+                <value>America Approved Investment Capital Funding</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Creditera</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Creditera</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Chicago_Tribune</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>startsWith</operation>
+                <value>Chicago Tribune</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>RadioShack</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Gary_R_Maloney</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Gary R. Maloney</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>phavenstein@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Partner-Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Pak Mail Centers of America</value>
+            </criteriaItems>
+            <template>All_Templates/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>phavenstein@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Partner-Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Play N Trade - Referrals</value>
+            </criteriaItems>
+            <template>All_Templates/LeadsNewassignmentnotificationSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Pre_Qual_Pass_Email_Campaign</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Pre Qual Pass Email Campaign</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Web_to_Lead</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Customer Journey Web to Lead</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>NSBA</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>NSBA</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>rfleischmann@rapidadvance.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Campaign.Name</field>
+                <operation>equals</operation>
+                <value>Quicken Loans Mortgage Services</value>
+            </criteriaItems>
+            <template>Auto_E_Mail_Templates/New_BD_Web_Lead</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

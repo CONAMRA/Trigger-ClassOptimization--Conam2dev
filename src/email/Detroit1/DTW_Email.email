@@ -1,0 +1,27 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<font face="arial" style="font-family: arial; font-size: 12pt;"><span style="font-size: 12pt;">Dear&nbsp;{!Contact.FirstName},</span></font><div style="font-family: arial; font-size: 12pt;"><br></div><div><p class="MsoNormal" style="font-family: arial; font-size: 12pt;">Happy Friday! I see that we’ve
+been trying to reach you in regards to some extra cash for your business. Our
+products are custom built and designed to help each individual business take
+advantage of any and all opportunities they have in front of them.<o:p></o:p></p>
+
+<p class="MsoNormal" style="font-family: arial; font-size: 12pt;">&nbsp;</p>
+
+<p class="MsoNormal" style="font-family: arial; font-size: 12pt;">&nbsp;</p>
+
+<p class="MsoNormal" style="font-family: arial; font-size: 12pt;">Last Tuesday we rolled out a
+brand new product called our “Preferred Loan” and this product is by far the
+most economical loan that we’ve ever built. The structure on our “Preferred
+Loan” are meant to rival those of bank loans and SBA loans without having to
+deal with the red tape and headaches that are normally associated with a loan
+of this quality. I was looking for about 5 minutes of your time to take a look at your business with you and see if it’s a fit. Please let me know when you are available
+for a short conversation. You may also reach out to me at any time on either
+phone number below.<o:p></o:p></p>
+
+<p class="MsoNormal" style="font-family: arial; font-size: 12pt;">&nbsp;</p>
+
+<p class="MsoNormal" style="font-family: arial; font-size: 12pt;">Looking forward to hearing back
+from you soon!<o:p></o:p></p><p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><br></p><p class="MsoNormal" style="font-family: arial; font-size: 12pt;">Thanks!</p><p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><br></p><p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><font face="arial">{!User.Name}</font><font face="arial" style="font-family: arial; font-size: 12pt;">&nbsp;| Business Advisor</font></p><p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><font face="arial" style="font-family: arial; font-size: 12pt;">Email: &nbsp;<span class="Apple-tab-span" style="white-space:pre">		</span></font><font face="arial">{!User.Email}</font></p><p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><font face="arial" style="font-family: arial; font-size: 12pt;">Phone:<span class="Apple-tab-span" style="white-space:pre">		</span></font><font face="arial">{!User.Phone}</font></p><p class="MsoNormal"><font><font face="arial" style="font-family: arial; font-size: 12pt;">Cell Phone: &nbsp;<span class="Apple-tab-span" style="white-space:pre">	</span></font><font face="arial">{!User.MobilePhone}</font></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font color="#002060" face="arial"><br></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="color:#002060"><br></span></p></div>]]></td>
+</tr>
+</table>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Friday 6/5 Email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>DTW Email</name>
+    <style>freeForm</style>
+    <subject>Hey {!Contact.FirstName}, your Business Advisor information:</subject>
+    <textOnly>Hey {!Contact.FirstName},
+
+Happy Friday! I see that we’ve been trying to reach you in regards to some extra cash for your business. Our products are custom built and designed to help each individual business take advantage of any and all opportunities they have in front of them.
+
+
+Last Tuesday we rolled out a brand new product called our “Preferred Loan” and this product is by far the most economical loan that we’ve ever built. The structure on our “Preferred Loan” are meant to rival those of bank loans and SBA loans without having to deal with the red tape and headaches that are normally associated with a loan of this quality. I was looking for about 5 minutes of your time to take a look at your business with you and see if it’s a fit. Please let me know when you are available for a short conversation. You may also reach out to me at any time on either phone number below.
+
+Looking forward to hearing back from you soon!
+
+Thanks,
+
+{!User.Name} | Business Advisor
+Phone: {!User.Phone}
+Cell:  {!User.MobilePhone}
+Email: {!User.Email}</textOnly>
+    <type>html</type>
+</EmailTemplate>

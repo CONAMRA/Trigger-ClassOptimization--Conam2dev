@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Interested in working capital introduction email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>EmailLetterhead</letterhead>
+    <name>Working Capital Intro</name>
+    <style>freeForm</style>
+    <subject>Hey {!Contact.FirstName}, your Business Advisor information:</subject>
+    <textOnly>Hey {!Contact.FirstName},
+
+I see that you’re interesting in getting some working capital for your business.  I want to make sure that we get you the best possible option for your financing.  We recently released a brand new preferred product for our more well qualified clients, and based on the information you’ve submitted, you seem to be a great candidate.  This product has the lowest interest rate we’ve ever offered in our 10 years in business and is comparable with some bank and SBA loans without the hassle and paperwork.  We can also get you your funding in just a couple of days.
+
+
+I’m available all day today and all weekend.  What would be a good time for us to talk about this?
+
+
+I look forward to speaking with you!
+
+
+
+http://www.rapidadvance.com/why-choose-rapid
+
+
+http://www.rapidadvance.com/our-clients
+
+All the best,
+
+
+
+{!User.Name} | Business Advisor
+
+Phone: {!User.Phone}
+
+Cell:  {!User.MobilePhone}
+
+Email:  {!User.Email}</textOnly>
+    <type>html</type>
+</EmailTemplate>

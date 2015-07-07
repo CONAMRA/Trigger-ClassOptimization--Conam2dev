@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>References</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>References</value>
+    </caseValues>
+    <fields>
+        <label><!-- Additional signor(s) on the lease? --></label>
+        <name>Additional_signor_s_on_the_lease__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Addresses Match --></label>
+        <name>Addresses_Match__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Any delinquencies in the rental payment? --></label>
+        <name>Any_delinquencies_in_the_rental_payment__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Any lease payment delinquencies? --></label>
+        <name>Any_lease_payment_delinquencies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Are there other signors on the lease? --></label>
+        <name>Are_there_other_signors_on_the_lease__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Are you current with your vendors? --></label>
+        <name>Are_you_current_with_your_vendors__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Business Ownership Matches --></label>
+        <name>Business_Ownership_Matches__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Business locations owned by principal --></label>
+        <name>Business_locations_owned_by_principal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Card statements are suspect --></label>
+        <name>Card_statements_are_suspect__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cash Advance Balance Owed(if applicable) --></label>
+        <name>Cash_Advance_Balance_Owed_if_applicable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chance of extending the tenant&apos;s lease? --></label>
+        <name>Chance_of_extending_the_tenant_s_lease__c</name>
+        <picklistValues>
+            <masterLabel>Excellent</masterLabel>
+            <translation><!-- Excellent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>good</masterLabel>
+            <translation><!-- good --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>poor</masterLabel>
+            <translation><!-- poor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comments on Additional Signors Response --></label>
+        <name>Comments_on_Additional_Signors_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments on Business Sale Response --></label>
+        <name>Comments_on_Business_Sale_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments on Contracted Business Response --></label>
+        <name>Comments_on_Contracted_Business_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments on Vendor Question Responses --></label>
+        <name>Comments_on_Vendor_Question_Responses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments on capital Use Discrepency --></label>
+        <name>Comments_on_capital_Use_Discrepency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments on the Business Opening --></label>
+        <name>Comments_on_the_Business_Opening__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments the Merchant&apos;s character --></label>
+        <name>Comments_the_Merchant_s_character__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confirm length of time with processor --></label>
+        <name>Confirm_length_of_time_with_processor__c</name>
+        <picklistValues>
+            <masterLabel>0 to 3 months</masterLabel>
+            <translation><!-- 0 to 3 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 to 6 months</masterLabel>
+            <translation><!-- 4 to 6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 to 12 months</masterLabel>
+            <translation><!-- 7 to 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; 1 year</masterLabel>
+            <translation><!-- &gt; 1 year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Current Delinquencies --></label>
+        <name>Current_Delinquencies__c</name>
+        <picklistValues>
+            <masterLabel>1 to 3 months</masterLabel>
+            <translation><!-- 1 to 3 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 to 6 months</masterLabel>
+            <translation><!-- 4 to 6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 to 12 months</masterLabel>
+            <translation><!-- 7 to 12 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; 12 months</masterLabel>
+            <translation><!-- &gt; 12 months --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Current Processor&apos;s Name --></label>
+        <name>Current_Processor_s_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Do you foresee the merchant closing? --></label>
+        <name>Do_you_foresee_the_merchant_closing__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Do you have any vendors? --></label>
+        <name>Do_you_have_any_vendors__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Does the intended use match the app? --></label>
+        <name>Does_the_intended_use_match_the_app__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Does the merchant own another business? --></label>
+        <name>Does_the_merchant_own_another_business__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Dollars Delinquent --></label>
+        <name>Dollars_Delinquent__c</name>
+        <picklistValues>
+            <masterLabel>$100 to $500</masterLabel>
+            <translation><!-- $100 to $500 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$2,501 to $5,000</masterLabel>
+            <translation><!-- $2,501 to $5,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$501 to $2,500</masterLabel>
+            <translation><!-- $501 to $2,500 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; $5,000</masterLabel>
+            <translation><!-- &gt; $5,000 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Explain any delinquent behavior --></label>
+        <name>Explain_any_delinquent_behavior__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gross monthly sales of the business --></label>
+        <name>Gross_monthly_sales_of_the_business__c</name>
+        <picklistValues>
+            <masterLabel>$10,000 to $25,000</masterLabel>
+            <translation><!-- $10,000 to $25,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$2,500 to $10,000</masterLabel>
+            <translation><!-- $2,500 to $10,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$25,001 to $50,000</masterLabel>
+            <translation><!-- $25,001 to $50,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$50,001 to $100,000</masterLabel>
+            <translation><!-- $50,001 to $100,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; $100,000</masterLabel>
+            <translation><!-- &gt; $100,000 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Has the merchant had an advance before? --></label>
+        <name>Has_the_merchant_had_an_advance_before__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Have you started eviction proceedings? --></label>
+        <name>Have_you_started_eviction_proceedings__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hours of Opertaion --></label>
+        <name>Hours_of_Opertaion__c</name>
+    </fields>
+    <fields>
+        <label><!-- How behind are you with your vendors? --></label>
+        <name>How_behind_are_you_with_your_vendors__c</name>
+        <picklistValues>
+            <masterLabel>$1,001 to $5,000</masterLabel>
+            <translation><!-- $1,001 to $5,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$5,000 to $10,000</masterLabel>
+            <translation><!-- $5,000 to $10,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$500 to $1,000</masterLabel>
+            <translation><!-- $500 to $1,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; $10,000</masterLabel>
+            <translation><!-- &gt; $10,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Current</masterLabel>
+            <translation><!-- Current --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How many sqft does the merchant occupy? --></label>
+        <name>How_many_sqft_does_the_merchant_occupy__c</name>
+    </fields>
+    <fields>
+        <label><!-- How much ownership do you have? --></label>
+        <name>How_much_ownership_do_you_have__c</name>
+        <picklistValues>
+            <masterLabel>100%</masterLabel>
+            <translation><!-- 100% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30% to 50%</masterLabel>
+            <translation><!-- 30% to 50% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51% to 99%</masterLabel>
+            <translation><!-- 51% to 99% --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- If closing in the next year what period? --></label>
+        <name>If_closing_in_the_next_year_what_period__c</name>
+        <picklistValues>
+            <masterLabel>Fall</masterLabel>
+            <translation><!-- Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spring</masterLabel>
+            <translation><!-- Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summer</masterLabel>
+            <translation><!-- Summer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Winter</masterLabel>
+            <translation><!-- Winter --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- If not how far behind are the dues? --></label>
+        <name>If_not_how_far_behind_are_the_dues__c</name>
+        <picklistValues>
+            <masterLabel>$1,000 to $5,000</masterLabel>
+            <translation><!-- $1,000 to $5,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$5,001 to $10,000</masterLabel>
+            <translation><!-- $5,001 to $10,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$500 to $1,000</masterLabel>
+            <translation><!-- $500 to $1,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; $10,000</masterLabel>
+            <translation><!-- &gt; $10,000 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- If other, then what? --></label>
+        <name>If_other_then_what__c</name>
+    </fields>
+    <fields>
+        <label><!-- If so are you current on franchise dues? --></label>
+        <name>If_so_are_you_current_on_franchise_dues__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- If so, for how much? --></label>
+        <name>If_so_for_how_much__c</name>
+        <picklistValues>
+            <masterLabel>$1,001 to $5,000</masterLabel>
+            <translation><!-- $1,001 to $5,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$100 to $500</masterLabel>
+            <translation><!-- $100 to $500 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$5,001 to $10,000</masterLabel>
+            <translation><!-- $5,001 to $10,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$501 to $1,000</masterLabel>
+            <translation><!-- $501 to $1,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; $10,000</masterLabel>
+            <translation><!-- &gt; $10,000 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- If so, with which Cash Advance Company? --></label>
+        <name>If_so_with_which_Cash_Advance_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- If the merchant is selling, then when? --></label>
+        <name>If_the_merchant_is_selling_then_when__c</name>
+        <picklistValues>
+            <masterLabel>1 to 6 months</masterLabel>
+            <translation><!-- 1 to 6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12 months +</masterLabel>
+            <translation><!-- 12 months + --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 to 12 months</masterLabel>
+            <translation><!-- 7 to 12 months --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- If yes, When? --></label>
+        <name>If_yes_When__c</name>
+        <picklistValues>
+            <masterLabel>Fall</masterLabel>
+            <translation><!-- Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spring</masterLabel>
+            <translation><!-- Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summer</masterLabel>
+            <translation><!-- Summer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Winter</masterLabel>
+            <translation><!-- Winter --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- If yes, how many months? --></label>
+        <name>If_yes_how_many_months__c</name>
+        <picklistValues>
+            <masterLabel>1 to 3</masterLabel>
+            <translation><!-- 1 to 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 to 6</masterLabel>
+            <translation><!-- 4 to 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 +</masterLabel>
+            <translation><!-- 6 + --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Information does not agree with applican --></label>
+        <name>Information_does_not_agree_with_applican__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is the business closing anytime soon? --></label>
+        <name>Is_the_business_closing_anytime_soon__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is this a triple net lease? --></label>
+        <name>Is_this_a_triple_net_lease__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is this business a franchise? --></label>
+        <name>Is_this_business_a_franchise__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Merchant Interview Completed Date --></label>
+        <name>Merchant_Interview_Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name(s) of additional signor(s) --></label>
+        <name>Name_s_of_additional_signor_s__c</name>
+    </fields>
+    <fields>
+        <label><!-- Non Peak Season --></label>
+        <name>Non_Peak_Season__c</name>
+        <picklistValues>
+            <masterLabel>Fall</masterLabel>
+            <translation><!-- Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spring</masterLabel>
+            <translation><!-- Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summer</masterLabel>
+            <translation><!-- Summer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Winter</masterLabel>
+            <translation><!-- Winter --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Number of Full-Time Employees --></label>
+        <name>Number_of_Full_Time_Employees__c</name>
+        <picklistValues>
+            <masterLabel>1 to 5</masterLabel>
+            <translation><!-- 1 to 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11 to 25</masterLabel>
+            <translation><!-- 11 to 25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25+</masterLabel>
+            <translation><!-- 25+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 to 10</masterLabel>
+            <translation><!-- 6 to 10 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Number of Tables (if an eatery) --></label>
+        <name>Number_of_Tables_if_an_eatery__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of part-Time Employees --></label>
+        <name>Number_of_part_Time_Employees__c</name>
+        <picklistValues>
+            <masterLabel>1 to 5</masterLabel>
+            <translation><!-- 1 to 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11 to 25</masterLabel>
+            <translation><!-- 11 to 25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25+</masterLabel>
+            <translation><!-- 25+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 to 10</masterLabel>
+            <translation><!-- 6 to 10 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- References --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Overall Merchant interview assessment --></label>
+        <name>Overall_Merchant_interview_assessment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Peak Season --></label>
+        <name>Peak_Season__c</name>
+        <picklistValues>
+            <masterLabel>Fall</masterLabel>
+            <translation><!-- Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spring</masterLabel>
+            <translation><!-- Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summer</masterLabel>
+            <translation><!-- Summer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Winter</masterLabel>
+            <translation><!-- Winter --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Phone numbers match --></label>
+        <name>Phone_numbers_match__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Physical location --></label>
+        <name>Physical_location__c</name>
+        <picklistValues>
+            <masterLabel>Mall</masterLabel>
+            <translation><!-- Mall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shopping Center</masterLabel>
+            <translation><!-- Shopping Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stand Alone</masterLabel>
+            <translation><!-- Stand Alone --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Services Offered --></label>
+        <name>Services_Offered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Notes on Merchant&apos;s Identity --></label>
+        <name>Special_Notes_on_Merchant_s_Identity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Square Footage of the Location --></label>
+        <name>Square_Footage_of_the_Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Suspect Landlord Interview --></label>
+        <name>Suspect_Landlord_Interview__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Suspect Merchant interview --></label>
+        <name>Suspect_Merchant_interview__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unacceptable Check --></label>
+        <name>Unacceptable_Check__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unsatisfactory Neighborhood check --></label>
+        <name>Unsatisfactory_Neighborhood_check__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Website (if availible) --></label>
+        <name>Website_if_availible__c</name>
+    </fields>
+    <fields>
+        <label><!-- What businesses are nearby? --></label>
+        <name>What_businesses_are_nearby__c</name>
+    </fields>
+    <fields>
+        <label><!-- What is the business type? --></label>
+        <name>What_is_the_business_type__c</name>
+        <picklistValues>
+            <masterLabel>Automotive</masterLabel>
+            <translation><!-- Automotive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bar</masterLabel>
+            <translation><!-- Bar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Washe</masterLabel>
+            <translation><!-- Car Washe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clothing &amp; Apparel</masterLabel>
+            <translation><!-- Clothing &amp; Apparel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer-Related Retail</masterLabel>
+            <translation><!-- Computer-Related Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Electronic</masterLabel>
+            <translation><!-- Consumer Electronic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drycleaner</masterLabel>
+            <translation><!-- Drycleaner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florists</masterLabel>
+            <translation><!-- Florists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food Convenience &amp; Variety</masterLabel>
+            <translation><!-- Food Convenience &amp; Variety --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Formal Wear</masterLabel>
+            <translation><!-- Formal Wear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furniture</masterLabel>
+            <translation><!-- Furniture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Golf</masterLabel>
+            <translation><!-- Golf --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grocery Store</masterLabel>
+            <translation><!-- Grocery Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair &amp; Nail Salon</masterLabel>
+            <translation><!-- Hair &amp; Nail Salon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Club</masterLabel>
+            <translation><!-- Health Club --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hotel/Motel</masterLabel>
+            <translation><!-- Hotel/Motel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Housing-Related</masterLabel>
+            <translation><!-- Housing-Related --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jewelry</masterLabel>
+            <translation><!-- Jewelry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lawn &amp; Garden</masterLabel>
+            <translation><!-- Lawn &amp; Garden --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limosine &amp; Transportation</masterLabel>
+            <translation><!-- Limosine &amp; Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquor Store</masterLabel>
+            <translation><!-- Liquor Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mail Center</masterLabel>
+            <translation><!-- Mail Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pet Store</masterLabel>
+            <translation><!-- Pet Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional Service</masterLabel>
+            <translation><!-- Professional Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restaurant</masterLabel>
+            <translation><!-- Restaurant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School</masterLabel>
+            <translation><!-- School --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shoe Store</masterLabel>
+            <translation><!-- Shoe Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sporting Good</masterLabel>
+            <translation><!-- Sporting Good --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tobacco Shop</masterLabel>
+            <translation><!-- Tobacco Shop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toy Store</masterLabel>
+            <translation><!-- Toy Store --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- What is the primary leaseholder&apos;s name --></label>
+        <name>What_is_the_primary_leaseholder_s_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- What % of the business is contracted? --></label>
+        <name>What_of_the_business_is_contracted__c</name>
+        <picklistValues>
+            <masterLabel>1% to 25%</masterLabel>
+            <translation><!-- 1% to 25% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>26% to 50%</masterLabel>
+            <translation><!-- 26% to 50% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; 51%</masterLabel>
+            <translation><!-- &gt; 51% --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- When did you purchase/start the business --></label>
+        <name>When_did_you_purchase_start_the_business__c</name>
+    </fields>
+    <fields>
+        <label><!-- When does the lease expire? --></label>
+        <name>When_does_the_lease_expire__c</name>
+        <picklistValues>
+            <masterLabel>1 to 5 years</masterLabel>
+            <translation><!-- 1 to 5 years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 to 6 months</masterLabel>
+            <translation><!-- 1 to 6 months --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 to 11 months</masterLabel>
+            <translation><!-- 7 to 11 months --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- When was business opened? --></label>
+        <name>When_was_business_opened__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will you sell the business anytime soon? --></label>
+        <name>Will_you_sell_the_business_anytime_soon__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- &gt; 3 residences in the last 12 mo --></label>
+        <name>X3_residences_in_the_last_12_mo__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- if so, then what type? --></label>
+        <name>if_so_then_what_type__c</name>
+    </fields>
+    <nameFieldLabel>References  Name</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

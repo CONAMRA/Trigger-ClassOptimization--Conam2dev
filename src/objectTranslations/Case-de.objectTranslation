@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Case Deadline --></label>
+        <name>Case_Deadline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Number --></label>
+        <name>Contact_Number__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lead Name --></label>
+        <name>Lead_Name__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Owner --></label>
+        <name>Opportunity_Owner__c</name>
+        <relationshipLabel><!-- Cases (Opportunity Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <name>Origin</name>
+        <picklistValues>
+            <masterLabel>Email from ITSupport</masterLabel>
+            <translation><!-- Email from ITSupport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email from Merchant</masterLabel>
+            <translation><!-- Email from Merchant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email from Partner</masterLabel>
+            <translation><!-- Email from Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email from Rapid Employee</masterLabel>
+            <translation><!-- Email from Rapid Employee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email from Senior Management</masterLabel>
+            <translation><!-- Email from Senior Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone - CS Toll Free Number</masterLabel>
+            <translation><!-- Phone - CS Toll Free Number --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone - Direct Dail</masterLabel>
+            <translation><!-- Phone - Direct Dail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone - Internal Employee Call</masterLabel>
+            <translation><!-- Phone - Internal Employee Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Priority</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Reason</name>
+        <picklistValues>
+            <masterLabel>Accounting/Financial Reporting</masterLabel>
+            <translation><!-- Accounting/Financial Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Analytics Project</masterLabel>
+            <translation><!-- Analytics Project --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD Reporting</masterLabel>
+            <translation><!-- BD Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data for Decision Making Query</masterLabel>
+            <translation><!-- Data for Decision Making Query --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT Development Collaboration</masterLabel>
+            <translation><!-- IT Development Collaboration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ITSupport - CRS Automation</masterLabel>
+            <translation><!-- ITSupport - CRS Automation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ITSupport - Salesforce Admin</masterLabel>
+            <translation><!-- ITSupport - Salesforce Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal Reporting</masterLabel>
+            <translation><!-- Legal Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Reporting</masterLabel>
+            <translation><!-- Marketing Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly Reporting Package</masterLabel>
+            <translation><!-- Monthly Reporting Package --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Native Salesforce Report Update/Creation</masterLabel>
+            <translation><!-- Native Salesforce Report Update/Creation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operations Management Reporting</masterLabel>
+            <translation><!-- Operations Management Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly Reporting Package</masterLabel>
+            <translation><!-- Quarterly Reporting Package --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk Reporting</masterLabel>
+            <translation><!-- Risk Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Management Reporting</masterLabel>
+            <translation><!-- Sales Management Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled Process - Daily Tasks</masterLabel>
+            <translation><!-- Scheduled Process - Daily Tasks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled Process - Weekly Task</masterLabel>
+            <translation><!-- Scheduled Process - Weekly Task --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Requested By --></label>
+        <name>Requested_By__c</name>
+        <relationshipLabel><!-- Cases (Requested By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <name>Status</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Escalated</masterLabel>
+            <translation><!-- Escalated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow Up Needed</masterLabel>
+            <translation><!-- Follow Up Needed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Type</name>
+        <picklistValues>
+            <masterLabel>Problem</masterLabel>
+            <translation><!-- Problem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Question</masterLabel>
+            <translation><!-- Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Request</masterLabel>
+            <translation><!-- Request --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Reference to the Geocode object holding all of mapping information for the record. --></help>
+        <label><!-- Geocode --></label>
+        <name>geopointe__Geocode__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Distribution action --></label>
+        <name>n2de__Action__c</name>
+        <picklistValues>
+            <masterLabel>Contacted</masterLabel>
+            <translation><!-- Contacted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reviewed</masterLabel>
+            <translation><!-- Reviewed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is distributed --></label>
+        <name>n2de__Is_distributed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is auto reassigned --></label>
+        <name>n2de__Is_reassigned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger enabled --></label>
+        <name>n2de__Is_trigger_enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is triggered --></label>
+        <name>n2de__Is_triggered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date last distributed to user --></label>
+        <name>n2de__Last_distributed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date last auto reassigned --></label>
+        <name>n2de__Last_reassigned__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Internal Inquiry --></label>
+        <name>Internal_Inquiry</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Merchant Inquiry --></label>
+        <name>Merchant_Inquiry</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Partner Inquiry --></label>
+        <name>Partner_Inquiry</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Map --></label>
+        <name>geopointe__Map</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Map_Records_Case --></label>
+        <name>geopointe__Map_Records_Case</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Map_newWindow --></label>
+        <name>geopointe__Map_newWindow</name>
+    </webLinks>
+</CustomObjectTranslation>

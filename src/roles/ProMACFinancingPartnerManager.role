@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>ProMED Healthcare Financing Partner Manager</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>ProMED Healthcare Financing Partner Manager</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>ProMACFinancingPartnerExecutive</parentRole>
+</Role>

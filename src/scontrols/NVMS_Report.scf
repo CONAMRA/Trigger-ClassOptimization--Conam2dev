@@ -1,0 +1,15 @@
+<html> 
+<head> 
+<script> 
+function init() 
+{ 
+
+} 
+</script> <!-- // utils --> 
+</head> 
+<body onload="javascript:init();" > 
+<div id="pagebody" > 
+{!Site_Survey__c.NVMS_Report__c}
+</div> 
+</body> 
+</html>

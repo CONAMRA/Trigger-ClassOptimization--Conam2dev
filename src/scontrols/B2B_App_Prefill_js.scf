@@ -1,0 +1,475 @@
+<script type="text/javascript">
+	function populateForm()
+	{
+		var accountId = getQueryVariable('acct');
+		var oppId = getQueryVariable('opp');
+		if (accountId && oppId)
+		{
+			sforce.connection.query("Select o.Name, o.Type, o.Purpose_of_Funds__c, o.Months_of_Processing_Statements_Included__c, o.Id, o.Existing_Customer__c, o.Estimated_Days_to_Repay__c, o.Does_Ave_V_MC_Volume_Agree_w_Calculator__c, o.Average_Monthly_VISA_MC_Volume__c, o.Amount, o.Renewal__c, o.Pay_Back_Amount__c From Opportunity o Where o.Id = '" + oppId + "'", {onSuccess : successOpportunity, onFailure: failure});
+			sforce.connection.query("Select a.Legal_Name__c, a.DBA__c, a.Website, a.BusinessStructure__c, a.FederalTaxID__c, a.Sic, a.ShippingStreet, a.ShippingState, a.ShippingPostalCode, a.ShippingCity, a.Phone, a.NumberOfEmployees, a.Name, a.Description, a.Fax, a.BillingStreet, a.BillingState, a.BillingPostalCode, a.BillingCity, a.AnnualRevenue, a.Use_Mailing_Address_in_Correspondence__c, a.DateBusinessStarted__c, a.Present_Management_Since__c, a.Number_of_Locations__c, a.Months_Remaining_On_Site_Lease_Mortgage__c, a.Does_the_Merchant_Own_the_Building__c, a.Landlord_Agent_Name__c, a.Landlord_Agent_Phone__c, a.Months_with_Current_Processor__c From Account a Where a.Id = '" + accountId + "'", {onSuccess : successAccount, onFailure: failure});
+			sforce.connection.query("Select c.Id, c.Title, c.Salutation, c.Suffix__c, c.Phone, c.MobilePhone, c.Principal_1_Street_Address__c, c.Principal_1_State__c, c.Principal_1_Zip__c, c.Principal_1_City__c, c.LastName, c.FirstName, c.Middle_Name__c, c.Email, c.Birthdate, c.OwnershipPercentage__c, c.Principal_Type__c, c.Monthly_Gross_Salary__c, c.Filed_for_bankruptcy__c, c.Months_at_Current_Address__c, c.Months_at_Previous_Address__c From Contact c Where c.AccountId = '" + accountId + "'", {onSuccess : successContact, onFailure: failure});
+		}
+	}
+	
+	function failure (error)
+	{
+		alert(error);
+	}
+	
+	function successOpportunity(result)
+	{
+		if (result.size > 0)
+		{
+			var record = result.getArray("records")[0];
+			if (getRecordValue(record, 'getBoolean', 'Renewal__c'))
+			{
+			     document.getElementById('fldProduct001Type').value = 'Renewal';
+			     document.getElementById('fldProduct001Type').onchange();
+			}
+			else
+			{
+			     document.getElementById('fldProduct001Type').value = 'CashAdvance';
+			     document.getElementById('fldProduct001Type').onchange();
+			}
+			document.getElementById('fldOppName').value = record.Name;
+			document.getElementById('fldBusInfoDBA').value = record.Name;
+			setField('fldProduct001Amount', getRecordValue(record, 'getFloat', 'Amount'), 'Opportunity', 'Amount');
+			setField('fldProduct001Term', getRecordValue(record, 'getInt', 'Estimated_Days_to_Repay__c'), 'Opportunity', 'Estimated_Days_to_Repay__c');
+			setField('fldProduct001Purpose', mapPurposePicklist(record.Purpose_of_Funds__c), 'Opportunity', 'Purpose_of_Funds__c');
+			setField('fldProduct001NumStmts', getRecordValue(record, 'getInt', 'Months_of_Processing_Statements_Included__c'), 'Opportunity', 'Months_of_Processing_Statements_Included__c');
+			//setField('fldBusInfoExisting', mapYesNoPicklist(record.Existing_Customer__c), 'Opportunity', 'Existing_Customer__c');
+			setField('fldBusInfoExisting', record.Renewal__c, 'Opportunity', 'Renewal__c');
+			setField('fldBusInfoAvgMoCC', getRecordValue(record, 'getFloat', 'Average_Monthly_VISA_MC_Volume__c'), 'Opportunity', 'Average_Monthly_VISA_MC_Volume__c');
+			//setField('fldBusInfoCCCalc', mapYesNoPicklist(record.Does_Ave_V_MC_Volume_Agree_w_Calculator__c), 'Opportunity', 'Does_Ave_V_MC_Volume_Agree_w_Calculator__c');
+			setField('fldProduct001PaybackAmt', getRecordValue(record, 'getFloat', 'Pay_Back_Amount__c'), 'Opportunity', 'Pay_Back_Amount__c');
+			window.top.isRenewal = record.Renewal__c;
+			//setField('fldOwner001Existing', record.Renewal__c, 'Opportunity', 'Renewal__c');
+		}
+	}
+	
+	function successAccount(result)
+	{
+		if (result.size > 0)
+		{
+			var record = result.getArray("records")[0];
+			setField('fldBusInfoLegalName', record.Legal_Name__c, 'Account', 'Legal_Name__c');
+			//setField('fldBusInfoDBA', record.DBA__c, 'Account', 'DBA__c');
+			setField('fldBusInfoStructure', mapStructurePicklist(record.BusinessStructure__c), 'Account', 'BusinessStructure__c');
+			setField('fldBusInfoBusDesc', record.Description, 'Account', 'Description');
+			setField('fldBusInfoTaxID', record.FederalTaxID__c, 'Account', 'FederalTaxID__c');
+			setField('fldBusInfoPhone', record.Phone, 'Account', 'Phone');
+			setField('fldBusInfoFax', record.Fax, 'Account', 'Fax');
+			setField('fldBusInfoWebsite', record.Website, 'Account', 'Website');
+			//setField('fldBusInfoNumEmployees', getRecordValue(record, 'getInt', 'NumberOfEmployees'), 'Account', 'NumberOfEmployees');
+			setField('fldBusInfoAnnualSales', getRecordValue(record, 'getFloat', 'AnnualRevenue'), 'Account', 'AnnualRevenue');
+			setField('fldBusInfoBusAddr1', record.BillingStreet, 'Account', 'BillingStreet');
+			setField('fldBusInfoBusCity', record.BillingCity, 'Account', 'BillingCity');
+			setField('fldBusInfoBusState', record.BillingState, 'Account', 'BillingState');
+			setField('fldBusInfoBusZip', record.BillingPostalCode, 'Account', 'BillingPostalCode');
+			setField('fldBusInfoMailingAddr1', record.ShippingStreet, 'Account', 'ShippingStreet');
+			setField('fldBusInfoMailingCity', record.ShippingCity, 'Account', 'ShippingCity');
+			setField('fldBusInfoMailingState', record.ShippingState, 'Account', 'ShippingState');
+			setField('fldBusInfoMailingZip', record.ShippingPostalCode, 'Account', 'ShippingPostalCode');
+			setField('fldBusInfoMailingSame', mapYesNoPicklist(record.Use_Mailing_Address_in_Correspondence__c), 'Account', 'Use_Mailing_Address_in_Correspondence__c');
+			setField('fldBusInfoDateEst', formatDate(getRecordValue(record, 'getDate', 'DateBusinessStarted__c')), 'Account', 'DateBusinessStarted__c');
+			setField('fldBusInfoManSince', formatDate(getRecordValue(record, 'getDate', 'Present_Management_Since__c')), 'Account', 'Present_Management_Since__c');
+			setField('fldBusInfoNumLoc', getRecordValue(record, 'getInt', 'Number_of_Locations__c'), 'Account', 'Number_of_Locations__c');
+			setField('fldBusInfoMonRemaining', getRecordValue(record, 'getInt', 'Months_Remaining_On_Site_Lease_Mortgage__c'), 'Account', 'Months_Remaining_On_Site_Lease_Mortgage__c');
+			setField('fldBusInfoOwnRent', mapOwnLeasePicklist(record.Does_the_Merchant_Own_the_Building__c), 'Account', 'Does_the_Merchant_Own_the_Building__c');
+			setField('fldBusInfoAgentName', record.Landlord_Agent_Name__c, 'Account', 'Landlord_Agent_Name__c');
+			setField('fldBusInfoAgentPhone', record.Landlord_Agent_Phone__c, 'Account', 'Landlord_Agent_Phone__c');
+			setField('fldBusInfoMonthsCurrentProcessor', getRecordValue(record, 'getInt', 'Months_with_Current_Processor__c'), 'Account', 'Months_with_Current_Processor__c');
+		}
+	}
+	
+	function successContact(result)
+	{
+		if (result.size > 0)
+		{
+			var record = result.getArray("records")[0];
+			document.getElementById('fldContact001Id').value = record.Id;
+			setField('fldOwner001Prefix', record.Salutation, 'Contact1', 'Salutation');
+			setField('fldOwner001NameFirst', record.FirstName, 'Contact1', 'FirstName');
+			setField('fldOwner001NameMiddle', record.Middle_Name__c, 'Contact1', 'Middle_Name__c');
+			setField('fldOwner001NameLast', record.LastName, 'Contact1', 'LastName');
+			setField('fldOwner001Suffix', record.Suffix__c, 'Contact1', 'Suffix__c');
+			setField('fldOwner001Title', record.Title, 'Contact1', 'Title');
+			setField('fldOwner001DOB', formatDate(getRecordValue(record, 'getDate', 'Birthdate')), 'Contact1', 'Birthdate');
+			setField('fldOwner001Addr1', record.Principal_1_Street_Address__c, 'Contact1', 'Principal_1_Street_Address__c');
+			setField('fldOwner001City', record.Principal_1_City__c, 'Contact1', 'Principal_1_City__c');
+			setField('fldOwner001State', record.Principal_1_State__c, 'Contact1', 'Principal_1_State__c');
+			setField('fldOwner001Zip', record.Principal_1_Zip__c, 'Contact1', 'Principal_1_Zip__c');
+			setField('fldOwner001HomePhone', record.Phone, 'Contact1', 'Phone');
+			setField('fldOwner001MobilePhone', record.MobilePhone, 'Contact1', 'MobilePhone');
+			setField('fldOwner001Email', record.Email, 'Contact1', 'Email');
+			setField('fldOwner001PrincipalType', mapPrinTypePicklist(record.Principal_Type__c), 'Contact1', 'Principal_Type__c');
+			setField('fldOwner001PercentOwnership', getRecordValue(record, 'getFloat', 'OwnershipPercentage__c'), 'Contact1', 'OwnershipPercentage__c');
+			setField('fldOwner001MonthlyGrossSalary', getRecordValue(record, 'getFloat', 'Monthly_Gross_Salary__c'), 'Contact1', 'Monthly_Gross_Salary__c');
+			setField('fldOwner001Bankruptcy', mapYesNoPicklist(record.Filed_for_bankruptcy__c), 'Contact1', 'Filed_for_bankruptcy__c');
+			setField('fldOwner001MonthsCurrentAddr', getRecordValue(record, 'getInt', 'Months_at_Current_Address__c'), 'Contact1', 'Months_at_Current_Address__c');
+			setField('fldOwner001MonthsPreviousAddr', getRecordValue(record, 'getInt', 'Months_at_Previous_Address__c'), 'Contact1', 'Months_at_Previous_Address__c');
+			setField('fldOwner001Existing', window.top.isRenewal, 'Opportunity', 'Renewal__c');
+		}
+
+		if (result.size > 1)
+		{
+			var records = result.getArray("records");
+			var section = '';
+			for (var i = 1; (i < records.length && i < 3); i++)
+			{
+				var record = records[i];
+				addSection('Owner001');
+				section = 'fldOwner' + formatString(''+(i+1), '###');
+				document.getElementById('fldContact' + formatString(''+(i+1), '###') +'Id').value = record.Id;
+				setField(section + 'Prefix', record.Salutation, 'Contact'+(i+1), 'Salutation');
+				setField(section + 'NameFirst', record.FirstName, 'Contact'+(i+1), 'FirstName');
+				setField(section + 'NameMiddle', record.Middle_Name__c, 'Contact'+(i+1), 'Middle_Name__c');
+				setField(section + 'NameLast', record.LastName, 'Contact'+(i+1), 'LastName');
+				setField(section + 'Suffix', record.Suffix__c, 'Contact'+(i+1), 'Suffix__c');
+				setField(section + 'Title', record.Title, 'Contact'+(i+1), 'Title');
+				setField(section + 'DOB', formatDate(getRecordValue(record, 'getDate', 'Birthdate')), 'Contact'+(i+1), 'Birthdate');
+				setField(section + 'Addr1', record.Principal_1_Street_Address__c, 'Contact'+(i+1), 'Principal_1_Street_Address__c');
+				setField(section + 'City', record.Principal_1_City__c, 'Contact'+(i+1), 'Principal_1_City__c');
+				setField(section + 'State', record.Principal_1_State__c, 'Contact'+(i+1), 'Principal_1_State__c');
+				setField(section + 'Zip', record.Principal_1_Zip__c, 'Contact'+(i+1), 'Principal_1_Zip__c');
+				setField(section + 'HomePhone', record.Phone, 'Contact'+(i+1), 'Phone');
+				setField(section + 'MobilePhone', record.MobilePhone, 'Contact'+(i+1), 'MobilePhone');
+				setField(section + 'Email', record.Email, 'Contact'+(i+1), 'Email');
+				setField(section + 'PrincipalType', mapPrinTypePicklist(record.Principal_Type__c), 'Contact'+(i+1), 'Principal_Type__c');
+				setField(section + 'PercentOwnership', getRecordValue(record, 'getFloat', 'OwnershipPercentage__c'), 'Contact'+(i+1), 'OwnershipPercentage__c');
+				setField(section + 'MonthlyGrossSalary', getRecordValue(record, 'getFloat', 'Monthly_Gross_Salary__c'), 'Contact'+(i+1), 'Monthly_Gross_Salary__c');
+				setField(section + 'Bankruptcy', mapYesNoPicklist(record.Filed_for_bankruptcy__c), 'Contact'+(i+1), 'Filed_for_bankruptcy__c');
+				setField(section + 'MonthsCurrentAddr', getRecordValue(record, 'getInt', 'Months_at_Current_Address__c'), 'Contact'+(i+1), 'Months_at_Current_Address__c');
+				setField(section + 'MonthsPreviousAddr', getRecordValue(record, 'getInt', 'Months_at_Previous_Address__c'), 'Contact'+(i+1), 'Months_at_Previous_Address__c');
+				setField(section + 'Existing', window.top.isRenewal, 'Opportunity', 'Renewal__c');
+			}
+		}
+	}
+	
+	function setField( field, value, src, fld)
+	{
+		if (value == null)
+		{
+			return;
+		}
+
+		var element = $(field);
+		//var element = document.getElementById(field);
+ 		element.value = value;
+ 		if (element.onchange)
+ 		{
+ 			element.onchange();
+ 			value = element.value;
+ 		}
+ 		element.writeAttribute('defaultvalue', value + '');
+ 		element.writeAttribute('isdirty', 'false');
+		element.writeAttribute('datasrc', src + '');
+		element.writeAttribute('datafld', fld + '');
+
+ 		var onchange = element.readAttribute('onchange');
+         
+ 		if(!onchange)
+ 		{
+			onchange = "";
+		}
+ 		onchange = "var id=this.id;" + onchange + 'checkDirtyFlag(this);';
+
+ 		element.onchange = new Function(onchange);
+	}
+	
+	function checkDirtyFlag(element)
+	{
+ 		if(element.value != element.getAttribute('defaultvalue'))
+ 		{
+ 		 		element.setAttribute('isdirty', 'true');
+ 		} 	
+ 		else
+ 		{
+ 		 		element.setAttribute('isdirty', 'false');
+ 		}		
+	}
+
+	function formatDate(date)
+	{
+		if (date == null || date == "")
+		{
+			return "";
+		}
+
+		var month = parseInt(date.getMonth()) + 1;
+		var day = parseInt(date.getDate());
+		return (month < 10 ? '0' : '') + month + '/' + (day < 10 ? '0' : '') + day + '/' + formatString(date.getFullYear(), '####');
+	}
+	
+	function getQueryVariable(variable)
+	{
+		//var query = window.location.search.substring(1);
+		var query = window.parent.location.search.substring(1);
+		var vars = query.split("&");
+		for (var i=0;i<vars.length;i++)
+		{
+			var pair = vars[i].split("=");
+			if (pair[0] == variable) {
+				return pair[1];
+			}
+		}
+	}
+	
+	function getRecordValue(recordObject, recordFunction, recordAttribute)
+	{
+		var value = '';
+		var statement = 'if(recordObject.' + recordAttribute + ')' +
+			'{ value = recordObject.' + recordFunction + '(\'' + recordAttribute + '\'); }';
+
+		eval(statement);
+		
+		return value;
+	}
+	
+	function mapOwnLeasePicklist(str)
+	{
+		if(str == null || str == '')
+			return '';
+
+		str = str.toUpperCase();
+		var ans = "";
+		switch (str)
+		{
+			case "OWNS":
+				ans = "OWN";
+				break;
+			case "OWN":
+				ans = "Owns";
+				break;	
+			case "LEASES":
+				ans = "LEASE";
+				break;
+			case "LEASE":
+				ans = "Leases";
+				break;	
+			default:
+				ans = "";
+				break;
+		}
+		return ans;
+	}
+	
+	function mapYesNoPicklist(str)
+	{
+		if(str == null || str == '')
+			return '';
+
+		str = str.toUpperCase();
+		var ans = "";
+		switch (str)
+		{
+			case "FALSE":
+				ans = "No";
+				break;
+			case "NO":
+				ans = "false";
+				break;
+			case "TRUE":
+				ans = "Yes";
+				break;
+			case "YES":
+				ans = "true"
+				break;
+			default:
+				ans = "";
+				break;
+		}
+		return ans;
+	}
+	
+	function mapPurposePicklist(str)
+	{
+		if(str == null || str == '')
+		{
+			return '';
+		}
+
+		if (str == "OTHER")
+		{
+			return "Other";
+		}
+		else if (str == "PAYROLL")
+		{
+			return "Payroll";
+		}
+		str = str.toUpperCase();
+		var ans = "";
+		switch (str)
+		{
+			case "DEBT":
+				ans = "Pay off debt";
+				break;
+			case "PAY OFF DEBT":
+				ans = "DEBT";
+				break;
+			case "EXPAND":
+				ans = "Expand business";
+				break;
+			case "EXPAND BUSINESS":
+				ans = "EXPAND";
+				break;
+			case "FIXASSETS":
+				ans = "Purchase new equipment, inventory";
+				break;
+			case "PURCHASE NEW EQUIPMENT, INVENTORY":
+				ans = "FIXASSETS";
+				break;
+			case "NEWLOCATION":
+				ans = "Open a new location";
+				break;
+			case "OPEN A NEW LOCATION":
+				ans = "NEWLOCATION";
+				break;
+			case "RENOVATE":
+				ans = "Renovation";
+				break;
+			case "RENOVATION":
+				ans = "RENOVATE";
+				break;
+			case "ERWC":
+				ans = "Emergency working capital";
+				break;
+			case "EMERGENCY WORKING CAPITAL":
+				ans = "ERWC";
+				break;
+			case "BUYOUT":
+				ans = "Buyout a partner";
+				break;
+			case "BUYOUT A PARTNER":
+				ans = "BUYOUT";
+				break;
+			case "TAXLIEN":
+				ans = "Pay off a tax lien";
+				break;
+			case "PAY OFF A TAX LIEN":
+				ans = "TAXLIEN";
+				break;
+			case "SURPLUS":
+				ans = "Seasonal - surplus cash for off-season";
+				break;
+			case "SEASONAL - SURPLUS CASH FOR OFF-SEASON":
+				ans = "SURPLUS";
+				break;
+			case "CONSTRUCT":
+				ans = "Construction";
+				break;
+			case  "CONSTRUCTION":
+				ans = "CONSTRUCT";
+				break;
+			case "PAYROLL":
+				ans = "PAYROLL";
+				break;
+			case "CASHFLOW":
+				ans = "Cashflow problems - security";
+				break;
+			case "CASHFLOW PROBLEMS - SECURITY":
+				ans = "CASHFLOW";
+				break;
+			case "MKTG":
+				ans = "Marketing expense, promotion";
+				break;
+			case "MARKETING EXPENSE, PROMOTION":
+				ans = "MKTG";
+				break;
+			case "OTHER":
+				ans = "OTHER";
+				break;
+			default:
+				ans = "";
+				break;
+		}
+		return ans;
+	}
+	
+	function mapPrinTypePicklist(str)
+	{
+		if(str == null || str == '')
+		{
+			return '';
+		}
+
+		str = str.toUpperCase();
+		var ans = "";
+		switch (str)
+		{
+			case "GUARANTOR":
+				ans = 'Guarantor';
+				break;
+			case "COSIGNER & GUARANTOR":
+				ans = 'Co-Signer and Guarantor';
+				break;
+			case "CO-SIGNER AND GUARANTOR":
+				ans = 'Cosigner & Guarantor';
+				break;
+			case "SIGNER & GUARANTOR":
+				ans = 'Signer and Guarantor';
+				break;
+			case "SIGNER AND GUARANTOR":
+				ans = 'Signer & Guarantor';
+				break;
+			default:
+				ans = '';
+				break;
+		}
+		return ans;
+	}
+
+	function mapStructurePicklist(str)
+	{
+		if(str == null || str == '')
+		{
+			return '';
+		}
+
+		str = str.toUpperCase();
+		var ans = "";
+		switch (str)
+		{
+			case "PROPRIETORSHIP":
+				ans = "PROP";
+				break;
+			case "PROP":
+				ans = "Proprietorship";
+				break;
+			case "GENERAL PARTNERSHIP":
+				ans = "GNPT";
+				break;
+			case "GNPT":
+				ans = "General Partnership";
+				break;
+			case "LIMITED PARTNERSHIP":
+				ans = "LMPT";
+				break;
+			case "LMPT":
+				ans = "Limited Partnership";
+				break;
+			case "S-CORPORATION":
+				ans = "SCOR";
+				break;
+			case "SCOR":
+				ans = "S-Corporation";
+				break;
+			case "C-CORPORATION":
+				ans = "CCOR";
+				break;
+			case "CCOR":
+				ans = "C-Corporation";
+				break;
+			case "LIMITED LIABILITY CORPORATION":
+				ans = "LMLB";
+				break;
+			case "LMLB":
+				ans = "Limited Liability Corporation";
+				break;
+			default:
+				ans = "";
+				break;
+		}
+		return ans;
+	}
+</script>

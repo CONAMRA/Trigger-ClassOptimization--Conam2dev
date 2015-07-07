@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Elavon-Bankers Merchant Services (Carlos Morales) Partner Executive</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Elavon-Bankers Merchant Services (Carlos Morales) Partner Executive</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>BusinessDevelopment</parentRole>
+</Role>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project Team</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Project Team Members</value>
+    </caseValues>
+    <fields>
+        <help><!-- Members currently working on this project. --></help>
+        <label><!-- Project Members --></label>
+        <name>Project_Members__c</name>
+        <picklistValues>
+            <masterLabel>Alex Lopez</masterLabel>
+            <translation><!-- Alex Lopez --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ashley Thomas</masterLabel>
+            <translation><!-- Ashley Thomas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Darien Allen</masterLabel>
+            <translation><!-- Darien Allen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Devin McDonald</masterLabel>
+            <translation><!-- Devin McDonald --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jeremy Brown</masterLabel>
+            <translation><!-- Jeremy Brown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jim Fenton</masterLabel>
+            <translation><!-- Jim Fenton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Karl Taborda</masterLabel>
+            <translation><!-- Karl Taborda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kirk Keshishian</masterLabel>
+            <translation><!-- Kirk Keshishian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mark Cerminaro</masterLabel>
+            <translation><!-- Mark Cerminaro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monica Cuesta</masterLabel>
+            <translation><!-- Monica Cuesta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quinn Konieczka</masterLabel>
+            <translation><!-- Quinn Konieczka --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rachel Bauchman</masterLabel>
+            <translation><!-- Rachel Bauchman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rory O&apos;Connell</masterLabel>
+            <translation><!-- Rory O&apos;Connell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sanaa Kholfi</masterLabel>
+            <translation><!-- Sanaa Kholfi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sheila Kohlhepp</masterLabel>
+            <translation><!-- Sheila Kohlhepp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sheila Mensah</masterLabel>
+            <translation><!-- Sheila Mensah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tony Brown</masterLabel>
+            <translation><!-- Tony Brown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Team Name --></label>
+        <name>SFDC_Project_Team_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>SFDC_Project__c</name>
+        <relationshipLabel><!-- Project Team Members --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

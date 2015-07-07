@@ -1,0 +1,44 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Hey {!Contact.FirstName},</p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">It seems like I caught you at a
+bad time. I called to talk to about a specific program we've created for Preferred
+Business owners such as yourself. <o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Just to give you an idea of what
+it is we are offering, it's a loan that is as competitive as a bank loan or SBA
+loan in terms and rates, with the only difference being we don’t require the
+crazy documentation that banks and government loans will require from
+you.&nbsp; We also don’t have the high cost fees because we will be servicing
+your loan through the life of the loan. Lastly, we take no collateral on these
+loans either. <o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">As your business advisor, I
+would like to come up with a few loan options for you so that you are
+comfortable and you can choose from that not only would help you as a business
+owner but would help strengthen and grow your business as well.&nbsp; <o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Please call me directly when you
+get this, or reply to this email with the best time to reach you. I just need 5
+minuets <o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Look forward to hearing from you
+and hope all is well <o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><o:p>&nbsp;</o:p></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><o:p>http://www.rapidadvance.com/</o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">All the best,<o:p></o:p></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial">{!User.Name} | Business Advisor</font></p><p class="MsoNormal"><font face="arial" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Phone: &nbsp;</font><font face="arial">{!User.Phone}</font></p><p class="MsoNormal"><font face="arial">Cell: &nbsp;{!User.MobilePhone}</font></p><p class="MsoNormal"><font face="arial">Email: &nbsp;{!User.Email}</font></p>]]></td>
+</tr>
+</table>

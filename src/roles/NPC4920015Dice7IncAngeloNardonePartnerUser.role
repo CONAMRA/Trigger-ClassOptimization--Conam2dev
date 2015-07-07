@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>NPC-4920015-Dice 7 Inc. (Angelo Nardone) Partner User</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>NPC-4920015-Dice 7 Inc. (Angelo Nardone) Partner User</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>NPC4920015Dice7IncAngeloNardonePartnerManager</parentRole>
+</Role>

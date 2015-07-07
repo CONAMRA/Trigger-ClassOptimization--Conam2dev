@@ -1,0 +1,498 @@
+<apex:page controller="FundingInfoSignOff_Ctrl" showHeader="false" sidebar="false" >     
+    <c:Opportunity_Related_CSS imgName="MainBusiness.png"/>
+    <apex:pageMessages id="pageMessageMain"/>
+    <apex:form id="MBForm" styleClass="MBForm"><br/>
+        <apex:outputPanel id="panelid">
+            <div class="bgImg"></div>
+            <div align="center">              
+                <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,panelid" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+            </div>       
+            <table id="MBTable">
+                <tr>
+                    <td colspan="4">
+                        <c:Extjs_Panel title="Funding Info Sign Off Information" RefreshButton="Refresh"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Wire_Coordinator__c.label}"/>              
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Wire_Coordinator__c}" /> 
+                    </td>
+                      
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Acct_Set_Up_Green_R_Started__c.label}"/>                 
+                    </td>
+                    <td>  
+                       <apex:inputField value="{!oppRecord.Acct_Set_Up_Green_R_Started__c}" /> 
+                    </td>                    
+                </tr>
+                <tr>
+                     <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.WC_Assigned__c.label}"/>                 
+                    </td>
+                    <td>  
+                       <apex:inputField value="{!oppRecord.WC_Assigned__c}" /> 
+                    </td>                
+                     <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Acct_Set_Up_Green_R_Completed__c.label}"/>                 
+                    </td>
+                    <td>  
+                       <apex:inputField value="{!oppRecord.Acct_Set_Up_Green_R_Completed__c}" /> 
+                    </td>
+                </tr>              
+                
+                <tr>
+                    <td>
+                        <apex:outputLabel value="Account (DBA) Name" />
+                    </td>
+                    <td>
+                        <apex:inputField value="{!accRecord.Name}" style="width:80%;"/>
+                    </td>
+                      
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Type_of_Entity__c.label}"/>                 
+                    </td>
+                    <td>  
+                       <apex:inputField value="{!oppRecord.Type_of_Entity__c}" /> 
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                       <apex:outputLabel value="Business Billing Street" />                  
+                    </td>
+                    <td>
+                        <apex:inputField value="{!accRecord.BillingStreet}" />
+                    </td>
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Legal_Name__c.label}"/>                 
+                    </td>
+                    <td>  
+                       <apex:inputField value="{!oppRecord.Legal_Name__c}" /> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <apex:outputLabel value="Business Billing State" />
+                    </td>
+                    <td>
+                        <apex:inputField value="{!accRecord.BillingState}" />
+                    </td>
+                    <td>
+                        <apex:outputLabel value="Business Billing City" />                 
+                    </td>
+                    <td>
+                        <apex:inputField value="{!accRecord.BillingCity}" />
+                    </td>                   
+                </tr>
+                <tr>
+                    <td>
+                        <apex:outputLabel value="Current % ROI (PO)" />
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Current_ROI__c}" />
+                    </td>
+                    <td>
+                       <apex:outputLabel value="Business Zip Code" />
+                    </td>
+                    <td>
+                         <apex:inputField value="{!accRecord.BillingPostalCode}" />
+                    </td>
+                </tr>
+                  <!--  
+                <tr>                    
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Processing_Representative__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Processing_Representative__c}" />
+                    </td>
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.UW_Underwriter_Assigned__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.UW_Underwriter_Assigned__c}" />
+                    </td>
+                </tr>
+                -->
+                <!--<tr>                    
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Amount.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Amount}" />
+                    </td>
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Product__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Product__c}" />
+                    </td>
+                </tr-->
+                -->
+                <tr>                    
+                   <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Percent_Payback__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Percent_Payback__c}" />
+                    </td>
+                    <!--td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Pay_Back_Amount__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Pay_Back_Amount__c}" />
+                    </td>
+                    -->
+                </tr>
+                <tr>                    
+                     <td>
+                       <apex:outputLabel value="{!$ObjectType.Account.fields.Number_of_Locations__c.label}" />
+                    </td>
+                    <td>
+                        <apex:inputField value="{!accRecord.Number_of_Locations__c}" />
+                    </td>
+                    <!--td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Estimated_Daily_Transactions__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Estimated_Daily_Transactions__c}" />
+                    </td>
+                    -->
+                </tr>
+                <tr>                    
+                   <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Number_of_MIDs_used_for_Pricing__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Number_of_MIDs_used_for_Pricing__c}" />
+                    </td>
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Account.fields.Number_of_Terminals_at_Location__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!accRecord.Number_of_Terminals_at_Location__c}" />
+                    </td>
+                </tr>
+                <tr>                    
+                     <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.SIC_CODE__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.SIC_CODE__c}" />
+                    </td> 
+                    <td colspan="2" rowspan="8">
+                        <c:Extjs_MID_Nos height="210" parentField="Opportunity__c" title="MID Nos" object="MID__c" fields="Name,Type__c" rows="3" minimized="false" parentRecordId="{!$CurrentPage.parameters.Id}"/>  
+                   </td>
+                </tr>
+                <tr>                    
+                     <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Business_Category__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Business_Category__c}" />
+                    </td>                 
+                </tr>
+                <tr>
+                    <td>
+                        <apex:outputLabel value="Applicant #1 FICO"/>                       
+                    </td>
+                    <td style="padding-left:0.25em;">
+                        <apex:outputText value="{!applicant1FICO}"/>
+                    </td>
+                </tr>
+                <tr>                    
+                   <td>
+                       <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Manual_Applicant_1_FICO_Score__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Manual_Applicant_1_FICO_Score__c}" rendered="{!IF($Profile.Name =='System Administrator' ,true,false)}"/>
+                        <apex:outputLabel value="{!oppRecord.Manual_Applicant_1_FICO_Score__c}" rendered="{!IF($Profile.Name !='System Administrator' ,true,false)}"/>
+                    </td>                
+                </tr>
+                <tr>
+                     <td>
+                       <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Applicant_2_FICO__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Applicant_2_FICO__c}"/>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                       <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Manual_Applicant_2_FICO_Score__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Manual_Applicant_2_FICO_Score__c}"  rendered="{!IF($Profile.Name =='System Administrator' ,true,false)}"/>
+                        <apex:outputLabel value="{!oppRecord.Manual_Applicant_2_FICO_Score__c}" rendered="{!IF($Profile.Name !='System Administrator' ,true,false)}"/>
+                    </td>
+                </tr>
+                
+                <tr>
+                     <td>
+                        <apex:outputLabel value="Yrs. In Business"/>
+                    </td>
+                    <td style="padding-left:0.25em;">
+                        <apex:outputText value="{!yrsInBusiness}"/>
+                    </td> 
+                </tr>
+                <tr>                    
+                    <td>
+                      <!--  <apex:outputLabel value="Yrs. In Business"/>-->
+                    </td>
+                    <td style="padding-left:0.25em;">
+                        <!--<apex:outputText value="{!yrsInBusiness}"/>-->
+                    </td>                   
+                </tr>
+                <tr>
+                    <td>
+                       <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Prefunding_Call_Performed_by__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Prefunding_Call_Performed_by__c}"/>
+                    </td>
+                    <td>
+                       <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Prefunding_Call_Completed_Date__c.label}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Prefunding_Call_Completed_Date__c}"/>
+                    </td>
+                </tr>               
+                
+                <tr>
+                    <td colspan="4">     
+                        <c:Extjs_Panel title="Cards Used To Payback"/>
+                    </td>
+                </tr>       
+                <tr>
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Visa_MC__c.label}"/>                 
+                    </td>
+                    <td>  
+                        <apex:inputField value="{!oppRecord.Visa_MC__c}" /> 
+                    </td>                   
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.AMEX__c.label}"/>                 
+                    </td>
+                    <td>  
+                        <apex:inputField value="{!oppRecord.AMEX__c}" /> 
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Discover__c.label}"/>                 
+                    </td>
+                    <td>  
+                        <apex:inputField value="{!oppRecord.Discover__c}" /> 
+                    </td>                   
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Debit__c.label}"/>                 
+                    </td>
+                    <td>  
+                        <apex:inputField value="{!oppRecord.Debit__c}" /> 
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.fields.EBT__c.label}"/>                 
+                    </td>
+                    <td>  
+                        <apex:inputField value="{!oppRecord.EBT__c}" /> 
+                    </td>                   
+                    <td colspan="2">
+                        &nbsp;
+                    </td>                   
+                </tr>
+            
+                <tr>
+                    <td colspan="4">
+                        <c:Extjs_Panel title="Processing Sign-Off Errors"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label> FRSA</label>               
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.PSOE_FRSA__c}"/>
+                    </td>
+
+
+                    <td>
+                        <label>No QC Calc</label>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.PSOE_No_QC_Calc__c}" />
+                    </td>
+
+                </tr>                    
+                <tr>
+                    <td>
+                        <label>Business Term</label>               
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.PSOE_Business_Term__c}"/>
+                    </td>
+                    <td>
+                        <label>Loan Key Suppliment</label>               
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.PSOE_Loan_Key_Suppliment__c}"/>
+                    </td>
+                    
+                </tr>                    
+                <tr>                    
+                    <td>
+                        <label>Competitor Payoff</label>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.PSOE_Competitor_Payoff__c}" />
+                    </td>
+                    <td>
+                        <label>Voided Check</label>               
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.PSOE_Voided_Check__c}"/>
+                    </td>
+                          
+                </tr>
+                <tr>                    
+                    <td>
+                        <label>Funding Checklist</label>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.PSOE_Funding_Checklist__c}"/>
+                    </td>  
+                    <td>
+                          <apex:outputLabel value="{!$ObjectType.Opportunity.fields.RA_Finance_Calc__c.label}"/> 
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.RA_Finance_Calc__c}" />
+                    </td>
+                    
+                </tr>
+                <tr>                    
+                    <td>
+                          <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Rapid_Funding_Addendum__c.label}"/> 
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Rapid_Funding_Addendum__c}" />
+                    </td>
+                    <td>
+                          <apex:outputLabel value="{!$ObjectType.Opportunity.fields.MLA_Addendum__c.label}"/>        
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.MLA_Addendum__c}"/>
+                    </td>         
+                </tr>
+                <tr>                    
+                <td>
+                          <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Green_R_Errors__c.label}"/> 
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Green_R_Errors__c}" />
+                    </td>
+                    <td>
+                          <apex:outputLabel value="{!$ObjectType.Opportunity.fields.Funding_Checklist_Error__c.label}"/>        
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Funding_Checklist_Error__c}"/>
+                    </td>          
+                </tr>
+                
+                
+                <tr>
+                    <td colspan="4">                     
+                          <c:Extjs_Panel title="Funding"/>
+                    </td>
+                </tr>    
+                <tr>                
+                    <td>
+                        <label>Account Database Entry</label>               
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Account_Database_Entry__c}"/>
+                    </td>
+                    <td>
+                        <label>Funds Wired</label>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Funded_by_WC__c}" />
+                    </td>                
+                </tr>            
+                <tr>
+                    <td>
+                        <label>Account Database Entry Due Date</label>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Account_Database_Entry_Due_Date__c}" />
+                    </td>
+                     <td>
+                        <label>Funds Wired Due Date</label>               
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Funded_by_WC_Due_Date__c}"/>
+                    </td>            
+                </tr>
+                <tr>
+                    <td>
+                        <label>Begin Activity Monitoring</label>               
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Begin_Activity_Monitoring__c}"/>
+                    </td>
+                    <td>
+                        <label>Funding Status</label>               
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Funding_Status__c}"/>
+                    </td>
+                </tr>  
+                <tr>
+                    <td>
+                        <label>Begin Activity Monitoring Due Date</label>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Begin_Activity_Monitoring_Due_Date__c}"/>
+                    </td>
+                    <td>
+                        <label>Close Date</label>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.CloseDate}" />
+                    </td>  
+                </tr>
+                <tr>
+                    <td>
+                        <label>Packet Preparation Sent</label>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Packet_Preparation_Sent__c}"/>
+                    </td>
+                    <td>
+                        <label>Closed Reason</label>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Closed_Reason__c}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Funding Notes</label>               
+                    </td>
+                    <td>
+                        <apex:inputField value="{!oppRecord.Funding_Notes__c}"/>
+                    </td>
+                    <td colspan="2">&nbsp;</td>                
+                </tr>
+            </table><br/>       
+            <div align="center">              
+                <apex:commandButton value="Save" action="{!doSave}" reRender="pageMessageMain,panelid" status="ajaxStatus" oncomplete="setfocus('{!$Component.pageMessageMain}');"/>&nbsp;&nbsp;         
+            </div>
+        </apex:outputPanel>      
+    </apex:form>
+    <apex:actionstatus startStyleClass="requiredLoaderBG" id="ajaxStatus" />
+</apex:page>

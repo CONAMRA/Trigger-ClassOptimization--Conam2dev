@@ -1,0 +1,147 @@
+{!INCLUDE($SControl.Sarissa_js)}
+{!INCLUDE($SControl.Sarissa_ieemu_load_js)}
+{!INCLUDE($SControl.Sarissa_ieemu_xpath_js)}
+{!INCLUDE($SControl.B2B2B_classes_js)}
+{!INCLUDE($SControl.B2B2B_main_js)}
+
+function refreshFindApp_hander(/*string*/ resultValue) {	
+	
+	//alert(resultValue);
+	AppStatus.Status = "Submitted";
+	AppStatus.Stage = "Submitted";
+	findAppComplete = true;
+	
+	var oDomDoc = (new DOMParser()).parseFromString(resultValue.replace(/\&lt;/gi, "<").replace(/\&gt;/gi, ">"), "text/xml");
+	//var appXML = oDomDoc.selectNodes("//*[name()='B2B-Export']")[0];
+	AppStatus.Status = getValue(oDomDoc, "//*[name() = 'Status']");
+	AppStatus.Stage = getValue(oDomDoc, "//*[name() = 'Stage']");
+	
+	if (findAppComplete && appXmlComplete)
+	{
+		saveObject();
+	}
+}
+// process result value of method ApplicationXML
+
+function refreshAppXML_handler(/*string*/ resultValue) {
+	
+	//alert("in APPXML finally");
+	//alert(resultValue.toString());
+	var oDomDoc = (new DOMParser()).parseFromString(resultValue.replace(/\&lt;/gi, "<").replace(/\&gt;/gi, ">"), "text/xml");
+	//var oDomDoc = (new DOMParser()).parseFromString(resultValue);
+	var appXML = oDomDoc.selectNodes("//*[name()='B2B-Export']")[0];
+		
+	var rows = appXML.selectNodes("//*[name()='Section' and @Name='PRODUCT']/*[name()='Row']");
+	//alert("hello rows" + rows.length);
+	for(var i=0; i< rows.length; i++)
+	{
+		//alert("in loop");
+		AppStatus.prodName = getValue(rows[i],"//*[name()='Field' and @Name='PRODNAME']");
+		var init_decision = getValue(rows[i], "//*[name()='Field' and @Name='PRODDECISIONREC']");
+		if (init_decision != "")
+		{
+			AppStatus.initial_decision = init_decision;
+		}
+		var decision = getValue(rows[i], "//*[name()='Field' and @Name='LASTDECISION']");
+		decision = decision.toUpperCase().replace("ACCEPT", "APPROVE");
+		AppStatus.SBSS__c = getValue(rows[i],"//*[name()='Field' and @Name='BUSAPPSCORE']");
+		
+		if (decision != "")
+		{
+			AppStatus.decision = decision;
+			AppStatus.decisionDate = new Date(getValue(rows[i],"//*[name()='Field' and @Name='LASTDECISIONDATE']"));
+			
+			if (decision != "DECLINE")
+			{
+				AppStatus.amount = getValue(rows[i],"//*[name()='Field' and @Name='LASTDECISIONAMOUNT']");
+				AppStatus.term = getValue(rows[i],"//*[name()='Field' and @Name='LASTDECISIONTERM']");
+				var rate = getValue(rows[i],"//*[name()='Field' and @Name='LASTDECISIONRATE']");
+				var rateIndex = getValue(rows[i],"//*[name()='Field' and @Name='LASTDECISIONRATEINDEX']");
+				var rateType = getValue(rows[i],"//*[name()='Field' and @Name='LASTDECISIONRATETYPE']");
+				if (rateType == "0")
+				{
+					rateType = "Fixed";
+				}
+				else if (rateType == "1")
+				{
+					rateType = "Variable";
+				}
+				rate += "% " + rateType;
+				if (rateIndex != "")
+				{
+					rate += " add to " + rateIndex;
+				}
+				AppStatus.rate = rate;
+				AppStatus.fees = getValue(rows[i],"//*[name()='Field' and @Name='LASTDECISIONFEES']");
+			}
+		}
+		else
+		{
+			AppStatus.decision = "This product has not yet been decisioned.";
+		}
+		
+		//alert("leaving");
+	}
+	//alert("out");
+	appXmlComplete = true;
+	
+	//alert(findAppComplete);
+	
+	if (appXmlComplete && findAppComplete)
+	{
+		saveObject();
+	}
+}
+
+function getValue(node, xpath)
+{
+	var obj = "";
+	if(node && node.selectSingleNode(xpath) && node.selectSingleNode(xpath).firstChild && node.selectSingleNode(xpath).firstChild.nodeValue)
+		obj = node.selectSingleNode(xpath).firstChild.nodeValue;
+	return obj;
+}
+
+function saveObject()
+{
+	//alert("In Save");
+	
+	var loan = new sforce.SObject("Advance_Lookup__c");
+	loan.Id = '{!Advance_Lookup__c.Id }';
+	loan.Status__c = AppStatus.Status;
+	loan.Stage__c = AppStatus.Stage;
+	loan.Product__c = AppStatus.prodName;
+	loan.Decision__c = AppStatus.decision;
+	loan.Decision_Date__c = AppStatus.decisionDate;
+	loan.Amount__c = AppStatus.amount;
+	loan.Term__c = AppStatus.term;
+	loan.Rate__c = AppStatus.rate;
+	loan.Fees__c = AppStatus.fees;
+	loan.Last_Refresh__c = new Date();
+	loan.SBSS__c = AppStatus.SBSS__c
+	var result = sforce.connection.update([loan]);
+	window.location.href = window.location.href;
+}
+
+var inputs = document.getElementsByTagName("input");
+for (var i=0; i< inputs.length; i++)
+{
+	if (inputs[i].name == "refresh")
+	{
+		inputs[i].setAttribute("disabled", "true");
+		inputs[i].value = "Refreshing...";
+		inputs[i].className = "btnDisabled";
+	}
+}
+
+var AppStatus = {};
+var appFID = '{!Advance_Lookup__c.AppFID__c}';
+
+var b = new BHWebServiceN("https://www.bank2business.net/b2bwebservices/bhwebservicen.asmx");
+var li = new LoginInfo("RapidAdvance", "WebAppUser", "@ppL1nk_ra2");
+var appXmlComplete = false;
+var findAppComplete = false;
+
+var finder = new FindApp();
+finder.ApplicationFID = appFID;
+b.FindApplications(li, finder, {onSuccess:refreshFindApp_hander, onFailure:refreshFindApp_hander});
+b.ApplicationXML(li, appFID, {onSuccess:refreshAppXML_handler, onFailure:refreshAppXML_handler});

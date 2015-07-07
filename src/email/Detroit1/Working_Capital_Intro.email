@@ -1,0 +1,20 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<table height="400" width="550" cellpadding="5" border="0" cellspacing="5"><tbody><tr height="400" valign="top"><td teditid="c1r1" aeditid="c1r1" locked="0" id="c1r1" style="font-size: 12pt; border: 1px dashed rgb(0, 0, 255); background-color: rgb(255, 255, 255);"><p class="MsoNormal" style="font-size: 12pt;">Hey {!Contact.FirstName},</p><p class="MsoNormal">I see that you’re interesting in
+getting some working capital for your business.&nbsp; I want to make sure that
+we get you the best possible option for your financing.&nbsp; We recently
+released a brand new preferred product for our more well qualified clients, and
+based on the information you’ve submitted, you seem to be a great
+candidate.&nbsp; This product has the lowest interest rate we’ve ever offered
+in our 10 years in business and is comparable with some bank and SBA loans
+without the hassle and paperwork.&nbsp; We can also get you your funding in
+just a couple of days.<o:p></o:p></p><p class="MsoNormal">&nbsp;<o:p></o:p></p><p class="MsoNormal">I’m available all day today and
+all weekend.&nbsp; What would be a good time for us to talk about this?&nbsp; <o:p></o:p></p><p class="MsoNormal">&nbsp;<o:p></o:p></p><p class="MsoNormal">I look forward to speaking with
+you!<o:p></o:p></p><p class="MsoNormal">&nbsp;<o:p></o:p></p><p class="MsoNormal"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">&nbsp;</span></p><p class="MsoNormal"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif"><a href="http://www.rapidadvance.com/why-choose-rapid"><span style="color:windowtext;
+text-decoration:none;text-underline:none">http://www.rapidadvance.com/</span></a></span></p><p class="MsoNormal"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif"><br></span></p><p class="MsoNormal" style="font-size: 12pt;">All the best,<o:p></o:p></p><p class="MsoNormal" style="font-size: 12pt;"><br></p><p class="MsoNormal" style="font-size: 12pt;"><font face="arial">{!User.Name} | Business Advisor</font></p><p class="MsoNormal"><font face="arial" style="font-size: 12pt;">Phone: &nbsp;</font><font face="arial">{!User.Phone}</font></p><p class="MsoNormal"><font face="arial">Cell: &nbsp;{!User.MobilePhone}</font></p><p class="MsoNormal"><font face="arial">Email: &nbsp;{!User.Email}</font></p></td></tr></tbody></table>]]></td>
+</tr>
+</table>

@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+ 	<script type="text/javascript">
+		djConfig = { isDebug: false, debugContainerId: 'dojoDebug' };
+	</script>	
+	<script type="text/javascript" src="/js/dojo/0.3.1/dojo.js"></script>
+	<script type="text/javascript" src="/soap/ajax/8.0/connection.js" ></script>
+	<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.0&appid=salesforce1.com"></script>
+	<link  href="/dCSS/Theme2/default/common.css" type="text/css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" >
+<!-- authors : Ron Hess, Dave Carroll 
+-- simple yahoo map for an account and related accounts, include opportunity and contact data 
+-- place in an inline scontrol , on the account detail page, in a new section , about 300 px tall 
+-->
+<script type="text/javascript">
+dojo.require('dojo.lang.*');
+//dojo.require('dojo.style');
+dojo.require("dojo.debug.Firebug"); 
+
+var reload , sControlId, mapContainer, Markers, addr, accountId , Children, Related, Parent, Self;
+var tb, map, navContainer;
+var link;
+var geoPoints ;
+var dataPointCount ;
+var pointCounter; var pins, pinsize, pinoffset; 
+
+function _soql ( noun,verb) { 
+	var soql = [ "SELECT a.Name, a.Id, a.ParentId, " , 
+		 "a.BillingStreet, a.BillingCity, a.BillingState, a.BillingPostalCode, a.BillingCountry, " ,
+		"(SELECT c.Id from a.Contacts c), ",
+		"( SELECT o.Amount, o.isclosed,o.iswon from a.Opportunities o) FROM Account a where ",
+		noun, " = '" , verb,  "' "
+		].join('');
+	dojo.debug('soql ',noun,verb,soql)
+	return soql;
+} 
+
+function sfdcInfocator(mk){ 
+// border-bottom-color:#E3DEB8; 
+// 
+	var nameRow = 'style="text-align:left;  font-weight: bold;   padding:2px 10px 2px 2px; " nowrap="nowrap" '
+	var labelCol = 'style="text-align:right; width: 18%; font-weight: bold; font-size:91%;  padding:1px 5px 1px 1px; " nowrap="nowrap" '
+	var dataCol = 'style="text-align: left;  width: 82%; padding: 1px 1px 1px 5px;  " nowrap="nowrap" ';
+	return [
+	/*'<style type="text/css">',
+	'body { font-weight: bold; font-size: 75%;    font-family: Arial,Helvetica,sans-serif;    background-color: #FFF;}',
+	'.td labelCol {  	text-align:right;   color:#333; font-size: 75%; }',
+	'dataCol {	text-align:left;  } ',
+	'</style>',
+		*/
+		' <div class=" " >', 
+		'<table style="     background-color: #F3F3EC;  " class=" " ><tbody><tr>',
+		
+		'<td '+nameRow+' colspan="2">',
+		'<a href="/' + mk.sfdcId + '" target="_top">' + mk.sfdcName + '&nbsp;',
+		(mk.relation?'('+mk.relation+')':''),
+		'&raquo;</a>',
+		'</td></tr><tr>',
+		'<td  '+labelCol+' >Contacts</td>',
+		'<td ' + dataCol+' >',	mk.numContacts, '</td></tr>',
+		'<tr>',
+		'<td  '+labelCol+' >Closed Won</td>',
+		'<td ' + dataCol+' >$ ',	(mk.won-0), '</td></tr>',
+		
+		'<td  '+labelCol+' >Pipeline</td>',
+		'<td ' + dataCol+' >$ ',	(mk.open-0), '</td></tr>',
+		
+		'</tbody></table>',		
+		'</div>' ].join('') ; 
+}
+
+function initPage() { // for inline scontrols, all globals must be inited in a function
+// try different sizes
+// /img/icon/flag24.gif
+	imagesrc = [ 
+		{src:'/img/icon/accounts24.gif', hsize:24, wsize:24, offsetx:11,offsety:18}, //self largest unless parent exists
+		{src:'/img/icon/accounts32.gif', hsize:24, wsize:24, offsetx:11,offsety:18}, // parent ( bigger) 
+		{src:'/img/icon/accounts24.gif', hsize:20, wsize:20, offsetx:9,offsety:16}, // children
+		{src:'/img/icon/accounts16.gif', hsize:16, wsize:16, offsetx:5,offsety:6}  // related
+		];
+
+	reload = true;
+	geoPoints = []; Markers = [], Children = [], Related = [], Parent = [], Self = null;
+	dataPointCount = 0;
+	pointCounter = 0;
+	
+	// where am i running, and if i'm visible or twisted out of sight
+	// the div i'm in is named after the scontrol ID, generate that from the URL
+	// this div is found in my parent, if not found assume we are in a custom link.
+	var div = parent.document.getElementById("{!Scontrol.URL}".split('=').pop()) 
+	if ( ! div ) { // running in a custom link
+		dojo.debug('no div, running in a custom link or window'); 
+		loadMap();
+	} else { // inline scontrol
+		while (div && div.tagName != 'DIV') { 	div = div.parentNode; } // fine first containing div
+		
+		// is it visible
+		if (div.style.display != 'none') { 
+			dojo.debug('div IS showing, do map'); 
+	    	loadMap();
+	    } else {  // hidden right now
+	    	dojo.debug('div not showing, is twisted out of sight'); 
+			// find my twisty    	
+			var twist = div.previousSibling; // works even if there are fields in this section 
+			if ( twist.tagName == 'DIV' && twist.firstChild.tagName == 'IMG' && twist.firstChild.onclick) { 
+				dojo.debug('found twisty',twist.tagName,twist.firstChild.tagName); 
+				dojo.debug('onclick ',twist.firstChild.onclick)
+				twist.firstChild.onclick = function (event) { 	// hook the onclick with our own function to load map
+					window.parent.twistSection(this); 
+					setTimeout("loadMap();",50); // may be called multiple times, should avoid redrawing
+				}
+	    	} else { 
+	    		dojo.debug('could not find twisty section'); 
+	    	}
+	    }
+	}
+
+}
+
+function doQuery() {
+	if (reload == false) return;
+	accountId = '{!Account.Id}';
+	
+	var soql = _soql('a.id', accountId );
+	Self = sforce.connection.query(soql).getArray('records')[0]; 
+
+	plotMarkers([Self], imagesrc[0])
+
+	// default the current account popped up
+	if ( Markers.length> 0 ) { 
+		Markers[0].openSmartWindow( sfdcInfocator(Markers[0]) ); 
+	}
+	
+	sforce.connection.query( _soql('a.parentid',accountId ), function(qr) { 
+		plotMarkers(qr,imagesrc[2]); // children
+	});
+	
+ 	if (Self.ParentId) { 
+		sforce.connection.query( _soql('a.id', Self.ParentId),  function(qr) { 
+			plotMarkers(qr,imagesrc[1],'Parent'); 
+		});   // parent 
+		
+		sforce.connection.query( _soql('a.parentId', Self.ParentId) +" and a.id != '"+accountId+"'" , 
+			function(qr) { 
+				plotMarkers(qr,imagesrc[3]); 
+			});
+ 	}
+   	reload = false;
+}
+function loadMap() { 
+    // Create a map object 
+    map = new YMap( dojo.byId('mapContainer') ); 
+    map.disableCopyright(); // map._removeYlogo(); map._removeYCopy();
+    
+    // Display the map centered on given address 
+    YEvent.Capture(map, EventsList.onEndGeoCode, geoCodeEnd);
+	YEvent.Capture(map, EventsList.changeZoom, function (r) { 
+		/* r.thisObj == map == this
+		 * r.YGeoPoin == center? 
+		 * r.zoomObj.previous , r.zoomObj.current
+		 */
+		if ( r.zoomObj.current < r.zoomObj.previous) { // zoom in
+			// if there is a pinned open flag, center on it.
+			if ( this.openMarker ) { 
+				this.panToLatLon(this.openMarker.YGeoPoint);
+			} 
+
+		}
+	} );
+	
+    map.addZoomLong(); 
+    doQuery();
+} 
+function geoCodeEnd(r) {
+    if (r.success == 1) {
+        if (r.GeoPoint.Lat != 0) {
+            geoPoints[geoPoints.length] = r.GeoPoint;
+            pointCounter++;
+        }
+    } else {
+    	pointCounter++;
+    }
+    // dojo.debug('geoCodeEnd',pointCounter, r.GeoPoint.Lat, r.GeoPoint.Lon)
+    zoomAndCenter(); 
+}
+function zoomAndCenter() { 
+    if (pointCounter >= dataPointCount) {
+        var bestZoomLevel = map.getZoomLevel(geoPoints);
+        if (bestZoomLevel < 5) bestZoomLevel = 5;
+        var geoCenter = map.getCenterGeoPoint(geoPoints);
+        map.drawZoomAndCenter(geoCenter, bestZoomLevel);
+        map.panToLatLon(geoCenter);
+    }
+}
+
+function hasAddress(db) { 
+	return (db.BillingStreet && db.BillingCity && db.BillingState /*&& db.BillingPostalCode*/ ); 
+}
+ 
+function plotMarkers(records, _imagesrc, typetag) { 
+	// dojo.debug('plotMarkers','records',records.length); 	
+	if (records.getArray) records = records.getArray('records');
+	var _markers=[] 
+	dojo.lang.forEach( records , function( db,counter) {
+    	if ( ! hasAddress( db ) ) return false;
+   		
+   		var addr = [db.BillingStreet,db.BillingCity,db.BillingState,db.BillingPostalCode,db.BillingCountry].join(", ");
+		dojo.debug(addr);
+		var myImage = null
+		myImage = new YImage(); 
+		myImage.src = _imagesrc.src; // try to put the image so the flag pops out of the folder
+		myImage.size = new YSize(_imagesrc.hsize,_imagesrc.wsize);
+		myImage.offsetSmartWindow = new YCoordPoint(_imagesrc.offsetx,_imagesrc.offsety);
+		
+		var marker = new YMarker(addr,myImage); 
+
+		marker.numContacts = (db.Contacts?db.Contacts.size:'0');
+    	marker.won = 0; 
+    	marker.open = 0;
+    	if (db.Opportunities && db.Opportunities.getArray ) { 
+	    	dojo.lang.forEach(db.Opportunities.getArray('records'),function(o){
+	    		if ( o.getBoolean('IsWon') ) marker.won+=(o.Amount-0); 
+	    		if ( ! o.getBoolean('IsClosed') && ! o.getBoolean('IsWon') ) marker.open+=(o.Amount-0);
+	    	} );
+    	} 
+		dataPointCount++;
+		
+		// Add auto expand
+		var _txt // = '<div style="width:160px;height:40px;"><b>'+ db.Name +'</b></div>';
+		marker.relation = typetag;
+		marker.sfdcId = db.Id;
+		marker.sfdcName = db.Name;
+		
+		marker.addAutoExpand( sfdcInfocator(marker) );
+	//	marker.personName = "<a style=\"color:black;\" href='/" + db.Id + "' target='_top'>" + db.Name + '&nbsp;&raquo;</a>';	
+
+		YEvent.Capture(marker, EventsList.MouseClick, function() {
+			this.openSmartWindow( sfdcInfocator(this) ); 
+		}); 
+		YEvent.Capture(marker, EventsList.openSmartWindow, function (r) { 
+	//		dojo.debug('open  SmartWindow');
+			this._map.openMarker = this;			
+		} );
+		YEvent.Capture(marker, EventsList.closeSmartWindow, function (r) { 
+	//		dojo.debug('close SmartWindow');
+			delete this._map.openMarker;
+		} );
+    
+		marker.record = db; // save the details
+		Markers.push(marker);
+		_markers.push(marker);
+		map.addOverlay(marker); 
+		return true;
+    });
+    return _markers; // return the array the we just created
+}
+
+
+</script>
+</head>
+<body onload="initPage();" style="background-color:transparent;" >
+<table style="width:100%;" cellspacing="0" cellpaddind="0"><tbody>
+<tr>
+	<td>
+		<div style="height:300px;" id="mapContainer"></div>
+	</td>
+</tr>
+<tr>	<td>	<div id="dojoDebug" name="dojoDebug" ></div></td></tr>
+</tbody></table>
+</body>
+</html>

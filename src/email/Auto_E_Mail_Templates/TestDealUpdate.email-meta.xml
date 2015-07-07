@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email status</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>Test Deal Update</name>
+    <style>freeForm</style>
+    <subject>{!Opportunity.Name} Update {!Opportunity.Partner_Application_Number__c}</subject>
+    <textOnly>Date - {!Opportunity.LastModifiedDate}  
+Rep - {!Opportunity.OwnerFirstName}
+ 
+Renewal? - {!Opportunity.Renewal__c}
+Renewal Date - {!Opportunity.RENEWAL_DATE__c}
+ 
+Opportunity Name - {!Opportunity.Name}
+Advance Amount - {!Opportunity.Amount}
+ 
+Contact Name - {!Account.Account_Contact__c}
+Phone # - {!Account.Phone}
+ 
+Stage - {!Opportunity.StageName}
+ 
+Underwriting Status - {!Opportunity.Underwriting_Approval__c}
+Decline Reason - {!Opportunity.Decline_Reason__c}
+
+Underwriting Notes - {!Opportunity.Underwriting_Notes__c} 
+
+
+Processing Notes - {!Opportunity.Processing_Notes__c}
+
+
+Sales Notes - {!Opportunity.Description}
+ 
+ 
+ 
+Person who sent update - {!Opportunity.LastModifiedBy}</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Additional Contact Address --></label>
+        <name>Additional_Contact_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Contact Email --></label>
+        <name>Additional_Contact_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Contact Fax --></label>
+        <name>Additional_Contact_Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Contact Mobile --></label>
+        <name>Additional_Contact_Mobile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Contact Name --></label>
+        <name>Additional_Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Contact Phone --></label>
+        <name>Additional_Contact_Phone__c</name>
+    </fields>
+    <fields>
+        <help><!-- This can be used to store wedding anniversary, an anniversary of doing business together, or any other annually noteworthy date. --></help>
+        <label><!-- Anniversary Date --></label>
+        <name>Anniversary_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bonus Suppression --></label>
+        <name>Bonus_Suppression__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Name --></label>
+        <name>Campaign_Name__c</name>
+        <relationshipLabel><!-- Contacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact Email Status --></label>
+        <name>CloudingoAgent__CES__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Address Record Type --></label>
+        <name>CloudingoAgent__MAR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Address Status --></label>
+        <name>CloudingoAgent__MAS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Address Vacancy --></label>
+        <name>CloudingoAgent__MAV__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Residential Delivery Indicator --></label>
+        <name>CloudingoAgent__MRDI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Timezone --></label>
+        <name>CloudingoAgent__MTZ__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Address Record Type --></label>
+        <name>CloudingoAgent__OAR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Address Status --></label>
+        <name>CloudingoAgent__OAS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Address Vacancy --></label>
+        <name>CloudingoAgent__OAV__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Residential Delivery Indicator --></label>
+        <name>CloudingoAgent__ORDI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Timezone --></label>
+        <name>CloudingoAgent__OTZ__c</name>
+    </fields>
+    <fields>
+        <label><!-- ContactID --></label>
+        <name>ContactID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created By Conversion --></label>
+        <name>Created_By_Conversion__c</name>
+    </fields>
+    <fields>
+        <label><!-- DO NOT FAX --></label>
+        <name>DO_NOT_FAX__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Bounced --></label>
+        <name>Date_Bounced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Birth --></label>
+        <name>Date_of_Birth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Last Activity --></label>
+        <name>Date_of_Last_Activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Does the Merchant --></label>
+        <name>Does_the_Merchant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Efax Notes --></label>
+        <name>Efax_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Efax Status --></label>
+        <name>Efax_Status__c</name>
+        <picklistValues>
+            <masterLabel>FAIL</masterLabel>
+            <translation><!-- FAIL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUCCESS</masterLabel>
+            <translation><!-- SUCCESS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Efax --></label>
+        <name>Efax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Present --></label>
+        <name>Email_Present__c</name>
+    </fields>
+    <fields>
+        <help><!-- Has Principal declared bankruptcy within the last ten (10) years? --></help>
+        <label><!-- Filed for bankruptcy? --></label>
+        <name>Filed_for_bankruptcy__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Home Phone Ext --></label>
+        <name>H_Phone_Ext__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import ID --></label>
+        <name>Import_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Source --></label>
+        <name>Import_Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Temporary Password --></label>
+        <name>Last_Temporary_Password__c</name>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>---------------------------------------</masterLabel>
+            <translation><!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100% Paid Off</masterLabel>
+            <translation><!-- 100% Paid Off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agent</masterLabel>
+            <translation><!-- Agent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auto Dialer</masterLabel>
+            <translation><!-- Auto Dialer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calc Lander Web to Lead</masterLabel>
+            <translation><!-- Calc Lander Web to Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call-In</masterLabel>
+            <translation><!-- Call-In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cold Call</masterLabel>
+            <translation><!-- Cold Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Journey Web to Lead</masterLabel>
+            <translation><!-- Customer Journey Web to Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Mail</masterLabel>
+            <translation><!-- Direct Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Campaign</masterLabel>
+            <translation><!-- Email Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Experian List</masterLabel>
+            <translation><!-- Experian List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facebook</masterLabel>
+            <translation><!-- Facebook --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fraud Alert From NAMAA</masterLabel>
+            <translation><!-- Fraud Alert From NAMAA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google+</masterLabel>
+            <translation><!-- Google+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Generation</masterLabel>
+            <translation><!-- Lead Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LinkedIn</masterLabel>
+            <translation><!-- LinkedIn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>List Purchase</masterLabel>
+            <translation><!-- List Purchase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meridian Direct Mail</masterLabel>
+            <translation><!-- Meridian Direct Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newsletter</masterLabel>
+            <translation><!-- Newsletter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner-Web</masterLabel>
+            <translation><!-- Partner-Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print Ad</masterLabel>
+            <translation><!-- Print Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Relations</masterLabel>
+            <translation><!-- Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radio</masterLabel>
+            <translation><!-- Radio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radio Ad</masterLabel>
+            <translation><!-- Radio Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal Campaign - Existing Merchants</masterLabel>
+            <translation><!-- Renewal Campaign - Existing Merchants --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rock Connections</masterLabel>
+            <translation><!-- Rock Connections --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Internal</masterLabel>
+            <translation><!-- Seminar - Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Partner</masterLabel>
+            <translation><!-- Seminar - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spanish Web-To-Lead</masterLabel>
+            <translation><!-- Spanish Web-To-Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TV-Call-In</masterLabel>
+            <translation><!-- TV-Call-In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telemarketing - Partner</masterLabel>
+            <translation><!-- Telemarketing - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Twitter</masterLabel>
+            <translation><!-- Twitter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UCC1 - List</masterLabel>
+            <translation><!-- UCC1 - List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web-Call-In</masterLabel>
+            <translation><!-- Web-Call-In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web-To-Lead</masterLabel>
+            <translation><!-- Web-To-Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow Pages</masterLabel>
+            <translation><!-- Yellow Pages --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Middle Name --></label>
+        <name>Middle_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Gross Salary --></label>
+        <name>Monthly_Gross_Salary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Months at Current Address --></label>
+        <name>Months_at_Current_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Months at Previous Address --></label>
+        <name>Months_at_Previous_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name of Bank (Personal) --></label>
+        <name>Name_of_Bank_Personal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ownership Percentage --></label>
+        <name>OwnershipPercentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Contact Type --></label>
+        <name>Partner_Contact_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Industry Type --></label>
+        <name>Partner_Industry_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner User Name --></label>
+        <name>Partner_User_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner User --></label>
+        <name>Partner_User__c</name>
+        <relationshipLabel><!-- Contacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Phone Ext --></label>
+        <name>Phone_Ext__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 City --></label>
+        <name>Principal_1_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 Country --></label>
+        <name>Principal_1_Country__c</name>
+        <picklistValues>
+            <masterLabel>Canada</masterLabel>
+            <translation><!-- Canada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USA</masterLabel>
+            <translation><!-- USA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 State --></label>
+        <name>Principal_1_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 Street Address --></label>
+        <name>Principal_1_Street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 1 Zip --></label>
+        <name>Principal_1_Zip__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 City --></label>
+        <name>Principal_2_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Date of Birth --></label>
+        <name>Principal_2_Date_of_Birth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Email --></label>
+        <name>Principal_2_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 First Name --></label>
+        <name>Principal_2_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Last Name --></label>
+        <name>Principal_2_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Mobile --></label>
+        <name>Principal_2_Mobile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Percent Ownership --></label>
+        <name>Principal_2_Percent_Ownership__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Phone --></label>
+        <name>Principal_2_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Social Security Number --></label>
+        <name>Principal_2_Social_Security_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 State --></label>
+        <name>Principal_2_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Street Address --></label>
+        <name>Principal_2_Street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal 2 Zip --></label>
+        <name>Principal_2_Zip__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal Home Phone --></label>
+        <name>Principal_Home_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal Type --></label>
+        <name>Principal_Type__c</name>
+        <picklistValues>
+            <masterLabel>Co-Signer and Guarantor</masterLabel>
+            <translation><!-- Co-Signer and Guarantor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guarantor</masterLabel>
+            <translation><!-- Guarantor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Signer and Guarantor</masterLabel>
+            <translation><!-- Signer and Guarantor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RF_Who --></label>
+        <name>RF_Who__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referrer --></label>
+        <name>Referrer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relationship to Owner --></label>
+        <name>Relationship__c</name>
+    </fields>
+    <fields>
+        <help><!-- Do not enter spaces or dashes. --></help>
+        <label><!-- SS# --></label>
+        <name>SS__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check this field if you wish to send an anniversary email to this contact, using the Anniversary Email email template. --></help>
+        <label><!-- Send Anniversary Email --></label>
+        <name>Send_Anniversary_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check this field to enable an automated birthday email to be sent to this contact, using the &quot;Birthday Email&quot; email template. --></help>
+        <label><!-- Send Birthday Email --></label>
+        <name>Send_Birthday_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- SoftPhone Test --></label>
+        <name>SoftPhone_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscribed to Newsletter? --></label>
+        <name>Subscribed_to_Newsletter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Suffix --></label>
+        <name>Suffix__c</name>
+        <picklistValues>
+            <masterLabel>II</masterLabel>
+            <translation><!-- II --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>III</masterLabel>
+            <translation><!-- III --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IV</masterLabel>
+            <translation><!-- IV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jr.</masterLabel>
+            <translation><!-- Jr. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sr.</masterLabel>
+            <translation><!-- Sr. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>V</masterLabel>
+            <translation><!-- V --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VI</masterLabel>
+            <translation><!-- VI --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Years at Current Address --></label>
+        <name>Years_at_Current__c</name>
+    </fields>
+    <fields>
+        <help><!-- Reference to the Geocode object holding all of mapping information for the record. --></help>
+        <label><!-- Geocode --></label>
+        <name>geopointe__Geocode__c</name>
+        <relationshipLabel><!-- Contacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pardot Campaign --></label>
+        <name>pi__campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Comments --></label>
+        <name>pi__comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Date --></label>
+        <name>pi__conversion_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Object Name --></label>
+        <name>pi__conversion_object_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Object Type --></label>
+        <name>pi__conversion_object_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Created Date --></label>
+        <name>pi__created_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Activity --></label>
+        <name>pi__first_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer Query --></label>
+        <name>pi__first_search_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer Type --></label>
+        <name>pi__first_search_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer --></label>
+        <name>pi__first_touch_url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Grade --></label>
+        <name>pi__grade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Last Activity --></label>
+        <name>pi__last_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Notes --></label>
+        <name>pi__notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Score --></label>
+        <name>pi__score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot URL --></label>
+        <name>pi__url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Campaign --></label>
+        <name>pi__utm_campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Content --></label>
+        <name>pi__utm_content__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Medium --></label>
+        <name>pi__utm_medium__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Source --></label>
+        <name>pi__utm_source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Term --></label>
+        <name>pi__utm_term__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Please enter numbers only. --></errorMessage>
+        <name>PhoneExtOnlyText</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter numbers only. --></errorMessage>
+        <name>PhoneExtOnlyTextHome</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GMI_Show_Map_Button_Contact --></label>
+        <name>GMI_Show_Map_Button_Contact</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GMI_Show_Map_Link_Contact --></label>
+        <name>GMI_Show_Map_Link_Contact</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Re_subscribe_in_ExactTarget --></label>
+        <name>Re_subscribe_in_ExactTarget</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ResetPassword --></label>
+        <name>ResetPassword</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- S_Docs --></label>
+        <name>SDOC__S_Docs</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendExactTargetEmail --></label>
+        <name>SendExactTargetEmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Map --></label>
+        <name>geopointe__Map</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Map_Records_Contact --></label>
+        <name>geopointe__Map_Records_Contact</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Map_newWindow --></label>
+        <name>geopointe__Map_newWindow</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- FindContactinInsideView --></label>
+        <name>iv__FindContactinInsideView</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- map --></label>
+        <name>map</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Email --></label>
+        <name>pi__Send_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Prospect_Insight --></label>
+        <name>pi__Send_to_Prospect_Insight</name>
+    </webLinks>
+</CustomObjectTranslation>

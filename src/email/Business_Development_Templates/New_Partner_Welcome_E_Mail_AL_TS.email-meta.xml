@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>StandardLetterheadSample</letterhead>
+    <name>New Partner Welcome E-Mail - AL (TS)</name>
+    <style>freeForm</style>
+    <subject>Welcome to RapidAdvance!</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+
+Welcome to RapidAdvance! We are excited that you have decided to join our company in our mission to help small businesses needs for working capital. At RapidAdvance we have multiple financing options and want to make sure that there is a good understanding of what we are able to provide for your customers. When would be a good time to schedule a webinar to go over our programs and how to submit your deals? It only takes about 30 minutes and will give you a comprehensive overview of the products we offer and the deal flow process.
+
+
+For your reference I have attached the training presentation, merchant eligibility requirements, restricted and prohibited merchant list, application, and contact sheet. Your deals will be submitted to Alex Lopez at alopez@rapidadvance.com or fax to 240-283-1609.
+
+
+Let me know if you have any questions and I look forward to hearing back from you to schedule the webinar.
+
+
+Regards,
+
+
+Timothy Sitzler
+Business Development Associate
+RapidAdvance®
+Direct: 240-380-1656
+Fax: 240-283-1634
+
+www.RapidAdvance.com
+Click Here or Icons Below
+Connect With Us Today!</textOnly>
+    <type>html</type>
+</EmailTemplate>

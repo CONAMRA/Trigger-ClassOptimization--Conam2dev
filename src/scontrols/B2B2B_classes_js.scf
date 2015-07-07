@@ -1,0 +1,1345 @@
+function escapeHTML (str)
+{
+    var div = document.createElement('div');
+    var text = document.createTextNode(str);
+    div.appendChild(text);
+    return div.innerHTML;
+}
+
+//LoginInfo Object
+function LoginInfo (FIName, UserName, Password)
+{
+	this.FIName = FIName || "";
+	this.UserName = UserName || "";
+	this.Password = Password || "";
+}
+
+
+LoginInfo.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<loginInfo>";
+	soapStr += "<FIName>" + this.FIName + "</FIName>";
+	soapStr += "<UserName>" + this.UserName + "</UserName>";
+	soapStr += "<Password>" + this.Password + "</Password>";
+	soapStr += "</loginInfo>";
+
+ 	return soapStr; 
+}
+
+//ImportApp Object
+function ImportApp (SubmittedByOfficerCode, ApplicationComment, RelationshipManagerOfficerCode, ApplicationTakenDate, ImportMode, BizUnitUserCode)
+{
+	this.SubmittedByOfficerCode = SubmittedByOfficerCode || "";
+	this.ApplicationComment = ApplicationComment || "";
+	this.RelationshipManagerOfficerCode = RelationshipManagerOfficerCode || "";
+	this.ApplicationTakenDate = ApplicationTakenDate || "";
+	this.ImportMode = ImportMode || "";
+	this.BizUnitUserCode = BizUnitUserCode || "";
+}
+
+ImportApp.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<importApp>";
+	soapStr += "<SubmittedByOfficerCode>" + this.SubmittedByOfficerCode + "</SubmittedByOfficerCode>";
+	soapStr += "<ApplicationComment>" + this.ApplicationComment + "</ApplicationComment>";
+	soapStr += "<RelationshipManagerOfficerCode>" + this.RelationshipManagerOfficerCode + "</RelationshipManagerOfficerCode>";
+	soapStr += "<ApplicationTakenDate>" + this.ApplicationTakenDate + "</ApplicationTakenDate>";
+	soapStr += "<ImportMode>" + this.ImportMode + "</ImportMode>";
+	soapStr += "<BizUnitUserCode>" + this.BizUnitUserCode + "</BizUnitUserCode>";
+	soapStr += "</importApp>";
+
+ 	return soapStr; 
+}
+
+//GeneralBusiness Object
+function GeneralBusiness (WebAddress, TaxID, MainPhone, MainFax, Country, County, DateBusinessEstablished, PresentManagementSince, BusStructure, AnnualSales, LegalName, SICCode, NAICSCode, LossComment, Loss, ForSaleComments, ForSale, NumOfEmployees, DUNSEXPERIANNumber, Description, DelinquentTaxesComments, DelinquentTaxes, AverageCheckingBalance, DoingBusinessAs, CurrentExposureTotal, CurrentExposureUnsecured, CurrentExposureSecured, CheckingLocation, PostalCode, State, City, AddressLine2, AddressLine1, AdditionalFields)
+{
+	this.WebAddress = WebAddress || "";
+	this.TaxID = TaxID || "";
+	this.MainPhone = MainPhone || "";
+	this.MainFax = MainFax || "";
+	this.Country = Country || "";
+	this.County = County || "";
+	this.DateBusinessEstablished = DateBusinessEstablished || "";
+	this.PresentManagementSince = PresentManagementSince || "";
+	this.BusStructure = BusStructure || "";
+	this.AnnualSales = AnnualSales || "";
+	this.LegalName = LegalName || "";
+	this.SICCode = SICCode || "";
+	this.NAICSCode = NAICSCode || "";
+	this.LossComment = LossComment || "";
+	this.Loss = Loss || "";
+	this.ForSaleComments = ForSaleComments || "";
+	this.ForSale = ForSale || "";
+	this.NumOfEmployees = NumOfEmployees || "";
+	this.DUNSEXPERIANNumber = DUNSEXPERIANNumber || "";
+	this.Description = Description || "";
+	this.DelinquentTaxesComments = DelinquentTaxesComments || "";
+	this.DelinquentTaxes = DelinquentTaxes || "";
+	this.AverageCheckingBalance = AverageCheckingBalance || "";
+	this.DoingBusinessAs = DoingBusinessAs || "";
+	this.CurrentExposureTotal = CurrentExposureTotal || "";
+	this.CurrentExposureUnsecured = CurrentExposureUnsecured || "";
+	this.CurrentExposureSecured = CurrentExposureSecured || "";
+	this.CheckingLocation = CheckingLocation || "";
+	this.PostalCode = PostalCode || "";
+	this.State = State || "";
+	this.City = City || "";
+	this.AddressLine2 = AddressLine2 || "";
+	this.AddressLine1 = AddressLine1 || "";
+	this.AdditionalFields = AdditionalFields || "";
+}
+
+
+GeneralBusiness.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<generalBusiness>";
+	if(this.WebAddress != "")
+	{		
+		soapStr += "<WebAddress>" + this.WebAddress + "</WebAddress>";
+	}
+	if(this.TaxID != "")
+	{		
+		soapStr += "<TaxID>" + this.TaxID + "</TaxID>";
+	}
+	if(this.MainPhone != "")
+	{		
+		soapStr += "<MainPhone>" + this.MainPhone + "</MainPhone>";
+	}
+	if(this.MainFax != "")
+	{		
+		soapStr += "<MainFax>" + this.MainFax + "</MainFax>";
+	}
+	if(this.Country != "")
+	{		
+		soapStr += "<Country>" + this.Country + "</Country>";
+	}
+	if(this.County != "")
+	{		
+		soapStr += "<County>" + this.County + "</County>";
+	}
+	if(this.DateBusinessEstablished != "")
+	{		
+		soapStr += "<DateBusinessEstablished>" + this.DateBusinessEstablished + "</DateBusinessEstablished>";
+	}
+	if(this.PresentManagementSince != "")
+	{		
+		soapStr += "<PresentManagementSince>" + this.PresentManagementSince + "</PresentManagementSince>";
+	}
+	if(this.BusStructure != "")
+	{		
+		soapStr += "<BusStructure>" + this.BusStructure + "</BusStructure>";
+	}
+	if(this.AnnualSales != "")
+	{		
+		soapStr += "<AnnualSales>" + this.AnnualSales + "</AnnualSales>";
+	}
+	if(this.LegalName != "")
+	{		
+		soapStr += "<LegalName>" + this.LegalName + "</LegalName>";
+	}
+	if(this.SICCode != "")
+	{		
+		soapStr += "<SICCode>" + this.SICCode + "</SICCode>";
+	}
+	if(this.NAICSCode != "")
+	{		
+		soapStr += "<NAICSCode>" + this.NAICSCode + "</NAICSCode>";
+	}
+	if(this.LossComment != "")
+	{		
+		soapStr += "<LossComment>" + this.LossComment + "</LossComment>";
+	}
+	if(this.Loss != "")
+	{		
+		soapStr += "<Loss>" + this.Loss + "</Loss>";
+	}
+	if(this.ForSaleComments != "")
+	{		
+		soapStr += "<ForSaleComments>" + this.ForSaleComments + "</ForSaleComments>";
+	}
+	if(this.ForSale != "")
+	{		
+		soapStr += "<ForSale>" + this.ForSale + "</ForSale>";
+	}
+	if(this.NumOfEmployees != "")
+	{		
+		soapStr += "<NumOfEmployees>" + this.NumOfEmployees + "</NumOfEmployees>";
+	}
+	if(this.DUNEXPERIANNumber != "")
+	{		
+		soapStr += "<DUNSEXPERIANNumber>" + this.DUNSEXPERIANNumber + "</DUNSEXPERIANNumber>";
+	}
+	if(this.Description != "")
+	{		
+		soapStr += "<Description>" + this.Description + "</Description>";
+	}
+	if(this.DelinquentTaxesComments != "")
+	{		
+		soapStr += "<DelinquentTaxesComments>" + this.DelinquentTaxesComments + "</DelinquentTaxesComments>";
+	}
+	if(this.DelinquentTaxes != "")
+	{		
+		soapStr += "<DelinquentTaxes>" + this.DelinquentTaxes + "</DelinquentTaxes>";
+	}
+	if(this.AverageCheckingBalance != "")
+	{		
+		soapStr += "<AverageCheckingBalance>" + this.AverageCheckingBalance + "</AverageCheckingBalance>";
+	}
+	if(this.DoingBusinessAs != "")
+	{		
+		soapStr += "<DoingBusinessAs>" + this.DoingBusinessAs + "</DoingBusinessAs>";
+	}
+	if(this.CurrentExposureTotal != "")
+	{		
+		soapStr += "<CurrentExposureTotal>" + this.CurrentExposureTotal + "</CurrentExposureTotal>";
+	}
+	if(this.CurrentExposureUnsecured != "")
+	{		
+		soapStr += "<CurrentExposureUnsecured>" + this.CurrentExposureUnsecured + "</CurrentExposureUnsecured>";
+	}
+	if(this.CurrentExposureSecured != "")
+	{		
+		soapStr += "<CurrentExposureSecured>" + this.CurrentExposureSecured + "</CurrentExposureSecured>";
+	}
+	if(this.CheckingLocation != "")
+	{		
+		soapStr += "<CheckingLocation>" + this.CheckingLocation + "</CheckingLocation>";
+	}
+	if(this.PostalCode != "")
+	{		
+		soapStr += "<PostalCode>" + this.PostalCode + "</PostalCode>";
+	}
+	if(this.State != "")
+	{		
+		soapStr += "<State>" + this.State + "</State>";
+	}
+	if(this.City != "")
+	{		
+		soapStr += "<City>" + this.City + "</City>";
+	}
+	if(this.Addressline2 != "")
+	{		
+		soapStr += "<AddressLine2>" + this.AddressLine2 + "</AddressLine2>";
+	}
+	if(this.AddressLine1 != "")
+	{		
+		soapStr += "<AddressLine1>" + this.AddressLine1 + "</AddressLine1>";
+	}		
+	soapStr += "<AdditionalFields>" + this.AdditionalFields.getSoap() + "</AdditionalFields>";
+	soapStr += "</generalBusiness>";
+
+ 	return soapStr; 
+}
+
+//ArrayOfField Object
+function ArrayOfField (Field)
+{
+	this.Field = Field || new Array();
+}
+
+
+ArrayOfField.prototype.getSoap = function()
+{
+	var soapStr = "";
+	if(this.Field.length > 0)
+	{
+		for(counter = 0; counter < this.Field.length; counter++)
+		{
+			soapStr += this.Field[counter].getSoap();		
+		}
+	}
+
+ 	return soapStr; 
+}
+
+//Field Object
+function Field (Name, Value, blnIsLookup, LookupType)
+{
+	this.Name = Name || "";
+	this.Value = Value || "";
+	this.blnIsLookup = blnIsLookup || "";
+	this.LookupType = LookupType || "";
+}
+
+
+Field.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<Field>";
+	soapStr += "<Name>" + this.Name + "</Name>";
+	soapStr += "<Value>" + this.Value + "</Value>";
+	soapStr += "<blnIsLookup>" + this.blnIsLookup + "</blnIsLookup>";
+	soapStr += "<LookupType>" + this.LookupType + "</LookupType>";
+	soapStr += "</Field>";
+
+ 	return soapStr; 
+}
+
+//ArrayOfPrincipal Object
+function ArrayOfPrincipal (Principal)
+{
+	this.Principal = Principal || new Array();
+}
+
+
+ArrayOfPrincipal.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<principals>";
+	if(this.Principal.length > 0)
+	{
+		for(var counter = 0; counter < this.Principal.length; counter++)
+		{
+			soapStr += this.Principal[counter].getSoap();
+		}
+	}
+	
+	//if(this.Principal != "")
+	//{
+	//	soapStr += this.Principal.getSoap();
+	//}
+	//else
+	//{
+	//	soapStr += "<Principal></Principal>";
+	//}
+	soapStr += "</principals>";
+
+ 	return soapStr; 
+}
+
+//Principal Object
+function Principal (ValueInBusiness, Title, SocialSecurityNumber, PrincipalType, PercentOwnership, TermPaymentsComments, TermPayments, MortgagePayments, JointStatement, OtherIncomeComments, OtherIncome, Income, DateOfBirth, TotalLiabilities, TotalAssets, RevolvingCreditPayments, BankruptcyComments, Bankruptcy, HomePhone, Suffix, Prefix, MiddleName, FirstName, LastName, EquityInHome, EmailAddress, Country, County, PostalCode, State, City, CheckingLocation, AddressLine2, AddressLine1, PrinCustomerIDDescription1, PrinCustomerIDDescription2, PrinCustomerIDType1, PrinCustomerIDType2, PrinExistingCustomer, AdditionalFields)
+{
+	this.ValueInBusiness = ValueInBusiness || "";
+	this.Title = Title || "";
+	this.SocialSecurityNumber = SocialSecurityNumber || "";
+	this.PrincipalType = PrincipalType || "";
+	this.PercentOwnership = PercentOwnership || "";
+	this.TermPaymentsComments = TermPaymentsComments || "";
+	this.TermPayments = TermPayments || "";
+	this.MortgagePayments = MortgagePayments || "";
+	this.JointStatement = JointStatement || "";
+	this.OtherIncomeComments = OtherIncomeComments || "";
+	this.OtherIncome = OtherIncome || "";
+	this.Income = Income || "";
+	this.DateOfBirth = DateOfBirth || "";
+	this.TotalLiabilities = TotalLiabilities || "";
+	this.TotalAssets = TotalAssets || "";
+	this.RevolvingCreditPayments = RevolvingCreditPayments || "";
+	this.BankruptcyComments = BankruptcyComments || "";
+	this.Bankruptcy = Bankruptcy || "";
+	this.HomePhone = HomePhone || "";
+	this.Suffix = Suffix || "";
+	this.Prefix = Prefix || "";
+	this.MiddleName = MiddleName || "";
+	this.FirstName = FirstName || "";
+	this.LastName = LastName || "";
+	this.EquityInHome = EquityInHome || "";
+	this.EmailAddress = EmailAddress || "";
+	this.Country = Country || "";
+	this.County = County || "";
+	this.PostalCode = PostalCode || "";
+	this.State = State || "";
+	this.City = City || "";
+	this.CheckingLocation = CheckingLocation || "";
+	this.AddressLine2 = AddressLine2 || "";
+	this.AddressLine1 = AddressLine1 || "";
+	this.PrinCustomerIDDescription1 = PrinCustomerIDDescription1 || "";
+	this.PrinCustomerIDDescription2 = PrinCustomerIDDescription2 || "";
+	this.PrinCustomerIDType1 = PrinCustomerIDType1 || "";
+	this.PrinCustomerIDType2 = PrinCustomerIDType2 || "";
+	this.PrinExistingCustomer = PrinExistingCustomer || "";
+	this.AdditionalFields = AdditionalFields || "";
+}
+
+
+Principal.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<Principal>";
+	if(this.ValueInBusiness != "")
+	{
+		soapStr += "<ValueInBusiness>" + this.ValueInBusiness + "</ValueInBusiness>";
+	}
+	if(this.Title != "")
+	{
+		soapStr += "<Title>" + this.Title + "</Title>";
+	}
+	if(this.SocialSecurityNumber != "")
+	{
+		soapStr += "<SocialSecurityNumber>" + this.SocialSecurityNumber + "</SocialSecurityNumber>";
+	}
+	if(this.PrincipalType != "")
+	{
+		soapStr += "<PrincipalType>" + this.PrincipalType + "</PrincipalType>";
+	}
+	if(this.PercentOwnership != "")
+	{
+		soapStr += "<PercentOwnership>" + this.PercentOwnership + "</PercentOwnership>";
+	}
+	if(this.TermPaymentsComments != "")
+	{
+		soapStr += "<TermPaymentsComments>" + this.TermPaymentsComments + "</TermPaymentsComments>";
+	}
+	if(this.TermPayments != "")
+	{
+		soapStr += "<TermPayments>" + this.TermPayments + "</TermPayments>";
+	}
+	if(this.MortgagePayments != "")
+	{
+		soapStr += "<MortgagePayments>" + this.MortgagePayments + "</MortgagePayments>";
+	}
+	if(this.JointStatement != "")
+	{
+		soapStr += "<JointStatement>" + this.JointStatement + "</JointStatement>";
+	}
+	if(this.OtherIncomeComments != "")
+	{
+		soapStr += "<OtherIncomeComments>" + this.OtherIncomeComments + "</OtherIncomeComments>";
+	}
+	if(this.OtherIncome != "")
+	{
+		soapStr += "<OtherIncome>" + this.OtherIncome + "</OtherIncome>";
+	}
+	if(this.Income != "")
+	{
+		soapStr += "<Income>" + this.Income + "</Income>";
+	}
+	if(this.DateOfBirth != "")
+	{
+		soapStr += "<DateOfBirth>" + this.DateOfBirth + "</DateOfBirth>";
+	}
+	if(this.TotalLiabilities != "")
+	{
+		soapStr += "<TotalLiabilities>" + this.TotalLiabilities + "</TotalLiabilities>";
+	}
+	if(this.TotalAssets != "")
+	{
+		soapStr += "<TotalAssets>" + this.TotalAssets + "</TotalAssets>";
+	}
+	if(this.RevolvingCreditPayments != "")
+	{
+		soapStr += "<RevolvingCreditPayments>" + this.RevolvingCreditPayments + "</RevolvingCreditPayments>";
+	}
+	if(this.BankruptcyComments != "")
+	{
+		soapStr += "<BankruptcyComments>" + this.BankruptcyComments + "</BankruptcyComments>";
+	}
+	if(this.Bankruptcy != "")
+	{
+		soapStr += "<Bankruptcy>" + this.Bankruptcy + "</Bankruptcy>";
+	}
+	if(this.HomePhone != "")
+	{
+		soapStr += "<HomePhone>" + this.HomePhone + "</HomePhone>";
+	}
+	if(this.Suffix != "")
+	{
+		soapStr += "<Suffix>" + this.Suffix + "</Suffix>";
+	}
+	if(this.Prefix != "")
+	{
+		soapStr += "<Prefix>" + this.Prefix + "</Prefix>";
+	}
+	if(this.MiddleName != "")
+	{
+		soapStr += "<MiddleName>" + this.MiddleName + "</MiddleName>";
+	}
+	if(this.FirstName != "")
+	{
+		soapStr += "<FirstName>" + this.FirstName + "</FirstName>";
+	}
+	if(this.LastName != "")
+	{
+		soapStr += "<LastName>" + this.LastName + "</LastName>";
+	}
+	if(this.EquityInHome != "")
+	{
+		soapStr += "<EquityInHome>" + this.EquityInHome + "</EquityInHome>";
+	}
+	if(this.EmailAddress != "")
+	{
+		soapStr += "<EmailAddress>" + this.EmailAddress + "</EmailAddress>";
+	}
+	if(this.Country != "")
+	{
+		soapStr += "<Country>" + this.Country + "</Country>";
+	}
+	if(this.County != "")
+	{
+		soapStr += "<County>" + this.County + "</County>";
+	}
+	if(this.PostalCode != "")
+	{
+		soapStr += "<PostalCode>" + this.PostalCode + "</PostalCode>";
+	}
+	if(this.State != "")
+	{
+		soapStr += "<State>" + this.State + "</State>";
+	}
+	if(this.City != "")
+	{
+		soapStr += "<City>" + this.City + "</City>";
+	}
+	if(this.CheckingLocation != "")
+	{
+		soapStr += "<CheckingLocation>" + this.CheckingLocation + "</CheckingLocation>";
+	}
+	if(this.AddressLine2 != "")
+	{
+		soapStr += "<AddressLine2>" + this.AddressLine2 + "</AddressLine2>";
+	}
+	if(this.AddressLine1 != "")
+	{
+		soapStr += "<AddressLine1>" + this.AddressLine1 + "</AddressLine1>";
+	}
+	if(this.PrinCustomerIDDescription != "")
+	{
+		soapStr += "<PrinCustomerIDDescription1>" + this.PrinCustomerIDDescription1 + "</PrinCustomerIDDescription1>";
+	}
+	if(this.PrinCustomerIDDescription2 != "")
+	{
+		soapStr += "<PrinCustomerIDDescription2>" + this.PrinCustomerIDDescription2 + "</PrinCustomerIDDescription2>";
+	}
+	if(this.PrinCustomerIDType1 != "")
+	{
+		soapStr += "<PrinCustomerIDType1>" + this.PrinCustomerIDType1 + "</PrinCustomerIDType1>";
+	}
+	if(this.PrinCustomerIDType2 != "")
+	{
+		soapStr += "<PrinCustomerIDType2>" + this.PrinCustomerIDType2 + "</PrinCustomerIDType2>";
+	}
+	if(this.PrinExistingCustomer != "")
+	{
+		soapStr += "<PrinExistingCustomer>" + this.PrinExistingCustomer + "</PrinExistingCustomer>";
+	}
+	soapStr += "<AdditionalFields>" + this.AdditionalFields.getSoap() + "</AdditionalFields>";
+	soapStr += "</Principal>";
+
+ 	return soapStr; 
+}
+
+//ArrayOfProduct Object
+function ArrayOfProduct (Product)
+{
+	this.Product = Product || "";
+}
+
+
+ArrayOfProduct.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<products>";
+	if(this.Product != "")
+	{
+		soapStr += this.Product.getSoap();
+	}
+	else
+	{
+		soapStr += "<Product></Product>";
+	}
+	soapStr += "</products>";
+
+ 	return soapStr; 
+}
+
+//Product Object
+function Product (index, Name, RequestedPurpose, RequestedTerm, RequestedAmount, ProductType, AdditionalFields)
+{
+	this.index = index || "0";
+	this.Name = Name || "";
+	this.RequestedPurpose = RequestedPurpose || "";
+	this.RequestedTerm = RequestedTerm || "";
+	this.RequestedAmount = RequestedAmount || "";
+	this.ProductType = ProductType || "";
+	this.AdditionalFields = AdditionalFields || "";
+}
+
+
+Product.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<Product>";
+	soapStr += "<index>" + this.index + "</index>";
+	if(this.Name != "")
+	{
+		soapStr += "<Name>" + this.Name + "</Name>";
+	}
+	if(this.RequestedPurpose != "")
+	{		
+		soapStr += "<RequestedPurpose>" + this.RequestedPurpose + "</RequestedPurpose>";
+	}
+	if(this.RequestedTerm != "")
+	{
+		soapStr += "<RequestedTerm>" + this.RequestedTerm + "</RequestedTerm>";
+	}
+	if(this.RequestedAmount != "")
+	{
+		soapStr += "<RequestedAmount>" + this.RequestedAmount + "</RequestedAmount>";
+	}
+	if(this.ProductType != "")
+	{
+		soapStr += "<ProductType>" + this.ProductType + "</ProductType>";
+	}
+	soapStr += "<AdditionalFields>" + this.AdditionalFields.getSoap() + "</AdditionalFields>";
+	soapStr += "</Product>";
+
+ 	return soapStr; 
+}
+
+//ArrayOfCollateral Object
+function ArrayOfCollateral (Collateral)
+{
+	this.Collateral = Collateral || "";
+}
+
+
+ArrayOfCollateral.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<collaterals>";
+	if(this.Collateral != "")
+	{
+		soapStr += this.Collateral.getSoap();
+	}
+	soapStr += "</collaterals>";
+
+ 	return soapStr; 
+}
+
+//Collateral Object
+function Collateral (MarketValue, OwnedComments, Owned, ExistingLienAmount, index, CollateralType, Name, Description, AdvancePercent, AdditionalFields)
+{
+	this.MarketValue = MarketValue || "";
+	this.OwnedComments = OwnedComments || "";
+	this.Owned = Owned || "";
+	this.ExistingLienAmount = ExistingLienAmount || "";
+	this.index = index || "";
+	this.CollateralType = CollateralType || "";
+	this.Name = Name || "";
+	this.Description = Description || "";
+	this.AdvancePercent = AdvancePercent || "";
+	this.AdditionalFields = AdditionalFields || "";
+}
+
+
+Collateral.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<Collateral>";
+	if(this.MarketValue != "")
+	{		
+		soapStr += "<MarketValue>" + this.MarketValue + "</MarketValue>";
+	}
+	if(this.OwnedComments != "")
+	{		
+		soapStr += "<OwnedComments>" + this.OwnedComments + "</OwnedComments>";
+	}
+	if(this.Owned != "")
+	{		
+		soapStr += "<Owned>" + this.Owned + "</Owned>";
+	}
+	if(this.ExistingLienAmount != "")
+	{		
+		soapStr += "<ExistingLienAmount>" + this.ExistingLienAmount + "</ExistingLienAmount>";
+	}
+	if(this.index != "")
+	{		
+		soapStr += "<index>" + this.index + "</index>";
+	}
+	if(this.CollateralType != "")
+	{		
+		soapStr += "<CollateralType>" + this.CollateralType + "</CollateralType>";
+	}
+	if(this.Name != "")
+	{		
+		soapStr += "<Name>" + this.Name + "</Name>";
+	}
+	if(this.Description != "")
+	{		
+		soapStr += "<Description>" + this.Description + "</Description>";
+	}
+	if(this.AdvancePercent != "")
+	{		
+		soapStr += "<AdvancePercent>" + this.AdvancePercent + "</AdvancePercent>";
+	}
+	soapStr += "<AdditionalFields>" + this.AdditionalFields.getSoap() + "</AdditionalFields>";
+	soapStr += "</Collateral>";
+
+ 	return soapStr; 
+}
+
+//ArrayOfProdToCollRel Object
+function ArrayOfProdToCollRel (ProdToCollRel)
+{
+	this.ProdToCollRel = ProdToCollRel || "";
+}
+
+
+ArrayOfProdToCollRel.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<prodToCollRels>";
+	if(this.ProdToCollRel != "")
+	{
+		soapStr += this.ProdToCollRel.getSoap();
+	}
+	soapStr += "</prodToCollRels>";
+
+ 	return soapStr; 
+}
+
+//ProdToCollRel Object
+function ProdToCollRel (CollateralIndex, ProductIndex)
+{
+	this.CollateralIndex = CollateralIndex || "";
+	this.ProductIndex = ProductIndex || "";
+}
+
+
+ProdToCollRel.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<ProdToCollRel>";
+	soapStr += "<CollateralIndex>" + this.CollateralIndex + "</CollateralIndex>";
+	soapStr += "<ProductIndex>" + this.ProductIndex + "</ProductIndex>";
+	soapStr += "</ProdToCollRel>";
+
+ 	return soapStr; 
+}
+
+//ArrayOfFinancial Object
+function ArrayOfFinancial (Financial)
+{
+	this.Financial = Financial || "";
+}
+
+
+ArrayOfFinancial.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<financials>";
+	if(this.Financial != "")
+	{
+		soapStr += this.Financial.getSoap();
+	}
+	soapStr += "</financials>";
+
+ 	return soapStr; 
+}
+
+//Financial Object
+function Financial (CurrentLiabilities, SellingandGAExpense, TaxesPayable, Taxes, RentalExpense, OtherCurrentLiabilitiesComments, OtherLongTermLiabilities, OtherOperatingExpensesComments, OtherOperatingExpenses, OtherAssetsComments, OtherAssets, NotesPayable, AccountsRecievable, Months, LongTermDebt, Inventory, InterestExpense, IntangibleAssets, DepreciationAndAmortization, StartingDate, CostOfSales, OfficerSalaries, Cash, AccountsPayable, NetSales, FixedAssets, AdditionalFields)
+{
+	this.CurrentLiabilities = CurrentLiabilities || "";
+	this.SellingandGAExpense = SellingandGAExpense || "";
+	this.TaxesPayable = TaxesPayable || "";
+	this.Taxes = Taxes || "";
+	this.RentalExpense = RentalExpense || "";
+	this.OtherCurrentLiabilitiesComments = OtherCurrentLiabilitiesComments || "";
+	this.OtherLongTermLiabilities = OtherLongTermLiabilities || "";
+	this.OtherOperatingExpensesComments = OtherOperatingExpensesComments || "";
+	this.OtherOperatingExpenses = OtherOperatingExpenses || "";
+	this.OtherAssetsComments = OtherAssetsComments || "";
+	this.OtherAssets = OtherAssets || "";
+	this.NotesPayable = NotesPayable || "";
+	this.AccountsRecievable = AccountsRecievable || "";
+	this.Months = Months || "";
+	this.LongTermDebt = LongTermDebt || "";
+	this.Inventory = Inventory || "";
+	this.InterestExpense = InterestExpense || "";
+	this.IntangibleAssets = IntangibleAssets || "";
+	this.DepreciationAndAmortization = DepreciationAndAmortization || "";
+	this.StartingDate = StartingDate || "";
+	this.CostOfSales = CostOfSales || "";
+	this.OfficerSalaries = OfficerSalaries || "";
+	this.Cash = Cash || "";
+	this.AccountsPayable = AccountsPayable || "";
+	this.NetSales = NetSales || "";
+	this.FixedAssets = FixedAssets || "";
+	this.AdditionalFields = AdditionalFields || "";
+}
+
+
+Financial.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<Financial>";
+	soapStr += "<CurrentLiabilities>" + this.CurrentLiabilities + "</CurrentLiabilities>";
+	soapStr += "<SellingandGAExpense>" + this.SellingandGAExpense + "</SellingandGAExpense>";
+	soapStr += "<TaxesPayable>" + this.TaxesPayable + "</TaxesPayable>";
+	soapStr += "<Taxes>" + this.Taxes + "</Taxes>";
+	soapStr += "<RentalExpense>" + this.RentalExpense + "</RentalExpense>";
+	soapStr += "<OtherCurrentLiabilitiesComments>" + this.OtherCurrentLiabilitiesComments + "</OtherCurrentLiabilitiesComments>";
+	soapStr += "<OtherLongTermLiabilities>" + this.OtherLongTermLiabilities + "</OtherLongTermLiabilities>";
+	soapStr += "<OtherOperatingExpensesComments>" + this.OtherOperatingExpensesComments + "</OtherOperatingExpensesComments>";
+	soapStr += "<OtherOperatingExpenses>" + this.OtherOperatingExpenses + "</OtherOperatingExpenses>";
+	soapStr += "<OtherAssetsComments>" + this.OtherAssetsComments + "</OtherAssetsComments>";
+	soapStr += "<OtherAssets>" + this.OtherAssets + "</OtherAssets>";
+	soapStr += "<NotesPayable>" + this.NotesPayable + "</NotesPayable>";
+	soapStr += "<AccountsRecievable>" + this.AccountsRecievable + "</AccountsRecievable>";
+	soapStr += "<Months>" + this.Months + "</Months>";
+	soapStr += "<LongTermDebt>" + this.LongTermDebt + "</LongTermDebt>";
+	soapStr += "<Inventory>" + this.Inventory + "</Inventory>";
+	soapStr += "<InterestExpense>" + this.InterestExpense + "</InterestExpense>";
+	soapStr += "<IntangibleAssets>" + this.IntangibleAssets + "</IntangibleAssets>";
+	soapStr += "<DepreciationAndAmortization>" + this.DepreciationAndAmortization + "</DepreciationAndAmortization>";
+	soapStr += "<StartingDate>" + this.StartingDate + "</StartingDate>";
+	soapStr += "<CostOfSales>" + this.CostOfSales + "</CostOfSales>";
+	soapStr += "<OfficerSalaries>" + this.OfficerSalaries + "</OfficerSalaries>";
+	soapStr += "<Cash>" + this.Cash + "</Cash>";
+	soapStr += "<AccountsPayable>" + this.AccountsPayable + "</AccountsPayable>";
+	soapStr += "<NetSales>" + this.NetSales + "</NetSales>";
+	soapStr += "<FixedAssets>" + this.FixedAssets + "</FixedAssets>";
+	soapStr += "<AdditionalFields>" + this.AdditionalFields.getSoap() + "</AdditionalFields>";
+	soapStr += "</Financial>";
+
+ 	return soapStr; 
+}
+
+//ArrayOfCurrentDebt Object
+function ArrayOfCurrentDebt (CurrentDebt)
+{
+	this.CurrentDebt = CurrentDebt || "";
+}
+
+
+ArrayOfCurrentDebt.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<currentDebts>";
+	if(this.CurrentDebt != "")
+	{
+		soapStr += this.CurrentDebt.getSoap();
+	}
+
+	soapStr += "</currentDebts>";
+
+ 	return soapStr; 
+}
+
+//CurrentDebt Object
+function CurrentDebt (CurrentDebtType, PaymentStructure, Purpose, PaymentAmount, PaidOffComments, PaidOff, OriginalAmount, Name, MaturityDate, Creditor, Balance, AdditionalFields)
+{
+	this.CurrentDebtType = CurrentDebtType || "";
+	this.PaymentStructure = PaymentStructure || "";
+	this.Purpose = Purpose || "";
+	this.PaymentAmount = PaymentAmount || "";
+	this.PaidOffComments = PaidOffComments || "";
+	this.PaidOff = PaidOff || "";
+	this.OriginalAmount = OriginalAmount || "";
+	this.Name = Name || "";
+	this.MaturityDate = MaturityDate || "";
+	this.Creditor = Creditor || "";
+	this.Balance = Balance || "";
+	this.AdditionalFields = AdditionalFields || "";
+}
+
+
+CurrentDebt.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<CurrentDebt>";
+	soapStr += "<CurrentDebtType>" + this.CurrentDebtType + "</CurrentDebtType>";
+	soapStr += "<PaymentStructure>" + this.PaymentStructure + "</PaymentStructure>";
+	soapStr += "<Purpose>" + this.Purpose + "</Purpose>";
+	soapStr += "<PaymentAmount>" + this.PaymentAmount + "</PaymentAmount>";
+	soapStr += "<PaidOffComments>" + this.PaidOffComments + "</PaidOffComments>";
+	soapStr += "<PaidOff>" + this.PaidOff + "</PaidOff>";
+	soapStr += "<OriginalAmount>" + this.OriginalAmount + "</OriginalAmount>";
+	soapStr += "<Name>" + this.Name + "</Name>";
+	soapStr += "<MaturityDate>" + this.MaturityDate + "</MaturityDate>";
+	soapStr += "<Creditor>" + this.Creditor + "</Creditor>";
+	soapStr += "<Balance>" + this.Balance + "</Balance>";
+	soapStr += "<AdditionalFields>" + this.AdditionalFields.getSoap() + "</AdditionalFields>";
+	soapStr += "</CurrentDebt>";
+
+ 	return soapStr; 
+}
+
+//ArrayOfDocument Object
+function ArrayOfDocument (Document)
+{
+	this.Document = Document || "";
+}
+
+
+ArrayOfDocument.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<documents>";
+	if(this.Document != "")
+	{
+		soapStr += this.Document.getSoap();
+	}
+	soapStr += "</documents>";
+
+ 	return soapStr; 
+}
+
+//Document Object
+function Document (Name, Description, MIMEType, BlobData, FileName, AdditionalFields)
+{
+	this.Name = Name || "";
+	this.Description = Description || "";
+	this.MIMEType = MIMEType || "";
+	this.BlobData = BlobData || "";
+	this.FileName = FileName || "";
+	this.AdditionalFields = AdditionalFields || "";
+}
+
+
+Document.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<Document>";
+	soapStr += "<Name>" + this.Name + "</Name>";
+	soapStr += "<Description>" + this.Description + "</Description>";
+	soapStr += "<MIMEType>" + this.MIMEType + "</MIMEType>";
+	soapStr += "<BlobData>" + this.BlobData + "</BlobData>";
+	soapStr += "<FileName>" + this.FileName + "</FileName>";
+	soapStr += "<AdditionalFields>" + this.AdditionalFields.getSoap() + "</AdditionalFields>";
+	soapStr += "</Document>";
+
+ 	return soapStr; 
+}
+
+//ArrayOfSigner Object
+function ArrayOfSigner (Signer)
+{
+	this.Signer = Signer || "";
+}
+
+
+ArrayOfSigner.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<signers>";
+	if(this.Signer != "")
+	{
+		soapStr += this.Signer.getSoap();
+	}
+
+	soapStr += "</signers>";
+
+ 	return soapStr; 
+}
+
+//Signer Object
+function Signer (Title, SocialSecurityNumber, PrincipalType, DateOfBirth, HomePhone, Suffix, Prefix, MiddleName, FirstName, LastName, EmailAddress, PostalCode, State, City, AddressLine2, AddressLine1, SignerCustomerIDDescription1, SignerCustomerIDDescription2, SignerCustomerIDType1, SignerCustomerIDType2, SignerExistingCustomer, AdditionalFields)
+{
+	this.Title = Title || "";
+	this.SocialSecurityNumber = SocialSecurityNumber || "";
+	this.PrincipalType = PrincipalType || "";
+	this.DateOfBirth = DateOfBirth || "";
+	this.HomePhone = HomePhone || "";
+	this.Suffix = Suffix || "";
+	this.Prefix = Prefix || "";
+	this.MiddleName = MiddleName || "";
+	this.FirstName = FirstName || "";
+	this.LastName = LastName || "";
+	this.EmailAddress = EmailAddress || "";
+	this.PostalCode = PostalCode || "";
+	this.State = State || "";
+	this.City = City || "";
+	this.AddressLine2 = AddressLine2 || "";
+	this.AddressLine1 = AddressLine1 || "";
+	this.SignerCustomerIDDescription1 = SignerCustomerIDDescription1 || "";
+	this.SignerCustomerIDDescription2 = SignerCustomerIDDescription2 || "";
+	this.SignerCustomerIDType1 = SignerCustomerIDType1 || "";
+	this.SignerCustomerIDType2 = SignerCustomerIDType2 || "";
+	this.SignerExistingCustomer = SignerExistingCustomer || "";
+	this.AdditionalFields = AdditionalFields || "";
+}
+
+
+Signer.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<Signer>";
+	soapStr += "<Title>" + this.Title + "</Title>";
+	soapStr += "<SocialSecurityNumber>" + this.SocialSecurityNumber + "</SocialSecurityNumber>";
+	soapStr += "<PrincipalType>" + this.PrincipalType + "</PrincipalType>";
+	soapStr += "<DateOfBirth>" + this.DateOfBirth + "</DateOfBirth>";
+	soapStr += "<HomePhone>" + this.HomePhone + "</HomePhone>";
+	soapStr += "<Suffix>" + this.Suffix + "</Suffix>";
+	soapStr += "<Prefix>" + this.Prefix + "</Prefix>";
+	soapStr += "<MiddleName>" + this.MiddleName + "</MiddleName>";
+	soapStr += "<FirstName>" + this.FirstName + "</FirstName>";
+	soapStr += "<LastName>" + this.LastName + "</LastName>";
+	soapStr += "<EmailAddress>" + this.EmailAddress + "</EmailAddress>";
+	soapStr += "<PostalCode>" + this.PostalCode + "</PostalCode>";
+	soapStr += "<State>" + this.State + "</State>";
+	soapStr += "<City>" + this.City + "</City>";
+	soapStr += "<AddressLine2>" + this.AddressLine2 + "</AddressLine2>";
+	soapStr += "<AddressLine1>" + this.AddressLine1 + "</AddressLine1>";
+	soapStr += "<SignerCustomerIDDescription1>" + this.SignerCustomerIDDescription1 + "</SignerCustomerIDDescription1>";
+	soapStr += "<SignerCustomerIDDescription2>" + this.SignerCustomerIDDescription2 + "</SignerCustomerIDDescription2>";
+	soapStr += "<SignerCustomerIDType1>" + this.SignerCustomerIDType1 + "</SignerCustomerIDType1>";
+	soapStr += "<SignerCustomerIDType2>" + this.SignerCustomerIDType2 + "</SignerCustomerIDType2>";
+	soapStr += "<SignerExistingCustomer>" + this.SignerExistingCustomer + "</SignerExistingCustomer>";
+	soapStr += "<AdditionalFields>" + this.AdditionalFields.getSoap() + "</AdditionalFields>";
+	soapStr += "</Signer>";
+
+ 	return soapStr; 
+}
+
+//ImportAppResult Object
+function ImportAppResult (AppFID, TaskID, Messages, Status, ActualImportModeUsed)
+{
+	this.AppFID = AppFID || "";
+	this.TaskID = TaskID || "";
+	this.Messages = Messages || "";
+	this.Status = Status || "";
+	this.ActualImportModeUsed = ActualImportModeUsed || "";
+}
+
+
+ImportAppResult.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<importAppResult>";
+	soapStr += "<AppFID>" + this.AppFID + "</AppFID>";
+	soapStr += "<TaskID>" + this.TaskID + "</TaskID>";
+	soapStr += "<Messages>" + this.Messages + "</Messages>";
+	soapStr += "<Status>" + this.Status + "</Status>";
+	soapStr += "<ActualImportModeUsed>" + this.ActualImportModeUsed + "</ActualImportModeUsed>";
+	soapStr += "</importAppResult>";
+
+ 	return soapStr; 
+}
+
+//ArrayOfMessage Object
+function ArrayOfMessage (Message)
+{
+	this.Message = Message || "";
+}
+
+
+ArrayOfMessage.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<arrayOfMessage>";
+	soapStr += "<Message>" + this.Message + "</Message>";
+	soapStr += "</arrayOfMessage>";
+
+ 	return soapStr; 
+}
+
+//Message Object
+function Message (Source, Description, Number, Type)
+{
+	this.Source = Source || "";
+	this.Description = Description || "";
+	this.Number = Number || "";
+	this.Type = Type || "";
+}
+
+
+Message.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<message>";
+	soapStr += "<Source>" + this.Source + "</Source>";
+	soapStr += "<Description>" + this.Description + "</Description>";
+	soapStr += "<Number>" + this.Number + "</Number>";
+	soapStr += "<Type>" + this.Type + "</Type>";
+	soapStr += "</message>";
+
+ 	return soapStr; 
+}
+
+//FindApp Object
+function FindApp (BusinessName, TaxID, AppTakenDateStart, AppTakenDateThrough, RelationshipManager, StageID, ApplicationFID)
+{
+	this.BusinessName = BusinessName || "";
+	this.TaxID = TaxID || "";
+	this.AppTakenDateStart = AppTakenDateStart || "";
+	this.AppTakenDateThrough = AppTakenDateThrough || "";
+	this.RelationshipManager = RelationshipManager || "";
+	this.StageID = StageID || "";
+	this.ApplicationFID = ApplicationFID || "";
+}
+
+
+FindApp.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<findApp>";
+	soapStr += "<BusinessName>" + this.BusinessName + "</BusinessName>";
+	soapStr += "<TaxID>" + this.TaxID + "</TaxID>";
+	//soapStr += "<AppTakenDateStart>" + this.AppTakenDateStart + "</AppTakenDateStart>";
+	//soapStr += "<AppTakenDateThrough>" + this.AppTakenDateThrough + "</AppTakenDateThrough>";
+	soapStr += "<RelationshipManager>" + this.RelationshipManager + "</RelationshipManager>";
+	soapStr += "<StageID>" + this.StageID + "</StageID>";
+	soapStr += "<ApplicationFID>" + this.ApplicationFID + "</ApplicationFID>";
+	soapStr += "</findApp>";
+
+ 	return soapStr; 
+}
+
+//FindAppResult Object
+function FindAppResult (Id, AppFID, BusinessName, TaxID, AppTakenDate, TotalAmount, Status, AppType, Originator, Owner, OwnerUsername, Stage, DateSaved, DateSubmitted, DateCompleted, DispatchStatus, Memo, deniedreadaccess, deniedupdateaccess, deniedinsertaccess, denieddeleteaccess, redecisionflag, denieddocprepaccess)
+{
+	this.Id = Id || "";
+	this.AppFID = AppFID || "";
+	this.BusinessName = BusinessName || "";
+	this.TaxID = TaxID || "";
+	this.AppTakenDate = AppTakenDate || "";
+	this.TotalAmount = TotalAmount || "";
+	this.Status = Status || "";
+	this.AppType = AppType || "";
+	this.Originator = Originator || "";
+	this.Owner = Owner || "";
+	this.OwnerUsername = OwnerUsername || "";
+	this.Stage = Stage || "";
+	this.DateSaved = DateSaved || "";
+	this.DateSubmitted = DateSubmitted || "";
+	this.DateCompleted = DateCompleted || "";
+	this.DispatchStatus = DispatchStatus || "";
+	this.Memo = Memo || "";
+	this.deniedreadaccess = deniedreadaccess || "";
+	this.deniedupdateaccess = deniedupdateaccess || "";
+	this.deniedinsertaccess = deniedinsertaccess || "";
+	this.denieddeleteaccess = denieddeleteaccess || "";
+	this.redecisionflag = redecisionflag || "";
+	this.denieddocprepaccess = denieddocprepaccess || "";
+}
+
+
+FindAppResult.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<findAppResult>";
+	soapStr += "<Id>" + this.Id + "</Id>";
+	soapStr += "<AppFID>" + this.AppFID + "</AppFID>";
+	soapStr += "<BusinessName>" + this.BusinessName + "</BusinessName>";
+	soapStr += "<TaxID>" + this.TaxID + "</TaxID>";
+	soapStr += "<AppTakenDate>" + this.AppTakenDate + "</AppTakenDate>";
+	soapStr += "<TotalAmount>" + this.TotalAmount + "</TotalAmount>";
+	soapStr += "<Status>" + this.Status + "</Status>";
+	soapStr += "<AppType>" + this.AppType + "</AppType>";
+	soapStr += "<Originator>" + this.Originator + "</Originator>";
+	soapStr += "<Owner>" + this.Owner + "</Owner>";
+	soapStr += "<OwnerUsername>" + this.OwnerUsername + "</OwnerUsername>";
+	soapStr += "<Stage>" + this.Stage + "</Stage>";
+	soapStr += "<DateSaved>" + this.DateSaved + "</DateSaved>";
+	soapStr += "<DateSubmitted>" + this.DateSubmitted + "</DateSubmitted>";
+	soapStr += "<DateCompleted>" + this.DateCompleted + "</DateCompleted>";
+	soapStr += "<DispatchStatus>" + this.DispatchStatus + "</DispatchStatus>";
+	soapStr += "<Memo>" + this.Memo + "</Memo>";
+	soapStr += "<deniedreadaccess>" + this.deniedreadaccess + "</deniedreadaccess>";
+	soapStr += "<deniedupdateaccess>" + this.deniedupdateaccess + "</deniedupdateaccess>";
+	soapStr += "<deniedinsertaccess>" + this.deniedinsertaccess + "</deniedinsertaccess>";
+	soapStr += "<denieddeleteaccess>" + this.denieddeleteaccess + "</denieddeleteaccess>";
+	soapStr += "<redecisionflag>" + this.redecisionflag + "</redecisionflag>";
+	soapStr += "<denieddocprepaccess>" + this.denieddocprepaccess + "</denieddocprepaccess>";
+	soapStr += "</findAppResult>";
+
+ 	return soapStr; 
+}
+
+//ArrayOfFindAppResult Object
+function ArrayOfFindAppResult (FindAppResult)
+{
+	this.FindAppResult = FindAppResult || "";
+}
+
+
+ArrayOfFindAppResult.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<arrayOfFindAppResult>";
+	soapStr += "<FindAppResult>" + this.FindAppResult + "</FindAppResult>";
+	soapStr += "</arrayOfFindAppResult>";
+
+ 	return soapStr; 
+}
+
+
+
+//ApplicationInfo Object
+function ApplicationInfo (ApplicationFID, TaskCreatedDate, TaskTemplateDescription, DecisionDate, DecisionUserCode)
+{
+	this.ApplicationFID = ApplicationFID || "";
+	this.TaskCreatedDate = TaskCreatedDate || "";
+	this.TaskTemplateDescription = TaskTemplateDescription || "";
+	this.DecisionDate = DecisionDate || "";
+	this.DecisionUserCode = DecisionUserCode || "";
+}
+
+
+ApplicationInfo.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<applicationInfo>";
+	soapStr += "<ApplicationFID>" + this.ApplicationFID + "</ApplicationFID>";
+	soapStr += "<TaskCreatedDate>" + this.TaskCreatedDate + "</TaskCreatedDate>";
+	soapStr += "<TaskTemplateDescription>" + this.TaskTemplateDescription + "</TaskTemplateDescription>";
+	soapStr += "<DecisionDate>" + this.DecisionDate + "</DecisionDate>";
+	soapStr += "<DecisionUserCode>" + this.DecisionUserCode + "</DecisionUserCode>";
+	soapStr += "</applicationInfo>";
+
+ 	return soapStr; 
+}
+
+//ArrayOfApplicationInfo Object
+function ArrayOfApplicationInfo (ApplicationInfo)
+{
+	this.ApplicationInfo = ApplicationInfo || "";
+}
+
+
+ArrayOfApplicationInfo.prototype.getSoap = function()
+{
+	var soapStr = "";
+	soapStr += "<arrayOfApplicationInfo>";
+	soapStr += "<ApplicationInfo>" + this.ApplicationInfo + "</ApplicationInfo>";
+	soapStr += "</arrayOfApplicationInfo>";
+
+ 	return soapStr; 
+}
+
+// importApplicationResultObjectFromSoap objects
+function importApplicationResultObjectFromSoap()
+{
+	this.AppFID = null;
+	this.TaskID = null;
+	this.MessageArray = null;
+	this.Status = null;
+	this.ActualImportModeUsed = null;
+}
+
+// importApplicationResultArrayObjectFromSoap objects
+function importApplicationResultArrayObjectFromSoap()
+{
+	this.MessageIndexArray = new Array();
+	this.MessageArray = new Array();
+}
+
+importApplicationResultArrayObjectFromSoap.prototype.getMessageArray = function()
+{
+	return this.MessageArray;
+}
+
+importApplicationResultArrayObjectFromSoap.prototype.ArrayOfMessage = function()
+{
+	this.Source = null;
+	this.Description = null;
+	this.Number = null;
+	this.Type = null;
+}
+
+importApplicationResultArrayObjectFromSoap.prototype.FromSoap = function(XML)
+{
+	var count = this.GetCount(XML);
+	var array = new Array(count);
+
+	for(var counter = 0; counter < count; counter++)
+	{
+		array[counter] = this.GetArray(counter, XML);
+	}
+
+	this.MessageArray = array;
+}
+
+importApplicationResultArrayObjectFromSoap.prototype.GetArray = function(counter, XML)
+{
+	array = new this.ArrayOfMessage();
+
+	array.Source = XML.substring(XML.indexOf('<Source>', this.MessageIndexArray[counter]) + 8, XML.indexOf('</Source>', this.MessageIndexArray[counter]));
+	array.Description = XML.substring(XML.indexOf('<Description>', this.MessageIndexArray[counter]) + 13, XML.indexOf('</Description>', this.MessageIndexArray[counter]));
+	array.Number = XML.substring(XML.indexOf('<Number>', this.MessageIndexArray[counter]) + 8, XML.indexOf('</Number>', this.MessageIndexArray[counter]));
+	array.Type = XML.substring(XML.indexOf('<Type>', this.MessageIndexArray[counter]) + 6, XML.indexOf('</Type>', this.MessageIndexArray[counter]));
+
+	return array;
+}
+
+importApplicationResultArrayObjectFromSoap.prototype.GetCount = function(inValue)
+{
+	var count = 0;
+	var index = 0;
+
+	index = inValue.indexOf('<Message>', index);
+
+	while( index >= 0)
+	{
+		this.MessageIndexArray[count] = index;
+		index = inValue.indexOf('<Message>', index + 1);
+		count++;
+	}
+
+	return count;
+}
+
+importApplicationResultObjectFromSoap.prototype.getValueFromXML = function(inValue, XML)
+{
+	var result = XML.substring(XML.indexOf(inValue) + inValue.length + 1, XML.indexOf('</' + inValue));
+	return result;
+}
+
+importApplicationResultObjectFromSoap.prototype.FromSoap = function(XML)
+{
+	this.AppFID = this.getValueFromXML('AppFID', XML);
+	this.TaskID = this.getValueFromXML('TaskID', XML);
+	var FromSoapArray = new importApplicationResultArrayObjectFromSoap();
+	FromSoapArray.FromSoap(XML);
+	this.MessageArray = FromSoapArray.getMessageArray();
+	this.Status = this.getValueFromXML('Status', XML);
+	this.ActualImportModeUsed = this.getValueFromXML('ActualImportModeUsed', XML);
+}
+
+function isSoapResponseValid(inSoapXML)
+{
+   isValid = true;
+
+   if(inSoapXML.indexOf("<soap:Envelope") == -1)
+   {
+      isValid = false;
+   }
+   else if(inSoapXML.indexOf('<soap:Fault>') != -1)
+   {
+      isValid = false;
+   }
+
+   return isValid;
+}
+
+function parseSoapResponse(inSoapXML)
+{
+	var obj = {};
+	obj.isValid = true;
+	obj.message = '';
+	
+	if(inSoapXML.match(/\<html\>/i))
+	{
+		obj.isValid = false;
+		var regTest = /\<title\>(\d|\D)+\<\/title\>/i;
+		var match = inSoapXML.match(regTest)
+		if(match)
+		{
+			obj.message = match[0].replace(/\<title\>/i, '').replace(/\<\/title\>/i, '');
+		}
+	}
+	else if(inSoapXML.indexOf("<soap:Envelope") == -1)
+	{
+		obj.isValid = false;
+		obj.message = 'An invalid SOAP response was detected.';
+	}
+	else if(inSoapXML.indexOf('<soap:Fault') != -1)
+	{
+		obj.isValid = false;
+		var regTest = /\<faultstring\>(\d|\D)+\<\/faultstring\>/i;
+		var match = inSoapXML.match(regTest);
+		if(match)
+		{
+			obj.message = match[0].replace(/\<faultstring\>/i, '').replace(/\<\/faultstring\>/i, '');
+		}
+	}
+	
+	return obj;
+}

@@ -1,0 +1,557 @@
+<script type="text/javascript">
+	{!INCLUDE($SControl.B2B2B_classes_js)}
+	{!INCLUDE($SControl.B2B2B_main_js)}
+	
+	function submitApp()
+	{
+		$('btnVal').disable();
+		var isValid = validateApp();
+		
+		if (isValid)
+		{
+			updateSalesForce();
+			importApplication();
+		}
+		else
+		{
+			$('btnVal').enable();
+		}
+		return isValid;
+	}
+	
+	function importApplication()
+	{
+		{!INCLUDE($SControl.B2B_App_LoginInfo)}
+		
+		// Create Product Object
+		var prod = new Product();
+		prod.index = '0';
+		prod.Name = $F("fldProduct001Type");
+		//prod.RequestedAmount = $F("fldProduct001Amount");
+		prod.RequestedAmount = getFormCurrency($F("fldProduct001Amount"));
+		prod.RequestedTerm = $F("fldProduct001Term");
+		prod.RequestedPurpose = 'See Below';
+		
+		var prodFields = new ArrayOfField();
+		
+		var prodFld = new Field('BDF_ADVPRIMPURPOSE', $F('fldProduct001Purpose'), 'true', 'BDF_ADVPRIMPURPOSE');
+		prodFields.Field.push(prodFld);
+		
+		prodFld = new Field('BDF_NUMSTMTS', $F('fldProduct001NumStmts'), 'false', '');
+		prodFields.Field.push(prodFld);
+
+		prodFld = new Field('BDF_PAYBACKAMOUNT', $F('fldProduct001PaybackAmt'), 'false', '');
+		prodFields.Field.push(prodFld);
+		
+		prodFld = new Field('ABDF_OPPORTUNITYID', getQueryVariable("opp"), 'false', '');
+		prodFields.Field.push(prodFld);
+
+		prodFld = new Field('BDF_CURRADVOTHPROVIDERYN', 'false', 'false', '');
+		prodFields.Field.push(prodFld);
+
+		prodFld = new Field('BDF_ATTACH4MOSSTMTSYN', 'true', 'false', '');
+		prodFields.Field.push(prodFld);
+		
+		prod.AdditionalFields = prodFields;
+		
+		// Create General Business Object
+		var bus = new GeneralBusiness();
+		bus.LegalName = $F("fldBusInfoLegalName");
+		bus.DoingBusinessAs = $F("fldBusInfoDBA");
+		bus.TaxID = $F("fldBusInfoTaxID");
+		bus.BusStructure = $F("fldBusInfoStructure");
+		bus.DateBusinessEstablished = getFormDate($F("fldBusInfoDateEst"));
+		bus.PresentManagementSince = getFormDate($F("fldBusInfoManSince"));
+		bus.MainPhone = $F("fldBusInfoPhone");
+		bus.MainFax = $F("fldBusInfoFax");
+		bus.WebAddress = $F("fldBusInfoWebsite");
+		bus.Description = $F("fldBusInfoBusDesc");
+		bus.AnnualSales = $F("fldBusInfoAnnualSales");
+		bus.AddressLine1 = $F("fldBusInfoBusAddr1");
+		bus.AddressLine2 = $F("fldBusInfoBusAddr2");
+		bus.City = $F("fldBusInfoBusCity");
+		bus.State = $F("fldBusInfoBusState");
+		bus.PostalCode = $F("fldBusInfoBusZip");
+		bus.AverageCheckingBalance = '0';
+		
+		var busFields = new ArrayOfField();
+
+		var fld = new Field('MAILADDRLINE1', $F('fldBusInfoMailingAddr1'), 'false', '');
+		busFields.Field.push(fld);
+		
+		fld = new Field('MAILADDRLINE2', $F('fldBusInfoMailingAddr2'), 'false', '');
+		busFields.Field.push(fld);
+		
+		fld = new Field('MAILCITY', $F('fldBusInfoMailingCity'), 'false', '');
+		busFields.Field.push(fld);
+		
+		if ($F('fldBusInfoMailingState').toUpperCase() != 'BHC_NONE_SEL')
+		{
+			fld = new Field('MAILSTATE', $F('fldBusInfoMailingState'), 'false', '');
+			busFields.Field.push(fld);
+		}
+		
+		fld = new Field('MAILZIP', $F('fldBusInfoMailingZip'), 'false', '');
+		busFields.Field.push(fld);
+		
+		fld = new Field('USEMAILADDRFLAG', $F('fldBusInfoMailingSame'), 'false', '');
+		busFields.Field.push(fld);
+		
+		fld = new Field('BUSEXISTINGCUSTOMER', $F('fldBusInfoExisting'), 'false', '');
+		busFields.Field.push(fld);
+		
+		fld = new Field('BDF_MOSREMGLEASEMORTG', $F('fldBusInfoMonRemaining'), 'false', '');
+		busFields.Field.push(fld);
+		
+		fld = new Field('OWNORLEASE', $F('fldBusInfoOwnRent'), 'true', 'OWNORLEASE');
+		busFields.Field.push(fld);
+		
+		fld = new Field('BDF_LANDLORDNAME', $F('fldBusInfoAgentName'), 'false', '');
+		busFields.Field.push(fld);
+		
+		fld = new Field('BDF_LANDLORDPHONE', $F('fldBusInfoAgentPhone'), 'false', '');
+		busFields.Field.push(fld);
+		
+		fld = new Field('BDF_VISAMCVOLAVG', $F('fldBusInfoAvgMoCC'), 'false', '');
+		busFields.Field.push(fld);
+		
+		fld = new Field('BDF_MOSCURRPROCESSOR', $F('fldBusInfoMonthsCurrentProcessor'), 'false', '');
+		busFields.Field.push(fld);
+		
+		fld = new Field('BDF_LOCATIONS', $F('fldBusInfoNumLoc'), 'false', '');
+		busFields.Field.push(fld);
+		
+		var avg = '0';
+		try
+		{
+			var sales = parseFloat(getFormCurrency($F('fldBusInfoAnnualSales')));
+			avg = sales / 12;
+		}
+		catch (ex) {}
+		
+		fld = new Field('BDF_ESTGROSSMOSALES', avg, 'false', '');
+		busFields.Field.push(fld);
+		
+		fld = new Field('BDF_AVGVISAMCAGREECALCYN', 'TRUE', 'false', '');
+		busFields.Field.push(fld);
+		
+		fld = new Field('BDF_CURRPROCESSOR', 'OTHER', 'true', 'BDF_CURRPROCESSOR');
+		busFields.Field.push(fld);
+
+		fld = new Field('BDF_CURRTERMINALTYPE', 'Unknown', 'false', '');
+		busFields.Field.push(fld);
+
+		fld = new Field('BDF_NBRTERMINALS', '1', 'false', '');
+		busFields.Field.push(fld);
+
+		fld = new Field('BDF_MERCHCHGPROCESSORYN', 'false', 'false', '');
+		busFields.Field.push(fld);
+
+		bus.AdditionalFields = busFields;
+		
+		// Create Principal Array
+		var arrPrins = new Array();
+
+		// Create Principal 001
+		var prin = new Principal();
+		prin.Prefix = $F("fldOwner001Prefix");
+		prin.FirstName = $F("fldOwner001NameFirst");
+		prin.MiddleName = $F("fldOwner001NameMiddle");
+		prin.LastName = $F("fldOwner001NameLast");
+		prin.Suffix = $F("fldOwner001Suffix");
+		prin.DateOfBirth = getFormDate($F("fldOwner001DOB"));
+		prin.PrincipalType = $F("fldOwner001PrincipalType").toUpperCase().replace('&', '&amp;');
+		prin.Title = $F("fldOwner001Title");
+		prin.PercentOwnership = $F("fldOwner001PercentOwnership");
+		prin.SocialSecurityNumber = $F("fldOwner001SSN");
+		prin.AddressLine1 = $F("fldOwner001Addr1");
+		prin.AddressLine2 = $F("fldOwner001Addr2");
+		prin.City = $F("fldOwner001City");
+		prin.State = $F("fldOwner001State");
+		prin.PostalCode = $F("fldOwner001Zip");
+		prin.HomePhone = $F("fldOwner001HomePhone");
+		prin.EMailAddress = $F("fldOwner001Email");
+		prin.Income = $F("fldOwner001MonthlyGrossSalary");
+		prin.MortgagePayments = '0';
+		prin.RevolvingCreditPayments = '0';
+		prin.Bankruptcy = $F("fldOwner001Bankruptcy");
+		prin.EquityInHome = '0';
+		prin.ValueInBusiness = '0';
+		
+		var prinFields = new ArrayOfField();
+		
+		var prinFld = new Field('PRINEXISTINGCUSTOMER', $F('fldOwner001Existing'), 'false', '');
+		prinFields.Field.push(prinFld);
+		
+		prinFld = new Field('BDF_MOBILEPH', $F('fldOwner001MobilePhone'), 'false', '');
+		prinFields.Field.push(prinFld);
+		
+		prinFld = new Field('BDF_MOSCURRADDR', $F('fldOwner001MonthsCurrentAddr'), 'false', '');
+		prinFields.Field.push(prinFld);
+		
+		prinFld = new Field('BDF_MOSPREVADDR', $F('fldOwner001MonthsPreviousAddr'), 'false', '');
+		prinFields.Field.push(prinFld);
+
+		prinFld = new Field('BDF_USCITIZENYN', 'true', 'false', '');
+		prinFields.Field.push(prinFld);
+		
+		prin.AdditionalFields = prinFields;
+		arrPrins.push(prin);
+
+		// Create Principal 002
+		if ($F("fldContact002Id").length > 0)
+		{
+			prin = new Principal();
+			prin.Prefix = $F("fldOwner002Prefix");
+			prin.FirstName = $F("fldOwner002NameFirst");
+			prin.MiddleName = $F("fldOwner002NameMiddle");
+			prin.LastName = $F("fldOwner002NameLast");
+			prin.Suffix = $F("fldOwner002Suffix");
+			prin.DateOfBirth = getFormDate($F("fldOwner002DOB"));
+			prin.PrincipalType = $F("fldOwner002PrincipalType").toUpperCase().replace('&', '&amp;');
+			prin.Title = $F("fldOwner002Title");
+			prin.PercentOwnership = $F("fldOwner002PercentOwnership");
+			prin.SocialSecurityNumber = $F("fldOwner002SSN");
+			prin.AddressLine1 = $F("fldOwner002Addr1");
+			prin.AddressLine2 = $F("fldOwner002Addr2");
+			prin.City = $F("fldOwner002City");
+			prin.State = $F("fldOwner002State");
+			prin.PostalCode = $F("fldOwner002Zip");
+			prin.HomePhone = $F("fldOwner002HomePhone");
+			prin.EMailAddress = $F("fldOwner002Email");
+			prin.Income = $F("fldOwner002MonthlyGrossSalary");
+			prin.MortgagePayments = '0';
+			prin.RevolvingCreditPayments = '0';
+			prin.Bankruptcy = $F("fldOwner002Bankruptcy");
+			prin.EquityInHome = '0';
+			prin.ValueInBusiness = '0';
+		
+			prinFields = new ArrayOfField();
+		
+			var prinFld = new Field('PRINEXISTINGCUSTOMER', $F('fldOwner002Existing'), 'false', '');
+			prinFields.Field.push(prinFld);
+			
+			prinFld = new Field('BDF_MOBILEPH', $F('fldOwner002MobilePhone'), 'false', '');
+			prinFields.Field.push(prinFld);
+			
+			prinFld = new Field('BDF_MOSCURRADDR', $F('fldOwner002MonthsCurrentAddr'), 'false', '');
+			prinFields.Field.push(prinFld);
+			
+			prinFld = new Field('BDF_MOSPREVADDR', $F('fldOwner002MonthsPreviousAddr'), 'false', '');
+			prinFields.Field.push(prinFld);
+			
+			prinFld = new Field('BDF_USCITIZENYN', 'true', 'false', '');
+			prinFields.Field.push(prinFld);
+			
+			prin.AdditionalFields = prinFields;
+			arrPrins.push(prin);
+		}
+
+		// Create Principal 003
+		if ($F("fldContact003Id").length > 0)
+		{
+			prin = new Principal();
+			prin.Prefix = $F("fldOwner003Prefix");
+			prin.FirstName = $F("fldOwner003NameFirst");
+			prin.MiddleName = $F("fldOwner003NameMiddle");
+			prin.LastName = $F("fldOwner003NameLast");
+			prin.Suffix = $F("fldOwner003Suffix");
+			prin.DateOfBirth = getFormDate($F("fldOwner003DOB"));
+			prin.PrincipalType = $F("fldOwner003PrincipalType").toUpperCase().replace('&', '&amp;');
+			prin.Title = $F("fldOwner003Title");
+			prin.PercentOwnership = $F("fldOwner003PercentOwnership");
+			prin.SocialSecurityNumber = $F("fldOwner003SSN");
+			prin.AddressLine1 = $F("fldOwner003Addr1");
+			prin.AddressLine2 = $F("fldOwner003Addr2");
+			prin.City = $F("fldOwner003City");
+			prin.State = $F("fldOwner003State");
+			prin.PostalCode = $F("fldOwner003Zip");
+			prin.HomePhone = $F("fldOwner003HomePhone");
+			prin.EMailAddress = $F("fldOwner003Email");
+			prin.Income = $F("fldOwner003MonthlyGrossSalary");
+			prin.MortgagePayments = '0';
+			prin.RevolvingCreditPayments = '0';
+			prin.Bankruptcy = $F("fldOwner003Bankruptcy");
+			prin.EquityInHome = '0';
+			prin.ValueInBusiness = '0';
+		
+			prinFields = new ArrayOfField();
+		
+			var prinFld = new Field('PRINEXISTINGCUSTOMER', $F('fldOwner003Existing'), 'false', '');
+			prinFields.Field.push(prinFld);
+			
+			prinFld = new Field('BDF_MOBILEPH', $F('fldOwner003MobilePhone'), 'false', '');
+			prinFields.Field.push(prinFld);
+			
+			prinFld = new Field('BDF_MOSCURRADDR', $F('fldOwner003MonthsCurrentAddr'), 'false', '');
+			prinFields.Field.push(prinFld);
+			
+			prinFld = new Field('BDF_MOSPREVADDR', $F('fldOwner003MonthsPreviousAddr'), 'false', '');
+			prinFields.Field.push(prinFld);
+			
+			prinFld = new Field('BDF_USCITIZENYN', 'true', 'false', '');
+			prinFields.Field.push(prinFld);
+			
+			prin.AdditionalFields = prinFields;
+			arrPrins.push(prin);
+		}
+				
+		var ia = new ImportApp();
+		//ia.ImportMode = 'VerificationImport';
+		ia.ImportMode = 'AutoSubmitImport';
+		ia.RelationshipManagerOfficerCode = 'WEBAPPUSER';
+		var now = new Date();
+		ia.ApplicationTakenDate = formatDateSoap(now) + 'T12:00:00.0000000-04:00';
+		
+		var prins = new ArrayOfPrincipal();
+		prins.Principal = arrPrins;
+		//var prins = new ArrayOfPrincipal(prin);
+		var prods = new ArrayOfProduct(prod);
+		var colls = new ArrayOfCollateral();
+		var prodToColls = new ArrayOfProdToCollRel();
+		var fins = new ArrayOfFinancial();
+		var currs = new ArrayOfCurrentDebt();
+		var docs = new ArrayOfDocument();
+		var sigs = new ArrayOfSigner();
+		
+		b.ImportApplication(li, ia, bus, prins, prods, colls, prodToColls, fins, currs, docs, sigs);
+	}
+	
+	// process result value of method ImportApplication
+	 function ImportApplication_handler(/*ImportAppResult*/ resultValue) {
+		var parsedSoapResponse = parseSoapResponse(resultValue);
+		var msg = 'An error occured during application submission.\n';
+		if (parsedSoapResponse.isValid)
+		{
+			var iar = new importApplicationResultObjectFromSoap();
+			iar.FromSoap(resultValue);
+			
+			if (iar.Status.toUpperCase() != "FAILED")
+			{
+				var loan = new sforce.SObject("Advance_Lookup__c");
+				loan.Name = $F("fldOppName");
+				loan.AppFID__c = iar.AppFID;
+				loan.Status__c = "Submitted";
+				loan.Stage__c = "Submitted";
+				
+				var result = sforce.connection.create([loan]);
+				//updateSalesForce();
+				
+				// Test Redirect
+				//window.parent.location.href = 'https://tapp0.salesforce.com/a0O/o';
+				// Production Redirect
+				window.parent.location.href = 'https://na5.salesforce.com/a0O/o';
+				$('btnVal').enable();
+			}
+			else
+			{	
+				if (iar.MessageArray && iar.MessageArray.length > 0)
+				{
+					msg += 'Message(s):\n';
+					for (var i in iar.MessageArray)
+					{
+						if(iar.MessageArray[i].Description)
+						{
+							msg += iar.MessageArray[i].Description + '\n';
+						}
+					}
+				}
+				msg += 'If you continue to experience this issue, contact your administrator.';
+				alert(msg);
+				$('btnVal').enable();
+			}
+		}
+		else
+		{
+			if (parsedSoapResponse.isTimeout)
+			{
+				var now = new Date();
+				var finder = new FindApp();
+				finder.TaxID = $F("fldBusInfoTaxID");
+				finder.AppTakenDateStart = formatDateSoap(now) + 'T12:00:00.0000000-04:00';
+				finder.AppTakenDateThrough = formatDateSoap(now) + 'T12:00:00.0000000-04:00';
+				finder.RelationshipManager = 'WEBAPPUSER';
+				
+				{!INCLUDE($SControl.B2B_App_LoginInfo)}
+				b.FindApplications(li, finder, {onSuccess:refreshFindApp_handler, onFailure:refreshFindApp_handler});
+			}
+			else
+			{
+				if (parsedSoapResponse.message.length > 0)
+				{
+					msg += 'Message:\n';
+					msg += parsedSoapResponse.message + '\n';
+				}
+				msg += 'If you continue to experience this issue, contact your administrator.';
+				
+				alert(msg);
+				$('btnVal').enable();
+			}
+		}
+	}
+	
+	function refreshFindApp_handler(/*string*/ resultValue)
+	{	
+		var parsedSoapResponse = parseSoapResponse(resultValue);
+		var msg = 'An error occured during application submission.\n';
+		if (parsedSoapResponse.isValid)
+		{
+			var loan = new sforce.SObject("Advance_Lookup__c");
+			loan.Name = $F("fldOppName");
+			loan.AppFID__c = resultValue.substring(resultValue.indexOf('AppFID') + 'AppFID'.length + 1, resultValue.indexOf('</' + 'AppFID'));
+			loan.Status__c = "Submitted";
+			loan.Stage__c = "Submitted";
+			
+			var result = sforce.connection.create([loan]);
+			
+			//updateSalesForce();
+			
+			// Test Redirect
+			//window.parent.location.href = 'https://tapp0.salesforce.com/a0O/o';
+			// Production Redirect
+			window.parent.location.href = 'https://na5.salesforce.com/a0O/o';
+			$('btnVal').enable();
+		}
+		else
+		{
+			if (parsedSoapResponse.message.length > 0)
+			{
+				msg += 'Message:\n';
+				msg += parsedSoapResponse.message + '\n';
+			}
+			msg += 'If you continue to experience this issue, contact your administrator.';
+			
+			alert(msg);
+			$('btnVal').enable();
+		}
+	}
+	
+	function getFormDate(str)
+	{
+		if (str == '' || str == null)
+		{
+			return "";
+		}
+		var dateArray = str.split('/');
+		//return formatString(dateArray[2], '####') + '-' + (dateArray[0]< 10 ? '0' : '') + dateArray[0] + '-' + (dateArray[1] < 10 ? '0' : '') + dateArray[1];
+		return dateArray[2] + '-' + dateArray[0] + '-' + dateArray[1] + 'T12:00:00.0000000-04:00';
+	}
+	
+	function getFormCurrency(str)
+	{
+		str = str.replace(/\D+/g, '');
+		return str;
+	}
+	
+	function formatDateSoap(date)
+	{
+		if (date == null)
+		{
+			return null;
+		}
+		
+	    	var month = parseInt(date.getMonth()) + 1;
+	    	var day = parseInt(date.getDate());
+	    	return formatString(date.getFullYear(), '####') + '-' + (month < 10 ? '0' : '') + month + '-' + (day < 10 ? '0' : '') + day;
+	}
+
+	function getSalesForceDate(dateStr)
+	{
+		// Input: mm/dd/yyyy
+		var dateArray = dateStr.split("/");
+
+		// Output: yyyy-mm-dd
+		return dateArray[2] + '-' + dateArray[0] + '-' + dateArray[1];
+	}
+
+	function updateSalesForce()
+	{
+		var isUpdated = false;
+		var arrUpdate = new Array();
+
+		var Account = new sforce.SObject("Account");
+		Account.id = getQueryVariable("acct");
+
+		var Contact1 = new sforce.SObject("Contact");
+		var Contact2 = new sforce.SObject("Contact");
+		var Contact3 = new sforce.SObject("Contact");
+
+		Contact1.id = $F('fldContact001Id');
+		Contact2.id = $F('fldContact002Id');
+		Contact3.id = $F('fldContact003Id');
+
+		var Opportunity = new sforce.SObject("Opportunity");
+		Opportunity.id = getQueryVariable("opp");
+
+		for(counter = 0; counter < window.fields.length; counter++)
+		{
+			var fieldName = window.fields[counter];				
+			var element = $(fieldName );
+
+			if(element == null)
+			{
+				continue;
+			}
+
+			if(element.readAttribute('isdirty') == 'true')
+			{
+				isUpdated = true;
+				var value = element.value;
+
+				// Principal Type Mapping
+				if(fieldName == 'fldOwner001PrincipalType' || fieldName == 'fldOwner002PrincipalType' ||
+				   fieldName == 'fldOwner003PrincipalType' )
+				{
+					value = mapPrinTypePicklist(value);
+				}
+				// Yes / No Mapping
+				if(fieldName == 'fldBusInfoExisting' || fieldName == 'fldBusInfoCCCalc' ||
+				   fieldName == 'fldBusInfoMailingSame' || fieldName == 'fldOwner001Bankruptcy' ||
+				   fieldName == 'fldOwner002Bankruptcy' || fieldName == 'fldOwner003Bankruptcy')
+				{
+					value = mapYesNoPicklist(value);
+				}
+				// Structure Picklist Mapping
+				else if(fieldName == 'fldBusInfoStructure')
+				{
+					value = mapStructurePicklist(value);
+				}
+				// Owns or Leases Mapping
+				else if(fieldName == 'fldBusInfoOwnRent')
+				{
+					value = mapOwnLeasePicklist(value);
+				}
+ 
+				if(element.readAttribute('validatefunction').toUpperCase() == 'UPDATECURRENCY')
+				{
+					value = getFormCurrency(value);
+				}
+				else if(element.readAttribute('validatefunction').toUpperCase() == 'UPDATEDATE')
+				{
+					value = getSalesForceDate(value);
+				}
+				var command = '';
+				command += (element.readAttribute('datasrc').length > 0 ? element.readAttribute('datasrc') : element.attributes['datasrc'].value);
+				command += ".";
+				command += (element.readAttribute('datafld').length > 0 ? element.readAttribute('datafld') : element.attributes['datafld'].value);
+				command += " = '" + value + "';";
+				//var command = element.readAttribute('datasrc') + "." + element.readAttribute('datafld') + " = '" + value + "';";
+				eval(command);
+			}
+		}
+
+		if(isUpdated)
+		{
+			arrUpdate.push(Account);
+			arrUpdate.push(Opportunity);
+			arrUpdate.push(Contact1);
+			if ($F('fldContact002Id').length > 0)
+			{ arrUpdate.push(Contact2); }
+			if ($F('fldContact003Id').length > 0)
+			{ arrUpdate.push(Contact3); }
+
+			sforce.connection.update(arrUpdate);
+			//sforce.connection.update([Account, Contact, Opportunity]);
+		}
+	}
+</script>

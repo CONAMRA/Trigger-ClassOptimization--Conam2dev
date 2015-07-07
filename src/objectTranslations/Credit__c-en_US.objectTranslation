@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Credit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Credits</value>
+    </caseValues>
+    <fields>
+        <label><!-- Advance is for Declining Sales --></label>
+        <name>Advance_is_for_Declining_Sales__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Advance is for Vendor Invoice &gt; 60 days --></label>
+        <name>Advance_is_for_Vendor_Invoice_60_days__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Applicant #1 FICO --></label>
+        <name>Applicant_1_FICO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applicant #2 FICO --></label>
+        <name>Applicant_2_FICO__c</name>
+    </fields>
+    <fields>
+        <label><!-- BAM --></label>
+        <name>BAM__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bankruptcies --></label>
+        <name>Bankruptcies__c</name>
+        <picklistValues>
+            <masterLabel>Current</masterLabel>
+            <translation><!-- Current --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discharged = to or &lt; 1 yr</masterLabel>
+            <translation><!-- Discharged = to or &lt; 1 yr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dismissed</masterLabel>
+            <translation><!-- Dismissed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Petition</masterLabel>
+            <translation><!-- Petition --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Business Closing for Renovation --></label>
+        <name>Business_Closing_for_Renovation__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Business ZIP --></label>
+        <name>Business_ZIP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business category --></label>
+        <name>Business_category__c</name>
+        <picklistValues>
+            <masterLabel>Automotive - Body Repair, Collision, Painting</masterLabel>
+            <translation><!-- Automotive - Body Repair, Collision, Painting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - Brake and Muffler</masterLabel>
+            <translation><!-- Automotive - Brake and Muffler --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - General Repair, Truck, RV</masterLabel>
+            <translation><!-- Automotive - General Repair, Truck, RV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - Parts, Accessories</masterLabel>
+            <translation><!-- Automotive - Parts, Accessories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - Quick Sevice, Lube, Tune-Up</masterLabel>
+            <translation><!-- Automotive - Quick Sevice, Lube, Tune-Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - Tire, Glass</masterLabel>
+            <translation><!-- Automotive - Tire, Glass --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive - Transmission</masterLabel>
+            <translation><!-- Automotive - Transmission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bar</masterLabel>
+            <translation><!-- Bar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Book and Stationary</masterLabel>
+            <translation><!-- Book and Stationary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Category - Picklist</masterLabel>
+            <translation><!-- Business Category - Picklist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Wash</masterLabel>
+            <translation><!-- Car Wash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clothing &amp; Apparel</masterLabel>
+            <translation><!-- Clothing &amp; Apparel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clothing - Shoe Store</masterLabel>
+            <translation><!-- Clothing - Shoe Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer-Related Retail</masterLabel>
+            <translation><!-- Computer-Related Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Electronics</masterLabel>
+            <translation><!-- Consumer Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drycleaners</masterLabel>
+            <translation><!-- Drycleaners --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equipment Rental</masterLabel>
+            <translation><!-- Equipment Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eyewear and Optical</masterLabel>
+            <translation><!-- Eyewear and Optical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florists</masterLabel>
+            <translation><!-- Florists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food - Bakery</masterLabel>
+            <translation><!-- Food - Bakery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food - Convenience &amp; Variety</masterLabel>
+            <translation><!-- Food - Convenience &amp; Variety --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food - Deli, Meat, Seafood, Other</masterLabel>
+            <translation><!-- Food - Deli, Meat, Seafood, Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food - Grocery Store</masterLabel>
+            <translation><!-- Food - Grocery Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Formal Wear</masterLabel>
+            <translation><!-- Formal Wear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furniture</masterLabel>
+            <translation><!-- Furniture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Golf - Stores, Driving Ranges, Country Clubs</masterLabel>
+            <translation><!-- Golf - Stores, Driving Ranges, Country Clubs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair &amp; Nail Salon</masterLabel>
+            <translation><!-- Hair &amp; Nail Salon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hardware</masterLabel>
+            <translation><!-- Hardware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Club</masterLabel>
+            <translation><!-- Health Club --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hotel &amp; Motel</masterLabel>
+            <translation><!-- Hotel &amp; Motel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Housing-Related</masterLabel>
+            <translation><!-- Housing-Related --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jewelry</masterLabel>
+            <translation><!-- Jewelry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lawn &amp; Garden</masterLabel>
+            <translation><!-- Lawn &amp; Garden --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limosine &amp; Transportation</masterLabel>
+            <translation><!-- Limosine &amp; Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquor Store</masterLabel>
+            <translation><!-- Liquor Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maid and Cleaning Service</masterLabel>
+            <translation><!-- Maid and Cleaning Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mail Center</masterLabel>
+            <translation><!-- Mail Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Music and Music Instrument</masterLabel>
+            <translation><!-- Music and Music Instrument --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Product Retail</masterLabel>
+            <translation><!-- Other Product Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Service Retail</masterLabel>
+            <translation><!-- Other Service Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pet Store</masterLabel>
+            <translation><!-- Pet Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy</masterLabel>
+            <translation><!-- Pharmacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print and Sign Center</masterLabel>
+            <translation><!-- Print and Sign Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional Service - All Doctors, Lawyers</masterLabel>
+            <translation><!-- Professional Service - All Doctors, Lawyers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Promotions &amp; Advertising</masterLabel>
+            <translation><!-- Promotions &amp; Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repair - Small Engine</masterLabel>
+            <translation><!-- Repair - Small Engine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restaurant - Casual Dining</masterLabel>
+            <translation><!-- Restaurant - Casual Dining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restaurant - Fast Food &amp; Carry Out</masterLabel>
+            <translation><!-- Restaurant - Fast Food &amp; Carry Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restaurant - Fine Dining</masterLabel>
+            <translation><!-- Restaurant - Fine Dining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School and Day Care</masterLabel>
+            <translation><!-- School and Day Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sporting Goods</masterLabel>
+            <translation><!-- Sporting Goods --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tanning and Tattoo</masterLabel>
+            <translation><!-- Tanning and Tattoo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tobacco Shop</masterLabel>
+            <translation><!-- Tobacco Shop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toy Store</masterLabel>
+            <translation><!-- Toy Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Veterinary</masterLabel>
+            <translation><!-- Veterinary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Video and DVD Rental</masterLabel>
+            <translation><!-- Video and DVD Rental --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Business currently not in good standing --></label>
+        <name>Business_currently_not_in_good_standing__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Business is a sole proprietor --></label>
+        <name>Business_is_a_sole_proprietor__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Casino Credit Inquiry --></label>
+        <name>Casino_Credit_Inquiry__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Charge-back rate &gt;1% --></label>
+        <name>Charge_back_rate_1__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Charge offs in the last 3 months --></label>
+        <name>Charge_offs_in_the_last_3_months__c</name>
+        <picklistValues>
+            <masterLabel>$1,000 to $5,000</masterLabel>
+            <translation><!-- $1,000 to $5,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$5,00 to $`15,000</masterLabel>
+            <translation><!-- $5,00 to $`15,000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt;$15,000</masterLabel>
+            <translation><!-- &gt;$15,000 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Child Support Past Due &gt;$1k --></label>
+        <name>Child_Support_Past_Due_1k__c</name>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>no</masterLabel>
+            <translation><!-- no --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Closed durring Renovation --></label>
+        <name>Closed_durring_Renovation__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Collection Accounts --></label>
+        <name>Collection_Accounts__c</name>
+        <picklistValues>
+            <masterLabel>$10k-$25k</masterLabel>
+            <translation><!-- $10k-$25k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$1k-$5k</masterLabel>
+            <translation><!-- $1k-$5k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$25k-$50k</masterLabel>
+            <translation><!-- $25k-$50k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$50k and up</masterLabel>
+            <translation><!-- $50k and up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$5k-$10k</masterLabel>
+            <translation><!-- $5k-$10k --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Consumer Credit Counseling (CCCS) --></label>
+        <name>Consumer_Credit_Counseling_CCCS__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Delinquent Rent/Lease Payments --></label>
+        <name>Delinquent_Rent_Lease_Payments__c</name>
+        <picklistValues>
+            <masterLabel>60-90 days</masterLabel>
+            <translation><!-- 60-90 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90 day+</masterLabel>
+            <translation><!-- 90 day+ --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Delinquent With Vendors --></label>
+        <name>Delinquent_With_Vendors__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- FICO score &lt; 500 --></label>
+        <name>FICO_score_500__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- FRAUD Misrepresentation --></label>
+        <name>FRAUD_Misrepresentation__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- HIGH RISKBusiness Tender Shift --></label>
+        <name>HIGH_RISKBusiness_Tender_Shift__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- HIGH RISK Business For Sale --></label>
+        <name>HIGH_RISK_Business_For_Sale__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- HIGH RISK Business (Prohibited List) --></label>
+        <name>HIGH_RISK_Business_Prohibited_List__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- HIGH RISK Business (Restricted List) --></label>
+        <name>HIGH_RISK_Business_Restricted_List__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Installment Debt Currently Past Due --></label>
+        <name>Installment_Debt_Currently_Past_Due__c</name>
+        <picklistValues>
+            <masterLabel>$10k-$25k</masterLabel>
+            <translation><!-- $10k-$25k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$1k-$5k</masterLabel>
+            <translation><!-- $1k-$5k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$25k-$50k</masterLabel>
+            <translation><!-- $25k-$50k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$50k and up</masterLabel>
+            <translation><!-- $50k and up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$5k-$10k</masterLabel>
+            <translation><!-- $5k-$10k --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Insufficient Active Credit References --></label>
+        <name>Insufficient_Active_Credit_References__c</name>
+        <picklistValues>
+            <masterLabel>0</masterLabel>
+            <translation><!-- 0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; 2</masterLabel>
+            <translation><!-- &gt; 2 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Internal Underwriting Notes --></label>
+        <name>Internal_Underwriting_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Judgements Open --></label>
+        <name>Judgements_Open__c</name>
+        <picklistValues>
+            <masterLabel>$15-$30k</masterLabel>
+            <translation><!-- $15-$30k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$30k-$50k</masterLabel>
+            <translation><!-- $30k-$50k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$50k and up</masterLabel>
+            <translation><!-- $50k and up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$5k-$15k</masterLabel>
+            <translation><!-- $5k-$15k --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lease/Rent is currently past due --></label>
+        <name>Lease_Rent_is_currently_past_due__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mortgage Currently --></label>
+        <name>Mortgage_Currently__c</name>
+        <picklistValues>
+            <masterLabel>60-90 days</masterLabel>
+            <translation><!-- 60-90 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90 days+</masterLabel>
+            <translation><!-- 90 days+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foreclosure/Forbearance &lt; 1yr out</masterLabel>
+            <translation><!-- Foreclosure/Forbearance &lt; 1yr out --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Past Due With Franchise Dues --></label>
+        <name>Past_Due_With_Franchise_Dues__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Purpose of advance is for Payroll --></label>
+        <name>Purpose_of_advance_is_for_Payroll__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Purpose of advance is for Taxes --></label>
+        <name>Purpose_of_advance_is_for_Taxes__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Repossessions &lt;6 months --></label>
+        <name>Repossessions_6_months__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Revolving Debt Currently Past Due --></label>
+        <name>Revolving_Debt_Currently_Past_Due__c</name>
+        <picklistValues>
+            <masterLabel>$10k-$25k</masterLabel>
+            <translation><!-- $10k-$25k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$1k-$5k</masterLabel>
+            <translation><!-- $1k-$5k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$25k-$50k</masterLabel>
+            <translation><!-- $25k-$50k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$50k and up</masterLabel>
+            <translation><!-- $50k and up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$5k-$10k</masterLabel>
+            <translation><!-- $5k-$10k --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Split is &gt;= 40% --></label>
+        <name>Split_is_40__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tax Liens/Judgements&gt;=$5000 in last 6 mo --></label>
+        <name>Tax_Liens_Judgements_5000_in_last_6_mo__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tax Liens/Judgment on Business --></label>
+        <name>Tax_Liens_Judgment_on_Business__c</name>
+        <picklistValues>
+            <masterLabel>$15k-$30k</masterLabel>
+            <translation><!-- $15k-$30k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$30k-$50k</masterLabel>
+            <translation><!-- $30k-$50k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$50k and up</masterLabel>
+            <translation><!-- $50k and up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$5k-$15k</masterLabel>
+            <translation><!-- $5k-$15k --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tax Liens Open --></label>
+        <name>Tax_Liens_Open__c</name>
+        <picklistValues>
+            <masterLabel>$15k-$30k</masterLabel>
+            <translation><!-- $15k-$30k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$30k-$50k</masterLabel>
+            <translation><!-- $30k-$50k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$50k and up</masterLabel>
+            <translation><!-- $50k and up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$5k-$15k</masterLabel>
+            <translation><!-- $5k-$15k --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unfavorable Landlord Reference --></label>
+        <name>Unfavorable_Landlord_Reference__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Wage Garnishment w/in the past 12 month --></label>
+        <name>Wage_Garnishment_w_in_the_past_12_month__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- &lt; 1 year with current processor --></label>
+        <name>X1_year_with_current_processor__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- &lt; 2 years is business --></label>
+        <name>X2_years_is_business__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- &lt; 2 years of credit history --></label>
+        <name>X2_years_of_credit_history__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- &lt; 9 months remaining on the lease --></label>
+        <name>X9_months_remaining_on_the_lease__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

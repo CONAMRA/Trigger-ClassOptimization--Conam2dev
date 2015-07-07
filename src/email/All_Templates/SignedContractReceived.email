@@ -1,0 +1,22 @@
+<table cellpadding="5" width="550" height="400" cellspacing="5" border="0" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P>Date:&nbsp; {!Opportunity.LastModifiedDate}</P>
+<P>&nbsp;</P>
+<P>Sales Rep: {!Opportunity.OwnerFullName}</P>
+<P>&nbsp;</P>
+<P>Deal Name:&nbsp; {!Opportunity.Name}</P>
+<P>&nbsp;</P>
+<P>Amount: {!Opportunity.Advance_Amount__c}</P>
+<P>Percent Payback: {!Opportunity.Percent_Payback__c}</P>
+<P>Payback Amount:&nbsp; {!Opportunity.Pay_Back_Amount__c}</P>
+<P>&nbsp;</P>
+<P>Deal sent to Sales Assistant? (no if blank): {!Opportunity.Submit_to_Sales_Assistant__c}</P>
+<P>&nbsp;</P>
+<P>Renewal?:&nbsp;{!Opportunity.RENEWAL_DATE__c}</P>
+<P>&nbsp;</P>
+<P>Lead Source: {!Opportunity.LeadSource}</P>
+<P>&nbsp;</P>
+<P>Campaign: {!Opportunity.Campaign}</P>]]></td>
+</tr>
+</table>

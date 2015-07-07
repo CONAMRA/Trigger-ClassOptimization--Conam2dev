@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>NPC-2061-The Baxter Group, Inc dba Bancard Systems (Jeff Baxte Partner User</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>NPC-2061-The Baxter Group, Inc dba Bancard Systems (Jeff Baxte Partner User</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>NPC2061TheBaxterGroupIncdbaBancardSystemsJeffBaxtePartnerManager</parentRole>
+</Role>

@@ -1,0 +1,560 @@
+<script type="text/javascript">
+function showExample(elm, options)
+{
+	elm = $(elm);
+	var posTop = elm.cumulativeOffset().top + elm.getHeight();
+	var posLeft = elm.cumulativeOffset().left;
+    
+	if (Prototype.Browser.IE && (typeof document.body.style.maxHeight == 'undefined'))
+	{
+		var iframe;
+		if ($('iframeExample'))
+		{
+			iframe = $('iframeExample');
+		}
+		else
+		{
+			iframe = new Element('iframe', {'class':'example_iframe', 'frameborder':'0', 'marginheight':'0', 'marginwidth':'0', 'hspace':'0', 'vspace':'0', 'scrolling':'no'});
+			iframe.id = 'iframeExample';
+			document.body.appendChild(iframe);
+		}
+		iframe.style.top = posTop - 5 + ((options.offsetTop != null) ? options.offsetTop : 0) + 'px';
+		iframe.style.left = posLeft - 8 + ((options.offsetLeft != null) ? options.offsetLeft : 0) + 'px';
+		if (options.width != null) { iframe.style.width = options.width + 'px'; }
+		if (options.height != null) { iframe.style.height = options.height + 'px'; }
+		setTimeout("setIframeContents('iframeExample', '" + options.imgSrc + "' );", 0);
+	}
+	else
+	{
+		var div;
+		if ($('divExample'))
+		{
+			div = $('divExample');
+		}
+		else
+		{
+			div = new Element('div', {'class':'example_div'});
+			div.id = 'divExample';
+			document.body.appendChild(div);
+		}
+		div.update('<img src="' + options.imgSrc + '" class="example_img" />');
+		div.style.top = posTop + ((options.offsetTop != null) ? options.offsetTop : 0) + 'px';
+		div.style.left = posLeft + ((options.offsetLeft != null) ? options.offsetLeft : 0) + 'px';
+		document.body.appendChild(div);
+	}
+}
+
+function showExampleImg(elm, imgSrc)
+{
+	elm = $(elm);
+	var posTop = elm.cumulativeOffset().top - 5;
+	var posLeft = elm.cumulativeOffset().left;
+	if (Prototype.Browser.IE && (typeof document.body.style.maxHeight == "undefined"))
+	{
+		hideExample();
+		var iframe = new Element('iframe', {'class':'example_iframe', 'frameborder':'0'});
+		iframe.id = 'iframeExample';
+		document.body.appendChild(iframe);
+		iframe.style.top = posTop + 9 + 'px';
+		iframe.style.left = posLeft - 8  + 'px';
+		setTimeout("setIframeContents('iframeExample', '" + imgSrc + "' );", 0);
+	}
+	else
+	{
+		hideExample();
+		var div = new Element('div', {'class':'example_div'});
+		div.id = 'divExample';
+		div.update('<img src="' + imgSrc + '" class="example_img" />');
+		div.style.top = posTop + 17 + 'px';
+		div.style.left = posLeft + 1 + 'px';
+		document.body.appendChild(div);
+	}
+}
+
+function setIframeContents(id, imgSrc)
+{
+	if ($(id))
+	{
+		$(id).contentWindow.document.createStyleSheet('styles/CreditApp.css');
+		$(id).contentWindow.document.body.innerHTML = '<img src="' + imgSrc + '" class="example_img" /><br /><a href="javascript:top.hideExample(\'' + id + '\');" >Close</a>';
+		$(id).contentWindow.document.body.style.backgroundColor = 'White';
+	}
+}
+
+function hideExample()
+{
+	if (Prototype.Browser.IE && (typeof document.body.style.maxHeight == "undefined"))
+	{
+		if ($('iframeExample')) {$('iframeExample').remove();}
+	}
+	else
+	{
+		if ($('divExample')) {$('divExample').remove();}
+	}
+}
+
+function displayMore(value, elms)
+{
+	if (value == "true" || value == "1")
+	{
+		for (var i = 0; i < elms.length; i++)
+		{
+			showField(elms[i]);
+		}
+	}
+	else
+	{
+		for (var i = 0; i < elms.length; i++)
+		{
+			hideField(elms[i]);
+		}
+	}
+}
+    
+function displayMore2(value, tElms, fElms)
+{
+	if (value.toLowerCase() == "true" || value == "1")
+	{
+		for (var i = 0; i < tElms.length; i++)
+		{
+			showField(tElms[i]);
+		}
+			
+		for (var i = 0; i < fElms.length; i++)
+		{
+			hideField(fElms[i]);
+		}
+	}
+	else if (value.toLowerCase() == "false" || value == "0")
+	{
+		for (var i = 0; i < fElms.length; i++)
+		{
+			showField(fElms[i]);
+		}
+
+		for (var i = 0; i < tElms.length; i++)
+		{
+			hideField(tElms[i]);
+		}
+	}
+	else
+	{
+		for (var i = 0; i < tElms.length; i++)
+		{
+			hideField(tElms[i]);
+		}
+
+		for (var i = 0; i < fElms.length; i++)
+		{
+			hideField(fElms[i]);
+		}
+	}
+}
+    
+function addCommas(nStr)
+{
+	nStr += '';
+	x = nStr.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(x1)) 
+	{
+		x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	}
+	return x1 + x2;
+}
+
+// DISABLE COPY PASTE START
+function captureKeys(e)
+{
+	if(e.keyCode == 17)
+	{
+		return false;
+	}
+	var obj = e.element();
+	if(!window[obj.id + 'val']) window[obj.id + 'val'] = "";
+	window[obj.id + 'val'] =  "" + (obj.value.length > (window[obj.id + 'val'].length + 2) ? window[obj.id + 'val'] : obj.value );
+	obj.value = window[obj.id + 'val'];
+}
+
+function captureMouse(e)
+{
+	if(window.event)
+	{
+		e = window.event;
+		e.target = e.srcElement;
+	}
+	var obj = e.target;
+	obj.oncontextmenu = new Function("return false;");
+}
+
+function disableCopyPaste(id)
+{
+	var obj = $(id);
+	if(!obj) { return false; }
+	if (Prototype.Browser.IE)
+	{
+		obj.oncopy = new Function('return false;');
+		obj.onpaste = new Function('return false;');
+		obj.ondrag = new Function('return false;');
+		obj.ondrop = new Function('return false;');
+	}
+	else
+	{
+		Event.observe(obj, 'keyup', captureKeys);
+		//Event.observe(obj, 'keyup', captureKeys);
+		//obj.onkeyup = captureKeys;
+		//Event.observe(obj, 'contextmenu', function(){return false;});
+	}
+	obj.oncontextmenu = new Function("return false;");
+}
+// DISABLE COPY PASTE END
+
+// ADD FROM TEMPLATE START
+function addFromTemplate(templateId)
+{
+	/*
+		if(parseInt($(templateId).readAttribute('nextId')) == 2)
+		{
+			
+		}
+	*/
+	if(templateId ==  null || document.getElementById(templateId) == null)
+	{
+		return;
+	}
+	
+	if(templateId.search('001') < 0)
+	{
+		alert('The specified element "' + templateId + '" does not appear to be a template id.');
+		return;
+	}
+	var obj = $(templateId);
+	var nextId = obj.readAttribute('nextId');
+	var maxOccurs = obj.readAttribute('maxOccurs');
+	
+	var countReg = new RegExp('^' + templateId.replace(/001/, '\\d{3}') + '$', 'i');
+	var count = 0;
+	var elms = document.getElementsByTagName(obj.tagName);
+	var prevSibling;
+	for (var i=0;i<elms.length;i++)
+	{
+		if(elms[i].id && elms[i].id.match(countReg))
+		{
+			prevSibling = elms[i];
+			count++;
+		}
+	}
+	if(!isNaN(maxOccurs) && (''+maxOccurs).replace(/^\s+|\s+$/g, "") != '' && count >= parseInt(maxOccurs))
+	{
+		alert('You have the maximum number of items of the specified type.');
+		return;
+	}
+		//~ if(!isNaN(nextId) && (''+nextId).replace(/^\s+|\s+$/g, "") != '')
+		//~ {
+			//~ if(!isNaN(maxOccurs) && (''+maxOccurs).replace(/^\s+|\s+$/g, "") != '')
+			//~ {
+				//~ if(parseInt(nextId) > parseInt(maxOccurs))
+				//~ {
+					//~ alert('You have the maximum number of items of the specified type.');
+					//~ return;
+				//~ }
+			//~ }
+		//~ }
+		//~ else
+		//~ {
+			//~ alert('The nextId attribute of the specified element contains an invalid value.');
+			//~ return;
+		//~ }
+
+	obj.writeAttribute('nextId', '' + (parseInt(nextId) + 1));
+	
+	//var prevSibling = $((''+obj.id).replace(/001/g, formatString('' + (parseInt(nextId) - 1), '###')));
+	
+	prevSibling = getObjectForCopy(prevSibling);
+	obj = getObjectForCopy(obj);   
+
+	var cpy = obj.cloneNode(true);
+	
+	if(!prevSibling || !prevSibling.nextSibling)
+	{
+		obj.parentNode.appendChild(cpy);
+	}
+	else
+	{
+		var sibling = prevSibling.nextSibling;
+		prevSibling.parentNode.insertBefore(cpy, sibling);
+	}
+	if(cpy.tagName.toUpperCase() == "TR")
+	{
+		for(var i = 0; i < cpy.cells.length; i++)
+		{
+			cpy.cells[i].innerHTML = (''+cpy.cells[i].innerHTML).replace(/001/g, ('' + formatString(nextId, '###')));
+		}
+		//~ var td = document.createElement('td');
+		//~ cpy.appendChild(td);
+		//~ var btnRemove = document.createElement('button');
+		//~ btnRemove.innerHTML="X";
+		//~ btnRemove.setAttribute('onclick','removeTemplateObject("' + templateId.replace(/001/g, ('' + formatString(nextId, '###'))) + '");');
+		//~ td.appendChild(btnRemove);
+	}
+	else
+	{
+		cpy.innerHTML = (''+cpy.innerHTML).replace(/001/g, ('' + formatString(nextId, '###')));
+		//~ var btnRemove = document.createElement('button');
+		//~ btnRemove.innerHTML="X";
+		//~ btnRemove.setAttribute('onclick','removeTemplateObject("' + templateId.replace(/001/g, ('' + formatString(nextId, '###'))) + '");');
+		//~ cpy.appendChild(btnRemove);	
+	}
+	if(cpy.id != null)
+	{
+		cpy.id = (''+cpy.id).replace(/001/g, ('' + formatString(nextId, '###')));
+	}
+	
+	var inputs = cpy.getElementsBySelector('input');
+	var selects = cpy.getElementsBySelector('select');
+	var textareas = cpy.getElementsBySelector('textarea');
+	
+	var newFields = combineArrays(new Array(inputs, selects, textareas));
+	
+	for(var i=0;i<newFields.length;i++)
+	{
+	    if(newFields[i].id && document.getElementById((''+newFields[i].id).replace(/\d{3}/, '001')))
+	    {
+		    addToList(newFields[i].id, (''+newFields[i].id).replace(/\d{3}/, '001'));
+		}
+		newFields[i].value = ( newFields[i].tagName.toLowerCase() == 'select' ? 'BHC_NONE_SEL' : '' );
+	}
+	
+	addFieldsToStack(newFields);
+}
+
+function addToList(id, templateId)
+{
+	if(templateId.match(/_list$/i))
+	{
+		return;
+	}
+	var list = document.getElementById(templateId + '_list');
+	if(!list)
+	{
+		list = document.createElement('input');
+		list.type = 'hidden';
+		list.id = templateId + '_list';
+		list.name = templateId + '_list';
+		list.value = templateId;
+		document.getElementById(templateId).parentNode.insertBefore(list, document.getElementById(templateId));
+	}
+	
+	if(id && list)
+	{
+		if(!list.value.match(new RegExp(id,'i')))
+		{
+			list.value += '|' + id;
+		}
+	}
+}
+
+function removeFromList(id, templateId)
+{
+	if(templateId.match(/_list$/i))
+	{
+		return;
+	}
+	var list = document.getElementById(templateId + '_list');
+	if(!list)
+	{
+		list = document.createElement('input');
+		list.type = 'hidden';
+		list.id = templateId + '_list';
+		list.name = templateId + '_list';
+		list.value = templateId;
+		document.getElementById(templateId).parentNode.insertBefore(list, document.getElementById(templateId));
+	}
+	if(id && list)
+	{
+		if(list.value.match(new RegExp('\\|' + id, 'i')))
+		{
+			list.value = list.value.replace(new RegExp('\\|' +id, 'i'), '');
+		}
+	}
+}
+
+function combineArrays(arrays)
+{	
+    var newArray = [];
+	if(typeof(arrays) == typeof(newArray) && arrays.length > 0)
+	{
+		for(var i=0; i<arrays.length; i++)
+		{
+			if(typeof(arrays[i]) == typeof(newArray))
+			{
+				for(var j=0; j<arrays[i].length;j++)
+				{
+					newArray.push(arrays[i][j]);
+				}
+			}
+		}
+	}
+	return newArray;
+}
+
+function addFieldsToStack(newFields)
+{
+	for(var i = 0; i < newFields.length; i++)
+	{
+		if(newFields[i].readAttribute('validateFunction') && newFields[i].readAttribute('validateFunction') != '')
+		{
+			window.fields.push(newFields[i].id);
+		}
+	}
+}
+
+function removeFieldsFromStack(oldFields)
+{
+	for(var i = 0; i < oldFields.length; i++)
+	{
+		if(oldFields[i].readAttribute('validateFunction') && oldFields[i].readAttribute('validateFunction') != '')
+		{
+			for(var j=window.fields.length - 1; j>-1; j--)
+			{
+				if(oldFields[i].id == window.fields[j])
+				{
+					window.fields.splice(j,1);
+					break;
+				}
+			}
+		}
+	}
+}
+
+function removeTemplateObject(id)
+{
+	var obj = $(id);
+	if(id.match(/001/))
+	{
+		if(!obj || obj.readAttribute('nextId')=='')
+		{
+			return null;
+		}
+		var nextId = obj.readAttribute('nextId');
+		
+		if(parseInt(nextId) < 3)
+		{
+			return null;
+		}
+		//~ obj.writeAttribute('nextid', '' + (parseInt(nextId) - 1));
+		
+		var countReg = new RegExp('^' + id.replace(/001/, '\\d{3}') + '$', 'i');
+		var count = 0;
+		var elms = document.getElementsByTagName(obj.tagName);
+		for (var i=0;i<elms.length;i++)
+		{
+			if(elms[i].id && elms[i].id.match(countReg))
+			{
+				obj = elms[i];
+				count++;
+			}
+		}
+		if(count < 2)
+		{
+			return;
+		}
+		//~ if(!isNaN(maxOccurs) && (''+maxOccurs).replace(/^\s+|\s+$/g, "") != '' && count >= parseInt(maxOccurs))
+		//~ {
+			//~ alert('You have the maximum number of items of the specified type.');
+			//~ return;
+		//~ }
+		
+		
+		//obj = $((''+obj.id).replace(/001/g, formatString('' + (parseInt(nextId) - 1), '###')));
+		
+		if(!obj)
+		{
+			return;
+		}
+	}
+	
+	obj = getObjectForCopy(obj);
+	
+	if(obj)
+	{
+		var inputs = obj.getElementsBySelector('input');
+		var selects = obj.getElementsBySelector('select');
+		var textareas = obj.getElementsBySelector('textarea');
+		
+		var oldFields = combineArrays(new Array(inputs, selects, textareas));
+		for(var i = 0;i<oldFields.length;i++)
+		{
+		    if(oldFields[i].id && document.getElementById((''+oldFields[i].id).replace(/\d{3}/, '001')))
+		    {
+			     removeFromList(oldFields[i].id, (''+oldFields[i].id).replace(/\d{3}/, '001'));
+			}
+		}
+		removeFieldsFromStack(oldFields);
+		
+		obj.parentNode.removeChild(obj);
+		//obj.remove();
+	}
+}
+
+function getObjectForCopy(obj)
+{
+	if(!obj)
+	{
+		return null;
+	}
+
+	var i = 10;
+	var tr = obj;
+	//~ if(obj.hasClassName('field_group_field_list'))
+	//~ {
+		//~ var fields = obj.value.split("|");
+		//~ for(var j=0;j<fields.length;j++)
+		//~ {
+			//~ if($(fields[j])){addFromTemplate(fields[j])};
+		//~ }
+	//~ }
+	//~ else
+	if(obj.className.match('field_'))
+	{
+		//prototype grabs the field_control div because cloneNode changes the _counted property to a string
+		//tr = obj.up('tr.field_row_table');
+		tr = obj;
+		while(tr.tagName.toLowerCase() != 'tr')
+		{
+			tr = tr.parentNode;
+		}
+	}
+	tr = $(tr);
+	return tr;
+}
+
+function formatString(str, format)
+{
+	if(str == null || format == null)
+	{
+		return null;
+	}
+	if(format.match('#') && format.replace(/\#/g, '').replace(/^\s+|\s+$/g, '')== '')
+	{
+		var len = format.replace(/^\s+|\s+$/g, '').length;
+		while(str.length < len)
+		{
+			str = '0' + str;
+		}
+	}
+	return str;
+}
+// ADD FROM TEMPLATE END
+    
+function trim(value)
+{
+    if(!value)
+    {
+        return '';
+    }
+    return value.replace(/^(\s)+/g,'').replace(/(\s)+$/g, '');
+}
+</script>

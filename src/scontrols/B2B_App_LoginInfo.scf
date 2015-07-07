@@ -1,0 +1,2 @@
+var li = new LoginInfo("RapidAdvance", "WebAppUser", "@ppL1nk_ra2");
+var b = new BHWebServiceN("https://www.bank2business.net/b2bwebservices/bhwebservicen.asmx");

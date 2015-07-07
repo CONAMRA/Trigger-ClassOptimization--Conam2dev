@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>NPC-S3485-Happy Financial Group, Inc. (Sunny Vig) Partner Manager</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>NPC-S3485-Happy Financial Group, Inc. (Sunny Vig) Partner Manager</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>NPCS3485HappyFinancialGroupIncSunnyVigPartnerExecutive</parentRole>
+</Role>
